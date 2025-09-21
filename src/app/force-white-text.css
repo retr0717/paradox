@@ -1,0 +1,53 @@
+@layer base {
+  /* Base text color */
+  body {
+    color: #ffffff !important;
+  }
+
+  /* All text elements */
+  h1, h2, h3, h4, h5, h6, p, span, div, li, a {
+    color: #ffffff !important;
+  }
+
+  /* Specific text classes */
+  .text-primary,
+  .text-secondary,
+  .text-foreground,
+  .text-muted-foreground {
+    color: #ffffff !important;
+  }
+
+  /* Links and buttons text */
+  a, 
+  button {
+    color: #ffffff !important;
+  }
+
+  /* Input text */
+  input,
+  textarea,
+  select {
+    color: #ffffff !important;
+  }
+
+  /* Card content */
+  .card * {
+    color: #ffffff !important;
+  }
+
+  /* Override any other text colors */
+  [class*="text-"] {
+    color: #ffffff !important;
+  }
+
+  /* Headers and navigation */
+  header *,
+  nav * {
+    color: #ffffff !important;
+  }
+
+  /* Footer content */
+  footer * {
+    color: #ffffff !important;
+  }
+}

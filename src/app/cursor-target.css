@@ -1,0 +1,37 @@
+/* Interactive elements hover effect */
+.cursor-target {
+  cursor: none !important;
+  transition: all 0.2s ease-out;
+}
+
+.cursor-target:hover {
+  transform: scale(1.05);
+}
+
+/* Specific styles for navigation menu links */
+[data-slot="navigation-menu-link"].cursor-target {
+  cursor: none !important;
+  transition: all 0.2s ease-out;
+}
+
+[data-slot="navigation-menu-link"].cursor-target:hover {
+  transform: scale(1.1);
+}
+
+/* Apply to all interactive elements */
+button:not([disabled]),
+a[href],
+input[type="submit"],
+input[type="button"],
+.interactive {
+  cursor: none !important;
+  transition: all 0.2s ease-out;
+}
+
+button:not([disabled]):hover,
+a[href]:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.interactive:hover {
+  transform: scale(1.05);
+}

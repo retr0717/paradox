@@ -1,0 +1,23 @@
+:root {
+  --app-height: 100%;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  height: var(--app-height);
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
+
+#__next {
+  isolation: isolate;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}

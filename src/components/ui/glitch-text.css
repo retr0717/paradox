@@ -1,0 +1,83 @@
+.glitch {
+  color: #fff;
+  white-space: nowrap;
+  position: relative;
+  margin: 0 auto;
+  user-select: none;
+  cursor: pointer;
+}
+
+.glitch::after,
+.glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  background-color: transparent;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+}
+
+.glitch:not(.enable-on-hover)::after {
+  left: 10px;
+  text-shadow: var(--after-shadow);
+  animation: animate-glitch var(--after-duration, 3s) infinite steps(2) alternate-reverse;
+  opacity: 0.9;
+}
+.glitch:not(.enable-on-hover)::before {
+  left: -10px;
+  text-shadow: var(--before-shadow);
+  animation: animate-glitch var(--before-duration, 2s) infinite steps(2) alternate-reverse;
+  opacity: 0.9;
+}
+
+.glitch.enable-on-hover::after,
+.glitch.enable-on-hover::before {
+  content: '';
+  opacity: 0;
+  animation: none;
+}
+
+.glitch.enable-on-hover:hover::after {
+  content: attr(data-text);
+  opacity: 1;
+  left: 10px;
+  text-shadow: var(--after-shadow, -10px 0 red);
+  animation: animate-glitch var(--after-duration, 3s) infinite linear alternate-reverse;
+}
+.glitch.enable-on-hover:hover::before {
+  content: attr(data-text);
+  opacity: 1;
+  left: -10px;
+  text-shadow: var(--before-shadow, 10px 0 cyan);
+  animation: animate-glitch var(--before-duration, 2s) infinite linear alternate-reverse;
+}
+
+@keyframes animate-glitch {
+  0% {
+    clip-path: inset(40% 0 61% 0);
+    transform: skew(0.5deg);
+  }
+  20% {
+    clip-path: inset(92% 0 1% 0);
+    transform: skew(-1deg);
+  }
+  40% {
+    clip-path: inset(43% 0 1% 0);
+    transform: skew(0.8deg);
+  }
+  60% {
+    clip-path: inset(25% 0 58% 0);
+    transform: skew(0.78deg);
+  }
+  80% {
+    clip-path: inset(54% 0 7% 0);
+    transform: skew(-0.3deg);
+  }
+  100% {
+    clip-path: inset(58% 0 43% 0);
+    transform: skew(-0.2deg);
+  }
+}

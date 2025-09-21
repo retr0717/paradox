@@ -1,0 +1,46 @@
+@layer base {
+  body {
+    background-color: transparent !important;
+    color: white !important;
+  }
+
+  section {
+    background-color: transparent !important;
+  }
+
+  .bg-background {
+    background-color: transparent !important;
+  }
+
+  .bg-muted {
+    background-color: rgb(17 17 17) !important;
+  }
+
+  /* Card backgrounds */
+  .card,
+  [class*="bg-card"] {
+    background-color: rgb(17 17 17) !important;
+  }
+
+  /* Override any light sections */
+  [class*="bg-gradient"],
+  [class*="from-background"],
+  [class*="to-background"],
+  [class*="bg-muted"] {
+    background-color: black !important;
+    background-image: none !important;
+  }
+
+  /* Make sure modals and overlays are dark */
+  [role="dialog"],
+  .popover,
+  .dropdown-content {
+    background-color: rgb(17 17 17) !important;
+  }
+
+  /* Footer */
+  footer {
+    background-color: black !important;
+    border-top-color: rgb(38 38 38) !important;
+  }
+}

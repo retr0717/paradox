@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useCallback, useMemo } from 'react';
-import Image from 'next/image';
 import './ProfileCard.css';
 
 const DEFAULT_BEHIND_GRADIENT =
-  'radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y),hsla(266,100%,90%,var(--card-opacity)) 4%,hsla(266,50%,80%,calc(var(--card-opacity)*0.75)) 10%,hsla(266,25%,70%,calc(var(--card-opacity)*0.5)) 50%,hsla(266,0%,60%,0) 100%),radial-gradient(35% 52% at 55% 20%,#00ffaac4 0%,#073aff00 100%),radial-gradient(100% 100% at 50% 50%,#00c1ffff 1%,#073aff00 76%),conic-gradient(from 124deg at 50% 50%,#c137ffff 0%,#07c6ffff 40%,#07c6ffff 60%,#c137ffff 100%)';
+  'radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y),hsla(140,25%,22%,var(--card-opacity)) 4%,hsla(156,65%,65%,calc(var(--card-opacity)*0.6)) 15%,hsla(200,65%,65%,calc(var(--card-opacity)*0.4)) 40%,hsla(140,25%,22%,0) 100%),radial-gradient(ellipse 70% 80% at 30% 40%,#2b4539aa 0%,#61dca350 30%,#61b3dc30 60%,transparent 100%),radial-gradient(ellipse 60% 90% at 70% 60%,#61b3dc40 0%,#61dca330 40%,#2b453920 80%,transparent 100%),linear-gradient(135deg,#2b453915 0%,#61dca320 50%,#61b3dc25 100%)';
 
-const DEFAULT_INNER_GRADIENT = 'linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)';
+const DEFAULT_INNER_GRADIENT = 'linear-gradient(145deg,#2b45394c 0%,#61dca344 50%,#61b3dc44 100%)';
 
 const ANIMATION_CONFIG = {
   SMOOTH_DURATION: 600,
@@ -23,14 +22,6 @@ const adjust = (value: number, fromMin: number, fromMax: number, toMin: number, 
   round(toMin + ((toMax - toMin) * (value - fromMin)) / (fromMax - fromMin));
 
 const easeInOutCubic = (x: number) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
-
-declare global {
-  interface Window {
-    DeviceMotionEvent: {
-      requestPermission?: () => Promise<'granted' | 'denied' | 'default'>;
-    };
-  }
-}
 
 interface ProfileCardProps {
   avatarUrl?: string;
@@ -54,9 +45,9 @@ interface ProfileCardProps {
 }
 
 const ProfileCardComponent: React.FC<ProfileCardProps> = ({
-  avatarUrl = '<Placeholder for avatar URL>',
-  iconUrl = '<Placeholder for icon URL>',
-  grainUrl = '<Placeholder for grain URL>',
+  avatarUrl = 'https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=800&h=600&auto=format',
+  iconUrl,
+  grainUrl,
   behindGradient,
   innerGradient,
   showBehindGradient = true,
@@ -65,10 +56,10 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
   enableMobileTilt = false,
   mobileTiltSensitivity = 5,
   miniAvatarUrl,
-  name = 'Javi A. Torres',
-  title = 'Software Engineer',
-  handle = 'javicodes',
-  status = 'Online',
+  name = 'Event Name',
+  title = 'Event Description',
+  handle = 'eventhandle',
+  status = 'Status',
   contactText = 'Contact',
   showUserInfo = true,
   onContactClick
@@ -144,7 +135,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
   }, [enableTilt]);
 
   const handlePointerMove = useCallback(
-    (event: React.PointerEvent<HTMLDivElement>) => {
+    (event: PointerEvent) => {
       const card = cardRef.current;
       const wrap = wrapRef.current;
 
@@ -168,20 +159,16 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
   }, [animationHandlers]);
 
   const handlePointerLeave = useCallback(
-    (event: React.PointerEvent<HTMLDivElement>) => {
+    (event: any) => {
       const card = cardRef.current;
       const wrap = wrapRef.current;
 
       if (!card || !wrap || !animationHandlers) return;
 
-      const rect = card.getBoundingClientRect();
-      const offsetX = event.clientX - rect.left;
-      const offsetY = event.clientY - rect.top;
-
       animationHandlers.createSmoothAnimation(
         ANIMATION_CONFIG.SMOOTH_DURATION,
-        offsetX,
-        offsetY,
+        event.offsetX,
+        event.offsetY,
         card,
         wrap
       );
@@ -226,22 +213,22 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
 
     const handleClick = () => {
       if (!enableMobileTilt || location.protocol !== 'https:') return;
-      if (typeof (window as any).DeviceMotionEvent.requestPermission === 'function') {
+      if (typeof window !== 'undefined' && typeof (window as any).DeviceMotionEvent !== 'undefined' && typeof (window as any).DeviceMotionEvent.requestPermission === 'function') {
         (window as any).DeviceMotionEvent.requestPermission()
           .then((state: string) => {
             if (state === 'granted') {
               window.addEventListener('deviceorientation', deviceOrientationHandler);
             }
           })
-          .catch((err: Error) => console.error(err));
+          .catch((err: any) => console.error(err));
       } else {
         window.addEventListener('deviceorientation', deviceOrientationHandler);
       }
     };
 
-    card.addEventListener('pointerenter', pointerEnterHandler as any);
+    card.addEventListener('pointerenter', pointerEnterHandler);
     card.addEventListener('pointermove', pointerMoveHandler as any);
-    card.addEventListener('pointerleave', pointerLeaveHandler as any);
+    card.addEventListener('pointerleave', pointerLeaveHandler);
     card.addEventListener('click', handleClick);
 
     const initialX = wrap.clientWidth - ANIMATION_CONFIG.INITIAL_X_OFFSET;
@@ -251,11 +238,11 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
     animationHandlers.createSmoothAnimation(ANIMATION_CONFIG.INITIAL_DURATION, initialX, initialY, card, wrap);
 
     return () => {
-      card.removeEventListener('pointerenter', pointerEnterHandler as any);
+      card.removeEventListener('pointerenter', pointerEnterHandler);
       card.removeEventListener('pointermove', pointerMoveHandler as any);
-      card.removeEventListener('pointerleave', pointerLeaveHandler as any);
+      card.removeEventListener('pointerleave', pointerLeaveHandler);
       card.removeEventListener('click', handleClick);
-      window.removeEventListener('deviceorientation', deviceOrientationHandler as any);
+      window.removeEventListener('deviceorientation', deviceOrientationHandler);
       animationHandlers.cancelAnimation();
     };
   }, [
@@ -272,7 +259,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
     () => ({
       '--icon': iconUrl ? `url(${iconUrl})` : 'none',
       '--grain': grainUrl ? `url(${grainUrl})` : 'none',
-      '--behind-gradient': showBehindGradient ? (behindGradient ?? DEFAULT_BEHIND_GRADIENT) : 'none',
+      // '--behind-gradient': showBehindGradient ? (behindGradient ?? DEFAULT_BEHIND_GRADIENT) : 'none',
       '--inner-gradient': innerGradient ?? DEFAULT_INNER_GRADIENT
     } as React.CSSProperties),
     [iconUrl, grainUrl, showBehindGradient, behindGradient, innerGradient]
@@ -283,52 +270,34 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
   }, [onContactClick]);
 
   return (
-    <div 
-      ref={wrapRef} 
-      className={`pc-card-wrapper ${className}`.trim()} 
-      style={cardStyle}
-      onPointerMove={handlePointerMove}
-      onPointerEnter={handlePointerEnter}
-      onPointerLeave={handlePointerLeave}
-    >
+    <div ref={wrapRef} className={`pc-card-wrapper ${className}`.trim()} style={cardStyle}>
       <section ref={cardRef} className="pc-card">
         <div className="pc-inside">
           <div className="pc-shine" />
           <div className="pc-glare" />
           <div className="pc-content pc-avatar-content">
-            <Image
+            <img
               className="avatar"
               src={avatarUrl}
               alt={`${name || 'User'} avatar`}
-              width={500}
-              height={500}
-              priority
-              loading="eager"
-              placeholder="blur"
-              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJiEwMS4qLi4yMy8vMjc6PjozNy85OUVFOTlJSUpKTE1MTkxPTk1KSUr/2wBDAQwXFx0aHTIdHTJKNiY2SkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkr/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-              onError={() => {
-                const target = document.querySelector('.avatar') as HTMLImageElement;
-                if (target) target.style.display = 'none';
+              loading="lazy"
+              onError={(e: any) => {
+                const target = e.target;
+                target.style.display = 'none';
               }}
             />
             {showUserInfo && (
               <div className="pc-user-info">
                 <div className="pc-user-details">
                   <div className="pc-mini-avatar">
-                    <Image
+                    <img
                       src={miniAvatarUrl || avatarUrl}
                       alt={`${name || 'User'} mini avatar`}
-                      width={48}
-                      height={48}
-                      loading="eager"
-                      placeholder="blur"
-                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJiEwMS4qLi4yMy8vMjc6PjozNy85OUVFOTlJSUpKTE1MTkxPTk1KSUr/2wBDAQwXFx0aHTIdHTJKNiY2SkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkr/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                      onError={() => {
-                        const target = document.querySelector('.pc-mini-avatar img') as HTMLImageElement;
-                        if (target) {
-                          target.style.opacity = '0.5';
-                          target.src = avatarUrl;
-                        }
+                      loading="lazy"
+                      onError={(e: any) => {
+                        const target = e.target;
+                        target.style.opacity = '0.5';
+                        target.src = avatarUrl;
                       }}
                     />
                   </div>

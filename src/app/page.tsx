@@ -1,7 +1,6 @@
 ﻿'use client';
 
 import About from '@/components/sections/about';
-import Contact from '@/components/sections/contact';
 import Events from '@/components/sections/events';
 import Hero from '@/components/sections/hero';
 import Schedule from '@/components/sections/schedule';
@@ -13,7 +12,6 @@ export default function Home() {
       <About />
       <Events />
       <Schedule />
-      <Contact />
     </>
   );
 }

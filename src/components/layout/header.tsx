@@ -27,7 +27,6 @@ const Header = () => {
     { title: 'About', href: '#about' },
     { title: 'Events', href: '#events' },
     { title: 'Schedule', href: '#schedule' },
-    { title: 'Contact', href: '#contact' },
   ];
 
   return (

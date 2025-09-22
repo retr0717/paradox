@@ -81,7 +81,7 @@ const Events = () => {
           </p>
         </motion.div>
 
-        <div className="flex flex-col items-center sm:grid sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16">
+        <div className="flex flex-col items-center justify-center sm:grid sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 w-full">
           {events.map((event, index) => (
             <motion.div
               key={event.title}
@@ -89,7 +89,7 @@ const Events = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="w-full max-w-sm"
+              className="w-full max-w-sm mx-auto"
             >
               <ProfileCard
                 name={event.name}

@@ -25,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} text-white min-h-screen w-full overflow-x-hidden`} style={{ margin: 0, padding: 0, backgroundColor: 'transparent' }}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} text-white min-h-screen w-full overflow-x-hidden antialiased`} style={{ margin: 0, padding: 0, backgroundColor: 'transparent' }}>
         <TargetCursor 
           spinDuration={2}
           hideDefaultCursor={true}
@@ -43,13 +43,15 @@ export default function RootLayout({
         </div>
 
         {/* Smoke Overlay */}
-        <div className="fixed inset-0 w-full h-full bg-black/30" style={{ zIndex: 0.5 }}></div>
+        <div className="fixed inset-0 w-full h-full bg-black/20 sm:bg-black/25 md:bg-black/30" style={{ zIndex: 0.5 }}></div>
 
         {/* Content Layer */}
         <div className="relative min-h-screen w-full bg-transparent" style={{ zIndex: 1 }}>
           <Header />
-          <main className="relative w-full">
-            {children}
+          <main className="relative w-full max-w-full mx-auto px-0">
+            <div className="w-full">
+              {children}
+            </div>
           </main>
           <Footer />
         </div>

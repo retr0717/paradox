@@ -2,68 +2,34 @@
 
 import { motion } from 'framer-motion';
 import Section from '@/components/ui/section';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const About = () => {
-  const features = [
-    {
-      title: 'Theme',
-      description: 'Exploring the intersection of technology and innovation',
-    },
-    {
-      title: 'Mission',
-      description: 'Fostering creativity and technical excellence in future engineers',
-    },
-    {
-      title: 'Vision',
-      description: 'Creating a platform for students to showcase their technical prowess',
-    },
-  ];
-
   return (
-    <Section id="about" className="bg-muted/50">
-      <div className="max-w-4xl mx-auto text-center mb-16">
-        <motion.h2 
-          className="text-4xl font-bold mb-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          About PARADOX
-        </motion.h2>
-        <motion.p
-          className="text-muted-foreground text-lg"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          PARADOX is the annual technical symposium organized by the Department of Computer Science 
-          and Engineering at College of Engineering Kidangoor. It serves as a platform for students 
-          to explore, learn, and showcase their technical skills through various events and workshops.
-        </motion.p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-        {features.map((feature, index) => (
-          <motion.div
-            key={feature.title}
-            initial={{ opacity: 0, y: 20 }}
+    <Section id="about" className="bg-muted/50 flex items-center justify-center py-16 sm:py-20 md:py-24 lg:min-h-screen">
+      <div className="w-full max-w-7xl mx-auto">
+        {/* Header Section */}
+        <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
+          <motion.h2 
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 md:mb-8 bg-gradient-to-r from-[#61dca3] to-[#61b3dc] bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
+            transition={{ duration: 0.6 }}
           >
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl text-center">{feature.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-center">{feature.description}</p>
-              </CardContent>
-            </Card>
-          </motion.div>
-        ))}
+            About PARADOX
+          </motion.h2>
+          <motion.p
+            className="text-muted-foreground text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed px-4 sm:px-6 md:px-8"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            PARADOX is the annual technical symposium organized by the Department of Computer Science 
+            and Engineering at College of Engineering Kidangoor. It serves as a platform for students 
+            to explore, learn, and showcase their technical skills through various events and workshops.
+          </motion.p>
+        </div>
       </div>
     </Section>
   );

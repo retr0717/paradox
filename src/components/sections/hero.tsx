@@ -31,14 +31,14 @@ const Hero = () => {
               speed={0.08}
               enableShadows={true}
               enableOnHover={true}
-              className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[11rem] font-bold ${spaceGrotesk.className} transition-all duration-300 cursor-target leading-tight sm:leading-tight md:leading-none`}
+              className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[11rem] font-bold ${spaceGrotesk.className} transition-all duration-300 cursor-target leading-tight sm:leading-tight md:leading-none`}
             >
               PARADOX&apos;25
             </GlitchText>
           </motion.div>
 
           <motion.p
-            className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white/70 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto mb-8 sm:mb-10 md:mb-12 leading-relaxed px-2 sm:px-4"
+            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/70 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto mb-8 sm:mb-10 md:mb-12 leading-relaxed px-2 sm:px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
@@ -47,21 +47,21 @@ const Hero = () => {
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 w-full max-w-md sm:max-w-none mx-auto"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6 w-full max-w-sm sm:max-w-none mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
             <Button 
               size="lg" 
-              className="text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-6 bg-white/10 hover:bg-white/20 backdrop-blur-sm w-full sm:w-auto min-w-[160px] sm:min-w-[180px] md:min-w-[200px] transition-all duration-300 hover:scale-105"
+              className="text-xs sm:text-sm md:text-base px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm w-full sm:w-auto min-w-[140px] sm:min-w-[160px] md:min-w-[180px] transition-all duration-300 hover:scale-105"
             >
               Register Now
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-6 border-white/20 hover:bg-white/10 w-full sm:w-auto min-w-[160px] sm:min-w-[180px] md:min-w-[200px] transition-all duration-300 hover:scale-105"
+              className="text-xs sm:text-sm md:text-base px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 border-white/20 hover:bg-white/10 w-full sm:w-auto min-w-[140px] sm:min-w-[160px] md:min-w-[180px] transition-all duration-300 hover:scale-105"
             >
               Learn More
             </Button>

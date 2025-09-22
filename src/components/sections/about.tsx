@@ -5,8 +5,8 @@ import Section from '@/components/ui/section';
 
 const About = () => {
   return (
-    <Section id="about" className="bg-muted/50 flex items-center justify-center py-16 sm:py-20 md:py-24 lg:min-h-screen">
-      <div className="w-full max-w-7xl mx-auto">
+    <Section id="about" className="bg-muted/50 flex items-center justify-center py-16 sm:py-20 md:py-24 lg:min-h-screen" fullWidth={true}>
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
           <motion.h2 

@@ -1,6 +1,44 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Custom Font - Bomber Escort */
+@font-face {
+  font-family: 'BomberEscort';
+  src: url('/bomber_escort/bomberescort.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BomberEscortGrad';
+  src: url('/bomber_escort/bomberescortgrad.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BomberEscortExpand';
+  src: url('/bomber_escort/bomberescortexpand.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Custom font utility classes */
+.font-bomber-escort {
+  font-family: 'BomberEscortGrad', 'BomberEscortExpand', 'BomberEscort', monospace;
+}
+
+.font-bomber-escort-grad {
+  font-family: 'BomberEscortGrad', monospace;
+}
+
+.font-bomber-escort-expand {
+  font-family: 'BomberEscortExpand', monospace;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

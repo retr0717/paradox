@@ -48,10 +48,8 @@ export default function RootLayout({
         {/* Content Layer */}
         <div className="relative min-h-screen w-full bg-transparent" style={{ zIndex: 1 }}>
           <Header />
-          <main className="relative w-full max-w-full mx-auto px-0">
-            <div className="w-full">
-              {children}
-            </div>
+          <main className="relative w-full">
+            {children}
           </main>
           <Footer />
         </div>

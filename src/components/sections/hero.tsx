@@ -1,15 +1,9 @@
 'use client';
 
-import { Space_Grotesk } from 'next/font/google';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowDownIcon } from 'lucide-react';
 import GlitchText from '@/components/ui/glitch-text';
-
-const spaceGrotesk = Space_Grotesk({ 
-  subsets: ['latin'],
-  weight: ['700']
-});
 
 const Hero = () => {
   return (
@@ -31,7 +25,7 @@ const Hero = () => {
               speed={0.08}
               enableShadows={true}
               enableOnHover={true}
-              className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[11rem] font-bold ${spaceGrotesk.className} transition-all duration-300 cursor-target leading-tight sm:leading-tight md:leading-none`}
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[11rem] font-bold font-bomber-escort transition-all duration-300 cursor-target leading-tight sm:leading-tight md:leading-none"
             >
               PARADOX&apos;25
             </GlitchText>

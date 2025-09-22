@@ -8,9 +8,10 @@ interface SectionProps {
   children: ReactNode;
   className?: string;
   noPadding?: boolean;
+  fullWidth?: boolean;
 }
 
-const Section = ({ id, children, className = '', noPadding = false }: SectionProps) => {
+const Section = ({ id, children, className = '', noPadding = false, fullWidth = false }: SectionProps) => {
   return (
     <section
       id={id}
@@ -21,7 +22,7 @@ const Section = ({ id, children, className = '', noPadding = false }: SectionPro
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-100px' }}
         transition={{ duration: 0.5 }}
-        className="container mx-auto px-4"
+        className={fullWidth ? "w-full" : "container mx-auto px-4"}
       >
         {children}
       </motion.div>

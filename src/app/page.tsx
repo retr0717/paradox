@@ -7,11 +7,11 @@ import Schedule from '@/components/sections/schedule';
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Hero />
       <About />
       <Events />
       <Schedule />
-    </>
+    </div>
   );
 }

@@ -1,58 +1,336 @@
 {
   "events": [
     {
+      "id": "hackathon",
       "name": "Hackathon",
       "title": "Coding Challenge",
       "handle": "hackathon",
       "status": "Coming Soon",
       "description": "24-hour coding challenge to build innovative solutions",
       "avatarUrl": "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=800&h=600&auto=format",
-      "contactText": "Register Now"
+      "contactText": "Register Now",
+      "details": {
+        "tagline": "Build the future in 24 hours",
+        "fullDescription": "To all the innovators out there, PARADOX '25 presents the ultimate coding challenge where you can showcase your problem-solving skills and creativity.",
+        "date": "21st September",
+        "time": "09:00 AM - 09:00 AM (24 hours)",
+        "venue": "Tech Hub",
+        "prizePool": "₹5K",
+        "posterUrl": "/events/hackathon-poster.jpg",
+        "registrationUrl": "https://forms.gle/hackathon2025",
+        "contacts": [
+          {
+            "name": "Vaishnav",
+            "phone": "+91 9633433537"
+          },
+          {
+            "name": "Shilpa", 
+            "phone": "+91 8086687084"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "24 hours continuous coding challenge"
+          },
+          {
+            "title": "Team Size",
+            "content": "Teams of 2-4 members are allowed"
+          },
+          {
+            "title": "Tools",
+            "content": "Any programming language, framework, or tools can be used"
+          },
+          {
+            "title": "Theme",
+            "content": "Problem statement will be revealed at the start"
+          },
+          {
+            "title": "Evaluation Criteria",
+            "content": "Innovation, Technical Implementation, UI/UX, and Presentation"
+          },
+          {
+            "title": "Submission",
+            "content": "Code repository and demo video required"
+          }
+        ]
+      }
     },
     {
+      "id": "techtalks",
       "name": "Tech Talks",
       "title": "Expert Sessions",
       "handle": "techtalks",
       "status": "Registration Open",
       "description": "Engaging sessions by industry experts",
       "avatarUrl": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&auto=format",
-      "contactText": "Join Session"
+      "contactText": "Join Session",
+      "details": {
+        "tagline": "Learn from the industry experts",
+        "fullDescription": "Join us for insightful sessions by leading professionals who will share their expertise and guide you through the latest trends in technology.",
+        "date": "21st September",
+        "time": "02:00 PM - 04:00 PM",
+        "venue": "Main Auditorium",
+        "prizePool": "Knowledge & Networking",
+        "posterUrl": "/events/techtalks-poster.jpg",
+        "registrationUrl": "https://forms.gle/techtalks2025",
+        "contacts": [
+          {
+            "name": "Arjun",
+            "phone": "+91 9876543210"
+          },
+          {
+            "name": "Priya",
+            "phone": "+91 8765432109"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "2 hours interactive session"
+          },
+          {
+            "title": "Format",
+            "content": "Keynote presentations followed by Q&A"
+          },
+          {
+            "title": "Topics",
+            "content": "AI, Machine Learning, Cloud Computing, Cybersecurity"
+          },
+          {
+            "title": "Networking",
+            "content": "Opportunity to connect with industry professionals"
+          },
+          {
+            "title": "Materials",
+            "content": "Presentation slides and resources will be shared"
+          }
+        ]
+      }
     },
     {
+      "id": "codecombat",
       "name": "Code Combat",
       "title": "Competitive Programming",
       "handle": "codecombat",
       "status": "Live",
       "description": "Competitive programming challenges",
       "avatarUrl": "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?w=800&h=600&auto=format",
-      "contactText": "Compete Now"
+      "contactText": "Compete Now",
+      "details": {
+        "tagline": "Battle with algorithms and data structures",
+        "fullDescription": "Test your problem-solving skills in this intense competitive programming contest featuring algorithmic challenges of varying difficulty levels.",
+        "date": "22nd September",
+        "time": "10:00 AM - 01:00 PM",
+        "venue": "Computer Lab 1",
+        "prizePool": "₹3K",
+        "posterUrl": "/events/codecombat-poster.jpg",
+        "registrationUrl": "https://forms.gle/codecombat2025",
+        "contacts": [
+          {
+            "name": "Rahul",
+            "phone": "+91 9123456789"
+          },
+          {
+            "name": "Sneha",
+            "phone": "+91 8234567890"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "3 hours competitive contest"
+          },
+          {
+            "title": "Platform",
+            "content": "HackerRank/CodeChef platform will be used"
+          },
+          {
+            "title": "Languages",
+            "content": "C, C++, Java, Python allowed"
+          },
+          {
+            "title": "Problems",
+            "content": "5-7 problems of varying difficulty"
+          },
+          {
+            "title": "Ranking",
+            "content": "Based on problems solved and time taken"
+          },
+          {
+            "title": "Individual",
+            "content": "Solo participation only"
+          }
+        ]
+      }
     },
     {
+      "id": "projectexpo",
       "name": "Project Expo",
       "title": "Innovation Showcase",
       "handle": "projectexpo",
       "status": "Coming Soon",
       "description": "Showcase your innovative projects",
       "avatarUrl": "https://images.unsplash.com/photo-1525422847952-7f91db09a364?w=800&h=600&auto=format",
-      "contactText": "Submit Project"
+      "contactText": "Submit Project",
+      "details": {
+        "tagline": "Showcase your innovative ideas",
+        "fullDescription": "Present your cutting-edge projects and innovative solutions to industry experts and fellow students. This is your platform to shine and get recognized.",
+        "date": "23rd September",
+        "time": "11:00 AM - 04:00 PM",
+        "venue": "Exhibition Hall",
+        "prizePool": "₹4K",
+        "posterUrl": "/events/projectexpo-poster.jpg",
+        "registrationUrl": "https://forms.gle/projectexpo2025",
+        "contacts": [
+          {
+            "name": "Kiran",
+            "phone": "+91 9345678901"
+          },
+          {
+            "name": "Meera",
+            "phone": "+91 8456789012"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Project Categories",
+            "content": "Web Development, Mobile Apps, IoT, AI/ML, Hardware"
+          },
+          {
+            "title": "Team Size",
+            "content": "1-4 members per team"
+          },
+          {
+            "title": "Presentation",
+            "content": "10 minutes presentation + 5 minutes Q&A"
+          },
+          {
+            "title": "Requirements",
+            "content": "Working prototype/demo mandatory"
+          },
+          {
+            "title": "Judging Criteria",
+            "content": "Innovation, Technical Merit, Practicality, Presentation"
+          },
+          {
+            "title": "Setup",
+            "content": "Participants must bring their own laptops/devices"
+          }
+        ]
+      }
     },
     {
+      "id": "designchallenge",
       "name": "Design Challenge",
       "title": "UI/UX Competition",
       "handle": "designchallenge",
       "status": "Registration Open",
       "description": "UI/UX design competition",
       "avatarUrl": "https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=800&h=600&auto=format",
-      "contactText": "Start Design"
+      "contactText": "Start Design",
+      "details": {
+        "tagline": "Design the future interfaces",
+        "fullDescription": "Unleash your creativity in this UI/UX design competition where you'll create stunning user interfaces and experiences for real-world problems.",
+        "date": "22nd September",
+        "time": "02:00 PM - 06:00 PM",
+        "venue": "Design Studio",
+        "prizePool": "₹2.5K",
+        "posterUrl": "/events/designchallenge-poster.jpg",
+        "registrationUrl": "https://forms.gle/designchallenge2025",
+        "contacts": [
+          {
+            "name": "Aditi",
+            "phone": "+91 9567890123"
+          },
+          {
+            "name": "Rohan",
+            "phone": "+91 8678901234"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "4 hours design challenge"
+          },
+          {
+            "title": "Tools",
+            "content": "Figma, Adobe XD, Sketch, or any design tool"
+          },
+          {
+            "title": "Deliverables",
+            "content": "High-fidelity mockups and prototype"
+          },
+          {
+            "title": "Theme",
+            "content": "Problem statement revealed on the day"
+          },
+          {
+            "title": "Evaluation",
+            "content": "Creativity, Usability, Visual Appeal, User Experience"
+          },
+          {
+            "title": "Team Size",
+            "content": "Individual or teams of 2"
+          }
+        ]
+      }
     },
     {
+      "id": "techquiz",
       "name": "Tech Quiz",
       "title": "Knowledge Test",
       "handle": "techquiz",
       "status": "Coming Soon",
       "description": "Test your technical knowledge",
       "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
-      "contactText": "Take Quiz"
+      "contactText": "Take Quiz",
+      "details": {
+        "tagline": "Test your tech knowledge",
+        "fullDescription": "Challenge yourself with a comprehensive quiz covering various domains of computer science and emerging technologies. Perfect for testing your technical acumen.",
+        "date": "21st September",
+        "time": "04:00 PM - 05:30 PM",
+        "venue": "Seminar Hall",
+        "prizePool": "₹1.5K",
+        "posterUrl": "/events/techquiz-poster.jpg",
+        "registrationUrl": "https://forms.gle/techquiz2025",
+        "contacts": [
+          {
+            "name": "Suraj",
+            "phone": "+91 9789012345"
+          },
+          {
+            "name": "Kavya",
+            "phone": "+91 8890123456"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "90 minutes quiz session"
+          },
+          {
+            "title": "Format",
+            "content": "Multiple choice and short answer questions"
+          },
+          {
+            "title": "Topics",
+            "content": "Programming, Algorithms, OS, Networks, Database, Current Tech"
+          },
+          {
+            "title": "Rounds",
+            "content": "Preliminary + Final rounds"
+          },
+          {
+            "title": "Individual",
+            "content": "Solo participation only"
+          },
+          {
+            "title": "Questions",
+            "content": "50 questions in preliminary, 25 in finals"
+          }
+        ]
+      }
     }
   ]
 }

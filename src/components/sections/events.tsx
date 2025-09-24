@@ -1,12 +1,19 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 import Section from '@/components/ui/section';
 import ProfileCard from '@/components/ui/ProfileCard';
 import eventsData from '@/data/events.json';
 
 const Events = () => {
   const { events } = eventsData;
+  const router = useRouter();
+
+  const handleEventClick = (eventId: string) => {
+    console.log('Event clicked:', eventId);
+    router.push(`/events/${eventId}`);
+  };
 
   return (
     <Section id="events" className="py-16 sm:py-20 md:py-24 lg:py-32" fullWidth={true}>
@@ -47,7 +54,8 @@ const Events = () => {
                 showUserInfo={true}
                 enableTilt={true}
                 enableMobileTilt={false}
-                onContactClick={() => console.log(`Event clicked: ${event.name}`)}
+                onCardClick={() => handleEventClick(event.id)}
+                onContactClick={() => handleEventClick(event.id)}
               />
             </motion.div>
           ))}

@@ -1,12 +1,37 @@
 // Event types
+export interface EventContact {
+  name: string
+  phone: string
+}
+
+export interface EventGuideline {
+  title: string
+  content: string
+}
+
+export interface EventDetails {
+  tagline: string
+  fullDescription: string
+  date: string
+  time: string
+  venue: string
+  prizePool: string
+  posterUrl: string
+  registrationUrl: string
+  contacts: EventContact[]
+  guidelines: EventGuideline[]
+}
+
 export interface Event {
-  name: string;
-  title: string;
-  handle: string;
-  status: string;
-  description: string;
-  avatarUrl: string;
-  contactText: string;
+  id: string
+  name: string
+  title: string
+  handle: string
+  status: string
+  description: string
+  avatarUrl: string
+  contactText: string
+  details: EventDetails
 }
 
 // Schedule types

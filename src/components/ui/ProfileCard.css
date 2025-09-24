@@ -35,6 +35,10 @@
   touch-action: pan-y;
 }
 
+.pc-card-wrapper[role="button"] {
+  cursor: pointer;
+}
+
 .pc-card-wrapper::before {
   content: '';
   position: absolute;
@@ -106,6 +110,10 @@
   border-radius: var(--card-radius);
   transform: translate3d(0, 0, 0.1px);
   pointer-events: none;
+}
+
+.pc-card-wrapper[role="button"] .pc-card {
+  pointer-events: auto;
 }
 
 .pc-inside {
@@ -296,7 +304,7 @@
   border: 1px solid rgba(97, 220, 163, 0.3);
   border-radius: 15px;
   padding: 12px 14px;
-  pointer-events: auto;
+  pointer-events: auto !important;
 }
 
 .pc-user-details {
@@ -354,6 +362,9 @@
   transition: all 0.2s ease;
   backdrop-filter: blur(10px);
   font-family: 'BomberEscortExpand', monospace;
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 10;
 }
 
 .pc-contact-btn:hover {
@@ -489,6 +500,9 @@
   padding: 5px 10px;
   font-size: clamp(9px, 2vw, 10px);
   border-radius: 8px;
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 10;
 }
 
 /* Small tablets and larger phones */
@@ -540,6 +554,9 @@
   .pc-contact-btn {
     padding: 6px 12px;
     font-size: clamp(10px, 2vw, 11px);
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 10;
   }
 }
 
@@ -591,6 +608,9 @@
   .pc-contact-btn {
     padding: 7px 14px;
     font-size: clamp(11px, 2vw, 12px);
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 10;
   }
 }
 
@@ -638,6 +658,9 @@
   .pc-contact-btn {
     padding: 8px 16px;
     font-size: 13px;
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 10;
   }
 }
 
@@ -672,5 +695,8 @@
 
   .pc-contact-btn {
     font-size: 14px;
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 10;
   }
 }

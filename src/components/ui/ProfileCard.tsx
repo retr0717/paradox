@@ -42,6 +42,7 @@ interface ProfileCardProps {
   contactText?: string;
   showUserInfo?: boolean;
   onContactClick?: () => void;
+  onCardClick?: () => void;
 }
 
 const ProfileCardComponent: React.FC<ProfileCardProps> = ({
@@ -62,7 +63,8 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
   status = 'Status',
   contactText = 'Contact',
   showUserInfo = true,
-  onContactClick
+  onContactClick,
+  onCardClick
 }) => {
   const wrapRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLElement>(null);
@@ -265,12 +267,26 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
     [iconUrl, grainUrl, showBehindGradient, behindGradient, innerGradient]
   );
 
-  const handleContactClick = useCallback(() => {
+  const handleContactClick = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     onContactClick?.();
   }, [onContactClick]);
 
+  const handleCardClick = useCallback(() => {
+    onCardClick?.();
+  }, [onCardClick]);
+
   return (
-    <div ref={wrapRef} className={`pc-card-wrapper ${className}`.trim()} style={cardStyle}>
+    <div 
+      ref={wrapRef} 
+      className={`pc-card-wrapper ${className}`.trim()} 
+      style={cardStyle}
+      onClick={handleCardClick}
+      role={onCardClick ? "button" : undefined}
+      tabIndex={onCardClick ? 0 : undefined}
+      onKeyDown={onCardClick ? (e) => e.key === 'Enter' && handleCardClick() : undefined}
+    >
       <section ref={cardRef} className="pc-card">
         <div className="pc-inside">
           <div className="pc-shine" />

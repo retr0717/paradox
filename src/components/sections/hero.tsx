@@ -7,8 +7,8 @@ import GlitchText from '@/components/ui/glitch-text';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-transparent pt-20 sm:pt-24 md:pt-32 px-4 sm:px-6 lg:px-8">
-      <div className="container relative z-10 flex flex-col items-center w-full max-w-7xl mx-auto">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-transparent pt-20 sm:pt-24 md:pt-32 w-full">
+      <div className="relative z-10 flex flex-col items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}

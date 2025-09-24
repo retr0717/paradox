@@ -8,7 +8,9 @@ body {
   margin: 0;
   height: 100vh;
   height: var(--app-height);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  /* margin-left: 0.4rem; */
+  width: 100%;
 }
 
 body {

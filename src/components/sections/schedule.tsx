@@ -50,7 +50,7 @@ const Schedule = () => {
           </p>
         </motion.div>
 
-        <div className="w-full max-w-6xl mx-auto relative">
+        <div className="w-full mx-auto relative">
           {/* Static timeline line with scroll-based gradient focus */}
           <div className="absolute left-4 sm:left-6 md:left-8 lg:left-1/2 lg:-translate-x-1/2 top-0 bottom-0 w-0.5 sm:w-1 rounded-full overflow-hidden">
             {/* Base gradient line - always visible */}

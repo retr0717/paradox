@@ -26,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} text-white min-h-screen w-full overflow-x-hidden antialiased`} style={{ margin: 0, padding: 0, backgroundColor: 'transparent' }}>
+      <body className={`${inter.className} text-white min-h-screen w-full overflow-x-hidden antialiased`} style={{ margin: 0, padding: 0, backgroundColor: 'transparent' , marginLeft: 0.4}}>
         <TargetCursor 
           spinDuration={2}
           hideDefaultCursor={true}

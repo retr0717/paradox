@@ -124,8 +124,9 @@ const Registration = () => {
   };
 
   return (
-    <Section id="register">
-      <motion.div
+    <Section id="register" fullWidth={true}>
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -206,6 +207,7 @@ const Registration = () => {
             </form>
           </DialogContent>
         </Dialog>
+      </div>
       </div>
     </Section>
   );

@@ -36,8 +36,9 @@ const FAQ = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   return (
-    <Section id="faq">
-      <motion.div
+    <Section id="faq" fullWidth={true}>
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -87,6 +88,7 @@ const FAQ = () => {
             </Card>
           </motion.div>
         ))}
+      </div>
       </div>
     </Section>
   );

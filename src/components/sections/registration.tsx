@@ -133,7 +133,7 @@ const Registration = () => {
         transition={{ duration: 0.5 }}
         className="text-center mb-12"
       >
-        <h2 className="text-4xl font-bold mb-4">Register</h2>
+        <h2 className="text-4xl font-bomber-escort font-bold mb-4 bg-gradient-to-r from-[#61dca3] to-[#2b4539] bg-clip-text text-transparent">Register</h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
           Join us at PARADOX 2025 by registering for our events and workshops.
         </p>

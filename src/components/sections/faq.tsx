@@ -45,7 +45,7 @@ const FAQ = () => {
         transition={{ duration: 0.5 }}
         className="text-center mb-12"
       >
-        <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-4xl font-bomber-escort font-bold mb-4 bg-gradient-to-r from-[#61dca3] to-[#2b4539] bg-clip-text text-transparent">Frequently Asked Questions</h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
           Find answers to common questions about PARADOX 2025.
         </p>

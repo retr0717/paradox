@@ -22,7 +22,7 @@ const About = () => {
           
           {/* Main Content */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 bg-gradient-to-r from-[#61dca3] to-[#2b4539] bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bomber-escort font-black mb-8 bg-gradient-to-r from-[#61dca3] to-[#2b4539] bg-clip-text text-transparent">
               About PARADOX '25
             </h2>
             <div className="space-y-6 text-lg md:text-xl leading-relaxed max-w-4xl mx-auto">

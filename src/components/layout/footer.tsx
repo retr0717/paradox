@@ -23,7 +23,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="sm:col-span-2 lg:col-span-1">
             <motion.h3 
-              className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-[#61dca3] to-[#61b3dc] bg-clip-text text-transparent"
+              className="text-xl sm:text-2xl md:text-3xl font-bomber-escort font-bold mb-3 sm:mb-4 bg-gradient-to-r from-[#61dca3] to-[#61b3dc] bg-clip-text text-transparent"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

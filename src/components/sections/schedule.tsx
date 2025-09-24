@@ -161,7 +161,7 @@ const Schedule = () => {
               {/* Time indicator - desktop only */}
               <div className={`hidden lg:block absolute ${
                 index % 2 === 0 ? 'right-1/2 mr-4' : 'left-1/2 ml-4'
-              } bg-gradient-to-r from-[#2b4539] to-[#61dca3] text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bomber-escort-expand font-semibold shadow-lg`}>
+              } bg-gradient-to-r from-[#2b4539] to-[#61dca3] text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wide shadow-lg`}>
                 {item.time}
               </div>
 
@@ -227,13 +227,13 @@ const Schedule = () => {
                     <CardContent className="p-4 sm:p-5 md:p-6 relative z-10">
                       {/* Mobile/Tablet time */}
                       <div className="lg:hidden mb-3">
-                        <span className="bg-gradient-to-r from-[#2b4539] to-[#61dca3] text-white px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full text-xs sm:text-sm font-bomber-escort-expand font-semibold">
+                        <span className="bg-gradient-to-r from-[#2b4539] to-[#61dca3] text-white px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wide">
                           {item.time}
                         </span>
                       </div>
                       
-                      <h3 className="font-bold text-base sm:text-lg md:text-xl mb-2 text-foreground font-bomber-escort-expand">{item.event}</h3>
-                      <p className="text-muted-foreground text-xs sm:text-sm md:text-base mb-2 flex items-center gap-2 font-bomber-escort-expand">
+                      <h3 className="font-bold text-base sm:text-lg md:text-xl mb-2 text-foreground uppercase tracking-wide">{item.event}</h3>
+                      <p className="text-muted-foreground text-xs sm:text-sm md:text-base mb-2 flex items-center gap-2 font-semibold uppercase tracking-wide">
                         <svg className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -241,7 +241,7 @@ const Schedule = () => {
                         {item.venue}
                       </p>
                       {item.description && (
-                        <p className="text-xs sm:text-sm md:text-base text-muted-foreground/80 leading-relaxed font-bomber-escort-expand">{item.description}</p>
+                        <p className="text-xs sm:text-sm md:text-base text-muted-foreground/80 leading-relaxed font-medium">{item.description}</p>
                       )}
                       
                       {/* Progress indicator */}
@@ -255,7 +255,7 @@ const Schedule = () => {
                             className="h-full bg-gradient-to-r from-[#61dca3] to-[#61b3dc] rounded-full"
                           />
                         </div>
-                        <span className="text-xs text-muted-foreground font-bomber-escort-expand">
+                        <span className="text-xs text-muted-foreground font-bold uppercase tracking-wider">
                           {index + 1}/{schedule.length}
                         </span>
                       </div>

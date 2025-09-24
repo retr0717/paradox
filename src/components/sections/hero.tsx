@@ -37,7 +37,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            A Technical Symposium by the Department of Computer Science and Engineering
+            Department of Computer Science and Engineering
           </motion.p>
 
           <motion.div

@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="absolute bottom-0 right-1/3 w-24 h-24 bg-gradient-to-br from-[#61b3dc]/10 to-transparent rounded-full blur-2xl" />
       
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-12 relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 text-center sm:text-left">
           {/* Brand Section */}
           <div className="sm:col-span-2 lg:col-span-1">
             <motion.h3 
@@ -32,13 +32,13 @@ const Footer = () => {
               PARADOX 2025
             </motion.h3>
             <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-              A technical symposium by the Department of Computer Science and Engineering,
+              Department of Computer Science and Engineering,
               College of Engineering Kidangoor
             </p>
           </div>
           
           {/* Quick Links */}
-          <div>
+          <div className="mx-auto">
             <h4 className="font-semibold mb-3 sm:mb-4 text-base sm:text-lg">Quick Links</h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
@@ -65,14 +65,6 @@ const Footer = () => {
                   Schedule
                 </a>
               </li>
-              <li>
-                <a 
-                  href="#contact" 
-                  className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base"
-                >
-                  Contact
-                </a>
-              </li>
             </ul>
           </div>
           
@@ -83,14 +75,6 @@ const Footer = () => {
               <li className="leading-relaxed">College of Engineering Kidangoor</li>
               <li className="leading-relaxed">Kidangoor South P.O</li>
               <li className="leading-relaxed">Kottayam, Kerala - 686583</li>
-              <li className="leading-relaxed">
-                <a 
-                  href="mailto:paradox@cek.ac.in" 
-                  className="hover:text-[#61dca3] transition-colors duration-200"
-                >
-                  paradox@cek.ac.in
-                </a>
-              </li>
             </ul>
           </div>
           
@@ -132,7 +116,7 @@ const Footer = () => {
             © 2025 PARADOX. All rights reserved.
           </p>
           <p className="text-muted-foreground/70 text-xs sm:text-sm mt-2">
-            Designed with ❤️ by the PARADOX Team
+            Designed by the PARADOX Team
           </p>
         </motion.div>
       </div>

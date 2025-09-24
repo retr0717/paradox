@@ -1,9 +1,21 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
+import { useRef, useEffect, useState } from 'react';
 
 const Schedule = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start center", "end center"]
+  });
+
+  const lineProgress = useTransform(scrollYProgress, [0, 1], [0, 100]);
+
   type ScheduleItem = {
     time: string;
     event: string;
@@ -23,8 +35,34 @@ const Schedule = () => {
     { time: '06:00 PM', event: 'Closing Ceremony', venue: 'Main Auditorium', description: 'Celebrating achievements' },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!timelineRef.current) return;
+      
+      const timelineItems = timelineRef.current.querySelectorAll('[data-timeline-item]');
+      const sectionTop = sectionRef.current?.offsetTop || 0;
+      const scrollTop = window.scrollY + window.innerHeight / 2;
+      
+      timelineItems.forEach((item, index) => {
+        const itemTop = (item as HTMLElement).offsetTop + sectionTop;
+        const itemHeight = (item as HTMLElement).offsetHeight;
+        
+        if (scrollTop >= itemTop && scrollTop < itemTop + itemHeight) {
+          setActiveIndex(index);
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <section id="schedule" className="w-full min-h-screen bg-black bg-muted/50 relative overflow-hidden py-16 sm:py-20 md:py-24 lg:py-32">
+    <section 
+      ref={sectionRef}
+      id="schedule" 
+      className="w-full min-h-screen bg-black bg-muted/50 relative overflow-hidden py-16 sm:py-20 md:py-24 lg:py-32"
+    >
       {/* Background gradient overlay */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent via-[#2b4539]/5 to-[#61dca3]/10 pointer-events-none" />
       
@@ -50,27 +88,39 @@ const Schedule = () => {
           </p>
         </motion.div>
 
-        <div className="w-full mx-auto relative">
-          {/* Static timeline line with scroll-based gradient focus */}
-          <div className="absolute left-4 sm:left-6 md:left-8 lg:left-1/2 lg:-translate-x-1/2 top-0 bottom-0 w-0.5 sm:w-1 rounded-full overflow-hidden">
+        <div ref={timelineRef} className="w-full mx-auto relative">
+          {/* Enhanced timeline line with scroll-based gradient focus */}
+          <div className="hidden md:block absolute left-4 sm:left-6 md:left-8 lg:left-1/2 lg:-translate-x-1/2 top-0 bottom-0 w-1 lg:w-1.5 rounded-full overflow-hidden">
             {/* Base gradient line - always visible */}
-            <div className="w-full h-full bg-gradient-to-b from-[#2b4539]/40 via-[#61dca3]/40 to-[#61b3dc]/40 rounded-full" />
+            <div className="w-full h-full bg-gradient-to-b from-[#2b4539]/30 via-[#61dca3]/30 to-[#61b3dc]/30 rounded-full" />
             
-            {/* Focused gradient overlay that moves with scroll */}
+            {/* Progress-based gradient fill */}
+            <motion.div
+              className="absolute top-0 left-0 w-full rounded-full"
+              style={{
+                background: "linear-gradient(to bottom, #61dca3, #2b4539, #61dca3)",
+                filter: "drop-shadow(0 0 8px rgba(97, 220, 163, 0.6)) drop-shadow(0 0 16px rgba(97, 220, 163, 0.4))",
+                height: useTransform(lineProgress, [0, 100], ["0%", "100%"])
+              }}
+            />
+            
+            {/* Active section glow effect */}
             <motion.div
               className="absolute w-full rounded-full"
               style={{
-                background: "linear-gradient(to bottom, transparent 0%, #61dca3 20%, #61b3dc 40%, #2b4539 60%, transparent 100%)",
-                filter: "drop-shadow(0 0 8px rgba(97, 220, 163, 0.4)) drop-shadow(0 0 12px rgba(97, 220, 163, 0.6))",
-                height: "150px"
+                background: "radial-gradient(circle, rgba(97, 220, 163, 0.8) 0%, rgba(43, 69, 57, 0.6) 30%, transparent 70%)",
+                filter: "blur(4px)",
+                height: "120px",
+                top: `${(activeIndex / Math.max(schedule.length - 1, 1)) * 100}%`,
+                transform: "translateY(-50%)"
               }}
               animate={{
-                y: ["0%", "calc(100% - 150px)"]
+                opacity: [0.4, 0.8, 0.4],
+                scale: [0.8, 1.2, 0.8]
               }}
               transition={{
-                duration: 8,
+                duration: 2,
                 repeat: Infinity,
-                repeatType: "reverse",
                 ease: "easeInOut"
               }}
             />
@@ -80,6 +130,7 @@ const Schedule = () => {
             {schedule.map((item, index) => (
               <motion.div
                 key={index}
+                data-timeline-item
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -88,18 +139,40 @@ const Schedule = () => {
                   index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                 } flex-row`}
               >
-              {/* Timeline dot */}
+              {/* Enhanced Timeline dot with active state */}
               <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
-                className={`absolute left-4 sm:left-6 md:left-8 lg:left-1/2 lg:-translate-x-1/2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full border-2 sm:border-3 md:border-4 border-white shadow-lg z-10`}
+                animate={{
+                  scale: activeIndex === index ? [1, 1.3, 1] : 1,
+                  boxShadow: activeIndex === index 
+                    ? [
+                        `0 0 10px ${index < 5 ? '#61dca3' : '#2b4539'}50`,
+                        `0 0 20px ${index < 5 ? '#61dca3' : '#2b4539'}80`,
+                        `0 0 10px ${index < 5 ? '#61dca3' : '#2b4539'}50`
+                      ]
+                    : `0 0 8px ${index < 5 ? '#2b4539' : '#61dca3'}30`
+                }}
+                transition={{
+                  scale: activeIndex === index 
+                    ? { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+                    : { duration: 0.4, delay: index * 0.1 + 0.3 },
+                  boxShadow: activeIndex === index 
+                    ? { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+                    : { duration: 0.3 }
+                }}
+                className={`absolute left-4 sm:left-6 md:left-8 lg:left-1/2 lg:-translate-x-1/2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 rounded-full border-2 sm:border-3 md:border-4 ${
+                  activeIndex === index ? 'border-white/90' : 'border-white/70'
+                } shadow-lg z-10 transition-all duration-300`}
                 style={{
-                  background: `linear-gradient(45deg, 
-                    ${index < 3 ? '#2b4539' : index < 6 ? '#61dca3' : '#61b3dc'}, 
-                    ${index < 3 ? '#61dca3' : index < 6 ? '#61b3dc' : '#2b4539'})`,
-                  boxShadow: `0 0 10px ${index < 3 ? '#2b453950' : index < 6 ? '#61dca350' : '#61b3dc50'}, 0 2px 4px -1px rgba(0, 0, 0, 0.1)`
+                  background: activeIndex === index 
+                    ? `linear-gradient(45deg, 
+                        ${index < 5 ? '#61dca3' : '#2b4539'}, 
+                        ${index < 5 ? '#2b4539' : '#61dca3'})` 
+                    : `linear-gradient(45deg, 
+                        ${index < 5 ? '#2b4539' : '#61dca3'}, 
+                        ${index < 5 ? '#61dca3' : '#2b4539'})`,
                 }}
               />
 
@@ -116,16 +189,33 @@ const Schedule = () => {
               } flex-1 max-w-full sm:max-w-md md:max-w-lg lg:max-w-sm xl:max-w-md`}>
                 <motion.div
                   whileHover={{ scale: 1.02, y: -2 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  animate={{
+                    scale: activeIndex === index ? 1.02 : 1,
+                    y: activeIndex === index ? -2 : 0
+                  }}
+                  transition={{ 
+                    type: "spring", 
+                    stiffness: 300, 
+                    damping: 20,
+                    duration: 0.3
+                  }}
                 >
-                  <Card className="relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                    {/* Card gradient background - lighter version */}
-                    <div 
-                      className="absolute inset-0 opacity-5"
+                  <Card className={`relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 ${
+                    activeIndex === index 
+                      ? 'shadow-xl ring-2 ring-[#61dca3]/30' 
+                      : ''
+                  }`}>
+                    {/* Card gradient background - enhanced for active state */}
+                    <motion.div 
+                      className="absolute inset-0"
+                      animate={{
+                        opacity: activeIndex === index ? 0.1 : 0.05
+                      }}
+                      transition={{ duration: 0.3 }}
                       style={{
                         background: `linear-gradient(135deg, 
-                          ${index < 3 ? '#61dca3' : index < 6 ? '#61b3dc' : '#2b4539'} 0%, 
-                          ${index < 3 ? '#61b3dc' : index < 6 ? '#2b4539' : '#61dca3'} 100%)`
+                          ${index < 5 ? '#61dca3' : '#2b4539'} 0%, 
+                          ${index < 5 ? '#2b4539' : '#61dca3'} 100%)`
                       }}
                     />
                     

@@ -4,35 +4,10 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Section from '@/components/ui/section';
 import { Card, CardContent } from '@/components/ui/card';
-
-const faqs = [
-  {
-    question: 'What is PARADOX 2025?',
-    answer: 'PARADOX 2025 is a national-level technical symposium organized by the Department of Computer Science and Engineering at College of Engineering Kidangoor.',
-  },
-  {
-    question: 'When and where is the event?',
-    answer: 'The event will be held at College of Engineering Kidangoor campus from September 21-23, 2025.',
-  },
-  {
-    question: 'Who can participate?',
-    answer: 'The event is open to all college students pursuing engineering or related technical courses.',
-  },
-  {
-    question: 'How can I register for events?',
-    answer: 'You can register through our online registration portal. Select the events or workshops you wish to participate in and complete the registration form.',
-  },
-  {
-    question: 'Is accommodation provided?',
-    answer: 'Yes, accommodation can be arranged for outstation participants on request. Please mention your requirements during registration.',
-  },
-  {
-    question: 'What are the payment methods?',
-    answer: 'We accept online payments through UPI, net banking, and major credit/debit cards.',
-  },
-];
+import faqData from '@/data/faq.json';
 
 const FAQ = () => {
+  const { faqs } = faqData;
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   return (

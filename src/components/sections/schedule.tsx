@@ -3,6 +3,8 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { useRef, useEffect, useState } from 'react';
+import scheduleData from '@/data/schedule.json';
+import { ScheduleItem } from '@/types/data';
 
 const Schedule = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -16,24 +18,7 @@ const Schedule = () => {
 
   const lineProgress = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
-  type ScheduleItem = {
-    time: string;
-    event: string;
-    venue: string;
-    description?: string;
-  };
-
-  const schedule: ScheduleItem[] = [
-    { time: '09:00 AM', event: 'Opening Ceremony', venue: 'Main Auditorium', description: 'Welcome to PARADOX 2025' },
-    { time: '10:00 AM', event: 'Keynote Speech', venue: 'Main Auditorium', description: 'Future of Technology' },
-    { time: '11:30 AM', event: 'Hackathon Kickoff', venue: 'Tech Hub', description: '24-hour coding challenge begins' },
-    { time: '12:30 PM', event: 'Code Combat', venue: 'Lab 1', description: 'Competitive programming event' },
-    { time: '02:00 PM', event: 'Tech Talk: AI & Future', venue: 'Seminar Hall', description: 'Industry experts discuss AI trends' },
-    { time: '03:30 PM', event: 'Design Challenge', venue: 'Creative Studio', description: 'UI/UX design competition' },
-    { time: '04:30 PM', event: 'Project Presentations', venue: 'Exhibition Hall', description: 'Teams showcase their innovations' },
-    { time: '05:30 PM', event: 'Award Ceremony', venue: 'Main Auditorium', description: 'Recognizing the best projects' },
-    { time: '06:00 PM', event: 'Closing Ceremony', venue: 'Main Auditorium', description: 'Celebrating achievements' },
-  ];
+  const { schedule } = scheduleData;
 
   useEffect(() => {
     const handleScroll = () => {

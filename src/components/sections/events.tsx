@@ -3,64 +3,10 @@
 import { motion } from 'framer-motion';
 import Section from '@/components/ui/section';
 import ProfileCard from '@/components/ui/ProfileCard';
+import eventsData from '@/data/events.json';
 
 const Events = () => {
-  const events = [
-    {
-      name: 'Hackathon',
-      title: 'Coding Challenge',
-      handle: 'hackathon',
-      status: 'Coming Soon',
-      description: '24-hour coding challenge to build innovative solutions',
-      avatarUrl: 'https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=800&h=600&auto=format',
-      contactText: 'Register Now',
-    },
-    {
-      name: 'Tech Talks',
-      title: 'Expert Sessions',
-      handle: 'techtalks',
-      status: 'Registration Open',
-      description: 'Engaging sessions by industry experts',
-      avatarUrl: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&auto=format',
-      contactText: 'Join Session',
-    },
-    {
-      name: 'Code Combat',
-      title: 'Competitive Programming',
-      handle: 'codecombat',
-      status: 'Live',
-      description: 'Competitive programming challenges',
-      avatarUrl: 'https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?w=800&h=600&auto=format',
-      contactText: 'Compete Now',
-    },
-    {
-      name: 'Project Expo',
-      title: 'Innovation Showcase',
-      handle: 'projectexpo',
-      status: 'Coming Soon',
-      description: 'Showcase your innovative projects',
-      avatarUrl: 'https://images.unsplash.com/photo-1525422847952-7f91db09a364?w=800&h=600&auto=format',
-      contactText: 'Submit Project',
-    },
-    {
-      name: 'Design Challenge',
-      title: 'UI/UX Competition',
-      handle: 'designchallenge',
-      status: 'Registration Open',
-      description: 'UI/UX design competition',
-      avatarUrl: 'https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=800&h=600&auto=format',
-      contactText: 'Start Design',
-    },
-    {
-      name: 'Tech Quiz',
-      title: 'Knowledge Test',
-      handle: 'techquiz',
-      status: 'Coming Soon',
-      description: 'Test your technical knowledge',
-      avatarUrl: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format',
-      contactText: 'Take Quiz',
-    },
-  ];
+  const { events } = eventsData;
 
   return (
     <Section id="events" className="py-16 sm:py-20 md:py-24 lg:py-32" fullWidth={true}>

@@ -15,24 +15,12 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 
+import registrationData from '@/data/registration.json';
+
 const Registration = () => {
   const [formType, setFormType] = useState<'event' | 'workshop' | null>(null);
-
-  const events = [
-    'Hackathon',
-    'Code Combat',
-    'Project Expo',
-    'Design Challenge',
-    'Tech Quiz',
-  ];
-
-  const workshops = [
-    'AI/ML Workshop',
-    'Web Development',
-    'Blockchain Basics',
-    'Cloud Computing',
-    'Cybersecurity',
-  ];
+  
+  const { events, workshops } = registrationData.registration;
 
   const renderForm = () => {
     switch (formType) {

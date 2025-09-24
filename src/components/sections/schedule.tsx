@@ -139,7 +139,7 @@ const Schedule = () => {
                   index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                 } flex-row`}
               >
-              {/* Enhanced Timeline dot with active state */}
+              {/* Enhanced Timeline dot with active state - hidden on mobile */}
               <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
@@ -162,7 +162,7 @@ const Schedule = () => {
                     ? { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
                     : { duration: 0.3 }
                 }}
-                className={`absolute left-4 sm:left-6 md:left-8 lg:left-1/2 lg:-translate-x-1/2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 rounded-full border-2 sm:border-3 md:border-4 ${
+                className={`hidden md:block absolute left-4 sm:left-6 md:left-8 lg:left-1/2 lg:-translate-x-1/2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 rounded-full border-2 sm:border-3 md:border-4 ${
                   activeIndex === index ? 'border-white/90' : 'border-white/70'
                 } shadow-lg z-10 transition-all duration-300`}
                 style={{
@@ -183,10 +183,10 @@ const Schedule = () => {
                 {item.time}
               </div>
 
-              {/* Content card */}
-              <div className={`ml-10 sm:ml-12 md:ml-16 lg:ml-0 ${
+              {/* Content card - centered on mobile, positioned on desktop */}
+              <div className={`w-full md:ml-10 lg:ml-0 ${
                 index % 2 === 0 ? 'lg:mr-4 lg:ml-0' : 'lg:ml-4 lg:mr-0'
-              } flex-1 max-w-full sm:max-w-md md:max-w-lg lg:max-w-sm xl:max-w-md`}>
+              } flex-1 max-w-full sm:max-w-md md:max-w-lg lg:max-w-sm xl:max-w-md mx-auto lg:mx-0`}>
                 <motion.div
                   whileHover={{ scale: 1.02, y: -2 }}
                   animate={{
@@ -202,22 +202,45 @@ const Schedule = () => {
                 >
                   <Card className={`relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 ${
                     activeIndex === index 
-                      ? 'shadow-xl ring-2 ring-[#61dca3]/30' 
+                      ? 'shadow-xl ring-2 ring-[#61dca3]/30 md:ring-[#61dca3]/30 ring-[#61dca3]/50' 
                       : ''
                   }`}>
-                    {/* Card gradient background - enhanced for active state */}
+                    {/* Card gradient background - enhanced for active state, more prominent on mobile */}
                     <motion.div 
                       className="absolute inset-0"
                       animate={{
-                        opacity: activeIndex === index ? 0.1 : 0.05
+                        opacity: activeIndex === index ? [0.15, 0.25, 0.15] : [0.05, 0.08, 0.05]
                       }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ 
+                        duration: activeIndex === index ? 2 : 0.3,
+                        repeat: activeIndex === index ? Infinity : 0,
+                        ease: "easeInOut"
+                      }}
                       style={{
                         background: `linear-gradient(135deg, 
                           ${index < 5 ? '#61dca3' : '#2b4539'} 0%, 
                           ${index < 5 ? '#2b4539' : '#61dca3'} 100%)`
                       }}
                     />
+                    
+                    {/* Mobile-specific glow effect for active card */}
+                    {activeIndex === index && (
+                      <motion.div
+                        className="md:hidden absolute inset-0 rounded-lg"
+                        animate={{
+                          boxShadow: [
+                            `inset 0 0 20px ${index < 5 ? 'rgba(97, 220, 163, 0.3)' : 'rgba(43, 69, 57, 0.3)'}`,
+                            `inset 0 0 40px ${index < 5 ? 'rgba(97, 220, 163, 0.5)' : 'rgba(43, 69, 57, 0.5)'}`,
+                            `inset 0 0 20px ${index < 5 ? 'rgba(97, 220, 163, 0.3)' : 'rgba(43, 69, 57, 0.3)'}`
+                          ]
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
+                      />
+                    )}
                     
                     <CardContent className="p-4 sm:p-5 md:p-6 relative z-10">
                       {/* Mobile/Tablet time */}

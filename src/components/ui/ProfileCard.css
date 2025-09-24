@@ -333,12 +333,14 @@
   font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
   line-height: 1;
+  font-family: 'BomberEscortExpand', monospace;
 }
 
 .pc-status {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
   line-height: 1;
+  font-family: 'BomberEscortExpand', monospace;
 }
 
 .pc-contact-btn {
@@ -351,6 +353,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   backdrop-filter: blur(10px);
+  font-family: 'BomberEscortExpand', monospace;
 }
 
 .pc-contact-btn:hover {
@@ -391,6 +394,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+  font-family: 'BomberEscortExpand', monospace;
 }
 
 .pc-details p {
@@ -403,6 +407,7 @@
   width: min-content;
   background-image: linear-gradient(to bottom, #ccc, #3a3a8a);
   background-size: 1em 1.5em;
+  font-family: 'BomberEscortExpand', monospace;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;

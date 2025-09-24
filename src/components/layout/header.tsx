@@ -58,9 +58,13 @@ const Header = () => {
           {/* Logo */}
           <Link 
             href="/" 
-            className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-violet-400 cursor-target no-underline whitespace-nowrap tracking-tight"
+            className="cursor-target no-underline flex items-center"
           >
-            PARADOX 2025
+            <img 
+              src="/pdox.png" 
+              alt="PARADOX 2025" 
+              className="h-6 sm:h-7 md:h-8 lg:h-9 w-auto object-contain transition-all duration-300 hover:scale-105"
+            />
           </Link>
           
           {/* Desktop Navigation - Hidden on mobile */}
@@ -71,7 +75,7 @@ const Header = () => {
                   <NavigationMenuItem key={item.title}>
                     <NavigationMenuLink
                       href={item.href}
-                      className="px-4 py-2 cursor-target text-sm xl:text-base hover:text-white/80 transition-all duration-200 rounded-lg hover:bg-white/5"
+                      className="px-4 py-2 cursor-target text-sm xl:text-base hover:text-white/80 transition-all duration-200 rounded-lg hover:bg-white/5 font-bomber-escort-expand"
                     >
                       {item.title}
                     </NavigationMenuLink>
@@ -122,9 +126,11 @@ const Header = () => {
                 
                 {/* Mobile Header */}
                 <div className="relative z-10 flex items-center justify-between p-6 pb-4 border-b border-white/10 bg-black/5 backdrop-blur-sm">
-                  <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#61dca3] to-[#61b3dc] tracking-tight">
-                    PARADOX 2025
-                  </span>
+                  <img 
+                    src="/pdox.png" 
+                    alt="PARADOX 2025" 
+                    className="h-7 sm:h-8 w-auto object-contain"
+                  />
                   <Button
                     variant="ghost"
                     size="sm"
@@ -145,7 +151,7 @@ const Header = () => {
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: index * 0.1 + 0.2, duration: 0.4 }}
                           onClick={() => handleMobileMenuClick(item.href)}
-                          className="group block w-full text-left px-6 py-4 text-lg font-medium text-white/90 hover:text-white rounded-2xl transition-all duration-300 border border-white/5 hover:border-white/10 relative overflow-hidden backdrop-blur-sm"
+                          className="group block w-full text-left px-6 py-4 text-lg font-medium text-white/90 hover:text-white rounded-2xl transition-all duration-300 border border-white/5 hover:border-white/10 relative overflow-hidden backdrop-blur-sm font-bomber-escort-expand"
                           style={{
                             background: 'linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(97,220,163,0.02) 50%, rgba(97,179,220,0.02) 100%)',
                           }}
@@ -190,7 +196,7 @@ const Header = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6, duration: 0.4 }}
-                    className="text-center text-white/60 text-sm mt-4 px-2"
+                    className="text-center text-white/60 text-sm mt-4 px-2 font-bomber-escort-expand"
                   >
                     Join PARADOX 2025 • CSE Department
                   </motion.p>

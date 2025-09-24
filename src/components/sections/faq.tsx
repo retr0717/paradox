@@ -46,7 +46,7 @@ const FAQ = () => {
         className="text-center mb-12"
       >
         <h2 className="text-4xl font-bomber-escort font-bold mb-4 bg-gradient-to-r from-[#61dca3] to-[#2b4539] bg-clip-text text-transparent">Frequently Asked Questions</h2>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-bomber-escort-expand">
           Find answers to common questions about PARADOX 2025.
         </p>
       </motion.div>
@@ -79,7 +79,7 @@ const FAQ = () => {
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.2 }}
-                    className="mt-4 text-muted-foreground"
+                    className="mt-4 text-muted-foreground font-bomber-escort-expand"
                   >
                     {faq.answer}
                   </motion.p>

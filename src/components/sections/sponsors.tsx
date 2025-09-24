@@ -25,7 +25,7 @@ const Sponsors = () => {
           className="text-center mb-12"
         >
         <h2 className="text-4xl font-bomber-escort font-bold mb-4 bg-gradient-to-r from-[#61dca3] to-[#2b4539] bg-clip-text text-transparent">Our Sponsors</h2>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-bomber-escort-expand">
           We are proud to partner with leading companies in the tech industry.
         </p>
       </motion.div>

@@ -15,8 +15,11 @@ import TargetCursor from '@/components/ui/target-cursor';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'PARADOX 2025 - Tech Symposium',
+  title: 'PARADOX\'25',
   description: 'PARADOX 2025 - A Technical Symposium by Department of Computer Science and Engineering, College of Engineering Kidangoor',
+  icons: {
+    icon: '/pdox.png',
+  },
 };
 
 export default function RootLayout({

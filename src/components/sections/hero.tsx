@@ -32,7 +32,7 @@ const Hero = () => {
           </motion.div>
 
           <motion.p
-            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/70 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto mb-8 sm:mb-10 md:mb-12 leading-relaxed px-2 sm:px-4"
+            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/70 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto mb-8 sm:mb-10 md:mb-12 leading-relaxed px-2 sm:px-4 font-bomber-escort-expand"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
@@ -48,14 +48,14 @@ const Hero = () => {
           >
             <Button 
               size="lg" 
-              className="text-xs sm:text-sm md:text-base px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm w-full sm:w-auto min-w-[140px] sm:min-w-[160px] md:min-w-[180px] transition-all duration-300 hover:scale-105"
+              className="text-xs sm:text-sm md:text-base px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm w-full sm:w-auto min-w-[140px] sm:min-w-[160px] md:min-w-[180px] transition-all duration-300 hover:scale-105 font-bomber-escort-expand"
             >
               Register Now
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="text-xs sm:text-sm md:text-base px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 border-white/20 hover:bg-white/10 w-full sm:w-auto min-w-[140px] sm:min-w-[160px] md:min-w-[180px] transition-all duration-300 hover:scale-105"
+              className="text-xs sm:text-sm md:text-base px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 border-white/20 hover:bg-white/10 w-full sm:w-auto min-w-[140px] sm:min-w-[160px] md:min-w-[180px] transition-all duration-300 hover:scale-105 font-bomber-escort-expand"
             >
               Learn More
             </Button>

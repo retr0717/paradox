@@ -134,7 +134,7 @@ const Registration = () => {
         className="text-center mb-12"
       >
         <h2 className="text-4xl font-bomber-escort font-bold mb-4 bg-gradient-to-r from-[#61dca3] to-[#2b4539] bg-clip-text text-transparent">Register</h2>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-bomber-escort-expand">
           Join us at PARADOX 2025 by registering for our events and workshops.
         </p>
       </motion.div>
@@ -155,8 +155,8 @@ const Registration = () => {
                   <CardTitle className="text-center">Event Registration</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center text-muted-foreground">
-                  <p>Register for our exciting technical events and competitions.</p>
-                  <Button variant="outline" className="mt-4">Register Now</Button>
+                  <p className="font-bomber-escort-expand">Register for our exciting technical events and competitions.</p>
+                  <Button variant="outline" className="mt-4 font-bomber-escort-expand">Register Now</Button>
                 </CardContent>
               </Card>
             </motion.div>
@@ -189,8 +189,8 @@ const Registration = () => {
                   <CardTitle className="text-center">Workshop Registration</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center text-muted-foreground">
-                  <p>Sign up for our hands-on technical workshops.</p>
-                  <Button variant="outline" className="mt-4">Register Now</Button>
+                  <p className="font-bomber-escort-expand">Sign up for our hands-on technical workshops.</p>
+                  <Button variant="outline" className="mt-4 font-bomber-escort-expand">Register Now</Button>
                 </CardContent>
               </Card>
             </motion.div>

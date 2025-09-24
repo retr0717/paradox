@@ -75,7 +75,7 @@ const Events = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bomber-escort font-bold mb-4 sm:mb-6 md:mb-8 bg-gradient-to-r from-[#61dca3] to-[#2b4539] bg-clip-text text-transparent">
             Events
           </h2>
-          <p className="text-muted-foreground text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl lg:max-w-3xl mx-auto px-4 sm:px-6">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl lg:max-w-3xl mx-auto px-4 sm:px-6 font-bomber-escort-expand">
             Explore our exciting lineup of technical events and competitions designed 
             to challenge your skills and creativity.
           </p>

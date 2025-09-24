@@ -31,7 +31,7 @@ const Footer = () => {
             >
               PARADOX 2025
             </motion.h3>
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed font-bomber-escort-expand">
               Department of Computer Science and Engineering,
               College of Engineering Kidangoor
             </p>
@@ -39,12 +39,12 @@ const Footer = () => {
           
           {/* Quick Links */}
           <div className="mx-auto">
-            <h4 className="font-semibold mb-3 sm:mb-4 text-base sm:text-lg">Quick Links</h4>
+            <h4 className="font-semibold mb-3 sm:mb-4 text-base sm:text-lg font-bomber-escort-expand">Quick Links</h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
                 <a 
                   href="#about" 
-                  className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base cursor-target"
+                  className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base cursor-target font-bomber-escort-expand"
                 >
                   About
                 </a>
@@ -52,7 +52,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="#events" 
-                  className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base"
+                  className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base font-bomber-escort-expand"
                 >
                   Events
                 </a>
@@ -60,7 +60,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="#schedule" 
-                  className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base"
+                  className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base font-bomber-escort-expand"
                 >
                   Schedule
                 </a>
@@ -70,8 +70,8 @@ const Footer = () => {
           
           {/* Contact Information */}
           <div>
-            <h4 className="font-semibold mb-3 sm:mb-4 text-base sm:text-lg">Contact</h4>
-            <ul className="space-y-2 sm:space-y-3 text-muted-foreground text-sm sm:text-base">
+            <h4 className="font-semibold mb-3 sm:mb-4 text-base sm:text-lg font-bomber-escort-expand">Contact</h4>
+            <ul className="space-y-2 sm:space-y-3 text-muted-foreground text-sm sm:text-base font-bomber-escort-expand">
               <li className="leading-relaxed">College of Engineering Kidangoor</li>
               <li className="leading-relaxed">Kidangoor South P.O</li>
               <li className="leading-relaxed">Kottayam, Kerala - 686583</li>
@@ -80,23 +80,23 @@ const Footer = () => {
           
           {/* Social Links */}
           <div>
-            <h4 className="font-semibold mb-3 sm:mb-4 text-base sm:text-lg">Follow Us</h4>
+            <h4 className="font-semibold mb-3 sm:mb-4 text-base sm:text-lg font-bomber-escort-expand">Follow Us</h4>
             <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row space-y-2 sm:space-y-0 sm:space-x-4 lg:space-x-0 lg:space-y-2 xl:space-y-0 xl:space-x-4">
               <a 
                 href="#" 
-                className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base"
+                className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base font-bomber-escort-expand"
               >
                 Instagram
               </a>
               <a 
                 href="#" 
-                className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base"
+                className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base font-bomber-escort-expand"
               >
                 LinkedIn
               </a>
               <a 
                 href="#" 
-                className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base"
+                className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base font-bomber-escort-expand"
               >
                 Twitter
               </a>
@@ -112,10 +112,10 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <p className="text-muted-foreground text-sm sm:text-base">
+          <p className="text-muted-foreground text-sm sm:text-base font-bomber-escort-expand">
             © 2025 PARADOX. All rights reserved.
           </p>
-          <p className="text-muted-foreground/70 text-xs sm:text-sm mt-2">
+          <p className="text-muted-foreground/70 text-xs sm:text-sm mt-2 font-bomber-escort-expand">
             Designed by the PARADOX Team
           </p>
         </motion.div>

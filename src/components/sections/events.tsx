@@ -1,22 +1,26 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useRouter } from 'next/navigation';
-import Section from '@/components/ui/section';
-import ProfileCard from '@/components/ui/ProfileCard';
-import eventsData from '@/data/events.json';
+import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+import Section from "@/components/ui/section";
+import ProfileCard from "@/components/ui/ProfileCard";
+import eventsData from "@/data/events.json";
 
 const Events = () => {
   const { events } = eventsData;
   const router = useRouter();
 
   const handleEventClick = (eventId: string) => {
-    console.log('Event clicked:', eventId);
+    console.log("Event clicked:", eventId);
     router.push(`/events/${eventId}`);
   };
 
   return (
-    <Section id="events" className="py-16 sm:py-20 md:py-24 lg:py-32" fullWidth={true}>
+    <Section
+      id="events"
+      className="py-16 sm:py-20 md:py-24 lg:py-32"
+      fullWidth={true}
+    >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -28,9 +32,9 @@ const Events = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bomber-escort font-bold mb-4 sm:mb-6 md:mb-8 bg-gradient-to-r from-[#61dca3] to-[#2b4539] bg-clip-text text-transparent">
             Events
           </h2>
-          <p className="text-muted-foreground text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl lg:max-w-3xl mx-auto px-4 sm:px-6 font-bomber-escort-expand">
-            Explore our exciting lineup of technical events and competitions designed 
-            to challenge your skills and creativity.
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl lg:max-w-3xl mx-auto px-4 sm:px-6 font-monserrat-extrabold font-bold text-white/10">
+            Explore our exciting lineup of technical events and competitions
+            designed to challenge your skills and creativity.
           </p>
         </motion.div>
 

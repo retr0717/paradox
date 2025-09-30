@@ -160,14 +160,31 @@ export function EventDetails({ event }: EventDetailsProps) {
                     </DialogTitle>
                   </DialogHeader>
                   <div className="space-y-4 mt-4">
-                    {event.details.guidelines.map((guideline, index) => (
-                      <div key={index} className="bg-gray-800 p-4 rounded-lg">
-                        <h4 className="text-green-400  mb-2">
-                          {guideline.title}
-                        </h4>
-                        <p className="text-gray-300">{guideline.content}</p>
-                      </div>
-                    ))}
+                    {event.details.guidelines.map((guideline, index) => {
+                      const lines = guideline.content
+                        .split("\n")
+                        .filter((line) => line.trim() !== "");
+                      const showLineNumbers = lines.length > 1;
+                      return (
+                        <div key={index} className="bg-gray-800 p-4 rounded-lg">
+                          <h4 className="text-green-400 mb-2">
+                            {guideline.title}
+                          </h4>
+                          <div className="text-gray-300 space-y-2">
+                            {lines.map((line, idx) => (
+                              <div key={idx} className="flex items-start">
+                                {showLineNumbers && (
+                                  <span className="mr-2 text-green-400 font-bold">
+                                    {idx + 1}.
+                                  </span>
+                                )}
+                                <span>{line}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      );
+                    })}
                   </div>
                 </DialogContent>
               </Dialog>

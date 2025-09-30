@@ -24,7 +24,7 @@
             "phone": "+91 9633433537"
           },
           {
-            "name": "Shilpa", 
+            "name": "Shilpa",
             "phone": "+91 8086687084"
           }
         ],
@@ -307,27 +307,27 @@
         "guidelines": [
           {
             "title": "Duration",
-            "content": "90 minutes quiz session"
+            "content": "2 hours "
           },
           {
-            "title": "Format",
-            "content": "Multiple choice and short answer questions"
+            "title": "Max Count",
+            "content": " 25 teams"
           },
           {
             "title": "Topics",
             "content": "Programming, Algorithms, OS, Networks, Database, Current Tech"
           },
           {
-            "title": "Rounds",
-            "content": "Preliminary + Final rounds"
+            "title": "Guidelines",
+            "content": "Each team consists of two participants.\n The competition is conducted through 2 rounds. \n First round will be MCQ and the second is buzzer round.\nMalpractice or any misconduct will lead to disqualification.\nThe authority has full rights to make any changes to the program."
           },
           {
-            "title": "Individual",
-            "content": "Solo participation only"
+            "title": "Round 1",
+            "content": "Each team would be given a set of question papers containing 25 objective type questions (MCQ).\nThe time limit of 1st round is 30 mins.\nMarks will be given for each correct answer.\nThere will be no negative marking.\n5 questions will be starred.\nIn case of a tie between 2 or more teams, the team that has correctly answered the most number of starred questions will advance into next level.\nThe top 8 scoring teams will qualify for the next round."
           },
           {
-            "title": "Questions",
-            "content": "50 questions in preliminary, 25 in finals"
+            "title": "Round 2 : KNOCKOUT",
+            "content": "The 8 qualifying teams will compete in a knockout format.\nMatches will be held one team against another.\nEach team must compete against and defeat an opponent in a head-to-head match to advance to the next round.\nEach match will consist of a set of buzzer questions.\nThe winners of each stage will proceed to the next stage until the final.\nIn case of a tie, a tie-breaker question will be asked."
           }
         ]
       }

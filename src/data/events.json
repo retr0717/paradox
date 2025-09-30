@@ -276,6 +276,7 @@
         ]
       }
     },
+
     {
       "id": "techquiz",
       "name": "Tech Quiz",
@@ -328,6 +329,375 @@
           {
             "title": "Round 2 : KNOCKOUT",
             "content": "The 8 qualifying teams will compete in a knockout format.\nMatches will be held one team against another.\nEach team must compete against and defeat an opponent in a head-to-head match to advance to the next round.\nEach match will consist of a set of buzzer questions.\nThe winners of each stage will proceed to the next stage until the final.\nIn case of a tie, a tie-breaker question will be asked."
+          }
+        ]
+      }
+    },
+    {
+      "id": "debate",
+      "name": "Debate Competition",
+      "title": "Debate",
+      "handle": "debate",
+      "status": "Coming Soon",
+      "description": "",
+      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "",
+        "date": "7 October 2025",
+        "time": ["9:45am - 11:45am", "Final: 12:15pm ‒ 12:30pm"],
+        "venue": " S7 CSE A , Main Stage",
+        "prizePool": "",
+        "posterUrl": "",
+        "registrationUrl": "",
+        "contacts": [
+          {
+            "name": "",
+            "phone": ""
+          },
+          {
+            "name": "",
+            "phone": ""
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": " 2 Hour 15 minutes"
+          },
+          {
+            "title": "Max Count",
+            "content": "8 teams"
+          },
+          {
+            "title": "Guidelines",
+            "content": "General\n Each team must consist of 3-5 members.\n A maximum of 8 teams will be allowed to participate.\n Proper decorum must be maintained throughout the event.\n Any disruptive behavior will lead to immediate disqualification.\n Exceeding the allotted time will result in negative marks.\n The final stage of the competition will be conducted on the main stage.\n Judges or the organizing authority reserve the right to modify the rules.\n"
+          },
+          {
+            "title": "Evaluation Criteria",
+            "content": " Content & Relevance\n Clarity & Presentation\n Teamwork\n Opposition Handling"
+          },
+          {
+            "title": "Judging & Results",
+            "content": "The decision of the judges will be final and binding."
+          }
+        ]
+      }
+    },
+    {
+      "id": "pitchperfect",
+      "name": "Pitch Perfect",
+      "title": "Pitch Perfect",
+      "handle": "",
+      "status": "Coming Soon",
+      "description": "",
+      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "",
+        "date": "7 October 2025",
+        "time": "10:00 AM",
+        "venue": "LH 5 CS",
+        "prizePool": "",
+        "posterUrl": "",
+        "registrationUrl": "",
+        "contacts": [
+          {
+            "name": "",
+            "phone": ""
+          },
+          {
+            "name": "",
+            "phone": ""
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "45 Minutes"
+          },
+          {
+            "title": "Team Size",
+            "content": "Minimum: 2 members, Maximum: 4 members"
+          },
+          {
+            "title": "Requirements",
+            "content": "Each participant must have their own system and internet provision"
+          },
+          {
+            "title": "Guidelines",
+            "content": "Participants will be given a product/theme on the spot.\nThey have to design a brochure using AI tools within the given time.\nThe brochure must be presented before the judges.\nJudges will evaluate based on creativity, clarity, innovation, and presentation skills.\n"
+          },
+          {
+            "title": "Event Modifications",
+            "content": "The coordinators reserve the right to modify or take decisions regarding any aspect of the event."
+          }
+        ]
+      }
+    },
+    {
+      "id": "cchallenge",
+      "name": "C Challenge",
+      "title": " C Challenge",
+      "handle": "cchallenge",
+      "status": "Coming Soon",
+      "description": "",
+      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "",
+        "date": "",
+        "time": "",
+        "venue": "",
+        "prizePool": "",
+        "posterUrl": "",
+        "registrationUrl": "",
+        "contacts": [
+          {
+            "name": "",
+            "phone": ""
+          },
+          {
+            "name": "",
+            "phone": ""
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "The problem must be solved within 30 minutes maximum."
+          },
+          {
+            "title": "Guidelines",
+            "content": "Internet usage, mobile phones, or any external references are strictly prohibited. If found, the participant will be disqualified immediately.\nOnly individual participation is allowed.\nA system will be provided for each participant."
+          },
+          {
+            "title": "Round 1 : Reverse Coding",
+            "content": "Participants must write a C program that produces an output almost identical to the given one.\nMinor variations (like an extra space or newline) may be tolerated, but the meaning and structure must match.\nHardcoding the full output directly (just writing one printf(\"…\")) is not allowed, unless the problem specifically permits it.\nThe problem must be solved within 30 minutes maximum."
+          },
+          {
+            "title": "Evaluation Criteria",
+            "content": "Output: Must be almost the same as the given output.\nLogic: Code should logically derive the result.\nNeatness: Proper indentation and structure.\nTime: Completed within the allotted 30 minutes."
+          },
+          {
+            "title": "Round 2 : Algorithm Race",
+            "content": "Participants must write an algorithm for the given problem statement.\nThe participant must write the solution as an algorithm/pseudocode (not full program code).\nJudges will evaluate based on correctness, efficiency, and clarity.\nThe problem must be solved within 30 minutes maximum."
+          },
+          {
+            "title": "Evaluation Criteria",
+            "content": "Correctness: Algorithm must provide the correct solution for the given problem.\nEfficiency: Preference will be given to algorithms with minimum time complexity.\nClarity: Steps should be clearly written, logically ordered, and unambiguous.\nTime: Completed within the allotted 30 minutes."
+          }
+        ]
+      }
+    },
+    {
+      "id": "singleprompt",
+      "name": "Single Prompt",
+      "title": "",
+      "handle": "",
+      "status": "Coming Soon",
+      "description": "",
+      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "",
+        "date": "",
+        "time": "",
+        "venue": "",
+        "prizePool": "",
+        "posterUrl": "",
+        "registrationUrl": "",
+        "contacts": [
+          {
+            "name": "",
+            "phone": ""
+          },
+          {
+            "name": "",
+            "phone": ""
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "1.5 Hr"
+          },
+          {
+            "title": "Participants",
+            "content": "Maximum of 20 participants can compete(first-come, first-servedbasis)."
+          },
+          {
+            "title": "Task",
+            "content": "Participants must solve each task using only one prompt. No retries,edits, or multiple submissions."
+          },
+          {
+            "title": "Tools",
+            "content": "Use only the designated/approved software. External assistance such asAI-based auto-completion, plugins, or third-party tools is strictly prohibited."
+          },
+          {
+            "title": "Evaluation Criteria",
+            "content": "Effectiveness: How well does the prompt elicit the intended response?\nCreativity: How unique and innovative is the prompt?\nClarity: The prompt should be concise and easy to understand.\n"
+          },
+          {
+            "title": "Scoring",
+            "content": "Based on prompt performance, creativity, and adherence to the task."
+          },
+          {
+            "title": "Rounds: The competition will be conducted in two rounds:",
+            "content": "Round 1: 15 mins\nRound 2: 20 mins\nScores from both rounds will be combined to determine the winner."
+          },
+          {
+            "title": "Note:",
+            "content": "Each participant will be assigned a computer for the competition."
+          }
+        ]
+      }
+    },
+    {
+      "id": "coderely",
+      "name": "CODERELY",
+      "title": "",
+      "handle": "coderely",
+      "status": "Coming Soon",
+      "description": "",
+      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "",
+        "date": "7/10/25",
+        "time": "10:00AM - 12:00PM",
+        "venue": "MM LAB",
+        "prizePool": "",
+        "posterUrl": "",
+        "registrationUrl": "",
+        "contacts": [
+          {
+            "name": "",
+            "phone": ""
+          },
+          {
+            "name": "",
+            "phone": ""
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "2hrs"
+          },
+          {
+            "title": "Max Count",
+            "content": "25"
+          },
+          {
+            "title": "Guidelines",
+            "content": "Participants must be present at the venue 10 minutes before the event starts.\nInternet Usage, mobile phones or any external references are strictly prohibited. If found, participants will be disqualified immediately.\nA Team must contain 4 members.\nTotal 30min for completing the program.\nThe Rules of Engagement:\nThe first team member begins their turn, and the 5-minute timer starts.\nOnly the person whose turn it is may touch the keyboard and mouse to write, debug, or refactor code.\nWhen the 5-minute timer rings, the Coder must immediately step away from the setup. They cannot finish the line of code they are on—they must stop instantly.\nThe next team member immediately takes the seat. The clock continues to run down the total time.\nTeam members who are not currently coding are absolutely allowed (and encouraged) to talk, plan, and strategize with the Coder."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ideapitch",
+      "name": "Idea Pitching",
+      "title": "",
+      "handle": "",
+      "status": "Coming Soon",
+      "description": "",
+      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "",
+        "date": "",
+        "time": "",
+        "venue": "",
+        "prizePool": "",
+        "posterUrl": "",
+        "registrationUrl": "",
+        "contacts": [
+          {
+            "name": "",
+            "phone": ""
+          },
+          {
+            "name": "",
+            "phone": ""
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": ""
+          },
+          {
+            "title": "Max Count",
+            "content": "20 (from 20, 6 teams will be shortlisted)"
+          },
+          {
+            "title": "Participation Mode",
+            "content": ": Individual / Team (max 3 members)"
+          },
+          {
+            "title": "Guidelines",
+            "content": "Originality is mandatory: plagiarism or copying existing solutions will lead to disqualification.\nJudges’ decision is final and binding.\n"
+          },
+          {
+            "title": "Phase 1: Idea Development (Before the Event)",
+            "content": "The topic/theme will be announced to participants in advance.\nEach participant/team must submit an abstract based on the given topic.\nThe abstract should be 1–2 pages and include:\nProblem Statement – what issue are you addressing?\nProposed Idea – your solution in brief.\n"
+          },
+          {
+            "title": "Phase 2: Idea Pitching",
+            "content": "Each participant/team will get:\n  5–7 minutes for presentation.\n  5 minutes Q&A from judges.\nPresentations should cover:\n  Problem Statement (what issue are you solving?)\n Proposed Idea (your solution)\n   Innovation (how is it new compared to existing solutions?)\n   Feasibility (can it be implemented realistically?)\n   Sustainability Impact (environmental, social, or economic benefits)\n   Scalability (future potential, long-term impact)\n"
+          }
+        ]
+      }
+    },
+    {
+      "id": "speedtyping",
+      "name": "SPEED TYPING",
+      "title": "",
+      "handle": "",
+      "status": "Coming Soon",
+      "description": "",
+      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "",
+        "date": "7/10/25 ",
+        "time": "9:45am - 10:45pm ",
+        "venue": " IP Lab ",
+        "prizePool": "",
+        "posterUrl": "",
+        "registrationUrl": "",
+        "contacts": [
+          {
+            "name": "",
+            "phone": ""
+          },
+          {
+            "name": "",
+            "phone": ""
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "1 Hour "
+          },
+          {
+            "title": "Max Count",
+            "content": " 20 "
+          },
+
+          {
+            "title": "Guidelines",
+            "content": "Participants must be present at the venue 10 minutes before the event starts.\nOnly individual participation is allowed.\nAll participants must bring their college ID card.\nEach participant will be assigned a computer/laptop with necessary tools for the competition.\nUse of external tools (autocorrect, spell-checker, grammar checkers, etc.) is strictly prohibited.\nAny participant found engaging in malpractice will be disqualified immediately.\nThe competition will consist of 3 rounds (Warm-up, Medium, and Advanced).\nScore will be based on typing speed (WPM) and accuracy.\nResults will be announced after evaluation.\nOrganizers reserve the right to make changes in rules."
           }
         ]
       }

@@ -164,24 +164,16 @@ export function EventDetails({ event }: EventDetailsProps) {
                       const lines = guideline.content
                         .split("\n")
                         .filter((line) => line.trim() !== "");
-                      const showLineNumbers = lines.length > 1;
                       return (
                         <div key={index} className="bg-gray-800 p-4 rounded-lg">
                           <h4 className="text-green-400 mb-2">
                             {guideline.title}
                           </h4>
-                          <div className="text-gray-300 space-y-2">
+                          <ul className="text-gray-300 space-y-2 list-disc list-inside">
                             {lines.map((line, idx) => (
-                              <div key={idx} className="flex items-start">
-                                {showLineNumbers && (
-                                  <span className="mr-2 text-green-400 font-bold">
-                                    {idx + 1}.
-                                  </span>
-                                )}
-                                <span>{line}</span>
-                              </div>
+                              <li key={idx}>{line}</li>
                             ))}
-                          </div>
+                          </ul>
                         </div>
                       );
                     })}

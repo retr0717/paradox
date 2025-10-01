@@ -294,7 +294,7 @@
         "venue": "Seminar Hall",
         "prizePool": "₹1.5K",
         "posterUrl": "/events/techquiz-poster.jpg",
-        "registrationUrl": "https://forms.gle/techquiz2025",
+        "registrationUrl": "https://forms.gle/mnTm6nb8qUnBbt4i7",
         "contacts": [
           {
             "name": "Suraj",
@@ -350,7 +350,7 @@
         "venue": " S7 CSE A , Main Stage",
         "prizePool": "",
         "posterUrl": "",
-        "registrationUrl": "",
+        "registrationUrl": "https://forms.gle/LqZfkkWJTAfWPqFC8",
         "contacts": [
           {
             "name": "",
@@ -402,7 +402,7 @@
         "venue": "LH 5 CS",
         "prizePool": "",
         "posterUrl": "",
-        "registrationUrl": "",
+        "registrationUrl": "https://forms.gle/xzLzuSVhEvKdMbPg8",
         "contacts": [
           {
             "name": "",
@@ -454,7 +454,7 @@
         "venue": "",
         "prizePool": "",
         "posterUrl": "",
-        "registrationUrl": "",
+        "registrationUrl": "https://forms.gle/ijYT18yuKmhwjf6p6",
         "contacts": [
           {
             "name": "",
@@ -510,7 +510,7 @@
         "venue": "",
         "prizePool": "",
         "posterUrl": "",
-        "registrationUrl": "",
+        "registrationUrl": "https://forms.gle/3ckEYuDNra89Y4g57",
         "contacts": [
           {
             "name": "",
@@ -574,7 +574,7 @@
         "venue": "MM LAB",
         "prizePool": "",
         "posterUrl": "",
-        "registrationUrl": "",
+        "registrationUrl": "https://forms.gle/KwJKNTqdgPZv9hJi6",
         "contacts": [
           {
             "name": "",
@@ -618,7 +618,7 @@
         "venue": "",
         "prizePool": "",
         "posterUrl": "",
-        "registrationUrl": "",
+        "registrationUrl": "https://forms.gle/9mgKxtbbmNgk9hee6",
         "contacts": [
           {
             "name": "",
@@ -674,7 +674,7 @@
         "venue": " IP Lab ",
         "prizePool": "",
         "posterUrl": "",
-        "registrationUrl": "",
+        "registrationUrl": "https://forms.gle/dAKyBZhDbjaqhg16A",
         "contacts": [
           {
             "name": "",
@@ -698,6 +698,59 @@
           {
             "title": "Guidelines",
             "content": "Participants must be present at the venue 10 minutes before the event starts.\nOnly individual participation is allowed.\nAll participants must bring their college ID card.\nEach participant will be assigned a computer/laptop with necessary tools for the competition.\nUse of external tools (autocorrect, spell-checker, grammar checkers, etc.) is strictly prohibited.\nAny participant found engaging in malpractice will be disqualified immediately.\nThe competition will consist of 3 rounds (Warm-up, Medium, and Advanced).\nScore will be based on typing speed (WPM) and accuracy.\nResults will be announced after evaluation.\nOrganizers reserve the right to make changes in rules."
+          }
+        ]
+      }
+    },
+    {
+      "id": "valorant",
+      "name": "VALORANT",
+      "title": "",
+      "handle": "",
+      "status": "Coming Soon",
+      "description": "",
+      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "",
+        "date": " 3-10-2025 ,4-10-2025",
+        "time": " 8:00",
+        "venue": " IP Lab ",
+        "prizePool": "2000",
+        "posterUrl": "",
+        "registrationUrl": "",
+        "contacts": [
+          {
+            "name": "",
+            "phone": ""
+          },
+          {
+            "name": "",
+            "phone": ""
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Mode",
+            "content": "Online"
+          },
+          {
+            "title": "Max Count",
+            "content": " 16 "
+          },
+
+          {
+            "title": "Guidelines",
+            "content": "All matches will be played on Valorant (PC) through custom lobbies (private room codes) created by the organizers.\nPlayers must use their own Riot ID and Valorant account. Smurfing or account sharing is strictly prohibited.\nPlayers must have a stable internet connection and ensure their setup (PC, peripherals, software) is working before the match.\nPlayers must join the lobby on time. Teams failing to join within 10 minutes of scheduled time may be disqualified.\nTournament format: Knockout (Single Elimination). Finals may be Best of 3 (BO3).\nMap Veto Process: Both teams will ban and pick maps before each match (as guided by the organizers).\n"
+          },
+          {
+            "title": "Registration",
+            "content": "Free for Computer Science students.\n₹50 registration fee for students from other departments.\nTeam size: 5 registered players only. Substitutes are allowed but must be declared before the event.\nVoice communication must be through the in-game chat or an organizer-approved platform (e.g., Discord).\nUnfair play (cheats, unauthorized software, ghosting via streams, exploiting bugs) will lead to instant disqualification."
+          },
+          {
+            "title": "In case of disconnects:",
+            "content": "If before the round starts, the round may be restarted.\nIf mid-round, the game continues; the disconnected player may rejoin.\nEach team is allowed 1 tactical timeout (1 min) per map.\nPlayers must not use abusive chat/voice. Sportsmanship is expected at all times.\nThe organizers reserve the right to modify the rules if necessary, and their decisions will be final and binding."
           }
         ]
       }

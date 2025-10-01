@@ -1,27 +1,36 @@
-import React, { useEffect, useRef, useCallback, useMemo } from 'react';
-import './ProfileCard.css';
+import React, { useEffect, useRef, useCallback, useMemo } from "react";
+import "./ProfileCard.css";
 
 const DEFAULT_BEHIND_GRADIENT =
-  'radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y),hsla(140,25%,22%,var(--card-opacity)) 4%,hsla(156,65%,65%,calc(var(--card-opacity)*0.6)) 15%,hsla(200,65%,65%,calc(var(--card-opacity)*0.4)) 40%,hsla(140,25%,22%,0) 100%),radial-gradient(ellipse 70% 80% at 30% 40%,#2b4539aa 0%,#61dca350 30%,#61b3dc30 60%,transparent 100%),radial-gradient(ellipse 60% 90% at 70% 60%,#61b3dc40 0%,#61dca330 40%,#2b453920 80%,transparent 100%),linear-gradient(135deg,#2b453915 0%,#61dca320 50%,#61b3dc25 100%)';
+  "radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y),hsla(140,25%,22%,var(--card-opacity)) 4%,hsla(156,65%,65%,calc(var(--card-opacity)*0.6)) 15%,hsla(200,65%,65%,calc(var(--card-opacity)*0.4)) 40%,hsla(140,25%,22%,0) 100%),radial-gradient(ellipse 70% 80% at 30% 40%,#2b4539aa 0%,#61dca350 30%,#61b3dc30 60%,transparent 100%),radial-gradient(ellipse 60% 90% at 70% 60%,#61b3dc40 0%,#61dca330 40%,#2b453920 80%,transparent 100%),linear-gradient(135deg,#2b453915 0%,#61dca320 50%,#61b3dc25 100%)";
 
-const DEFAULT_INNER_GRADIENT = 'linear-gradient(145deg,#2b45394c 0%,#61dca344 50%,#61b3dc44 100%)';
+const DEFAULT_INNER_GRADIENT =
+  "linear-gradient(145deg,#2b45394c 0%,#61dca344 50%,#61b3dc44 100%)";
 
 const ANIMATION_CONFIG = {
   SMOOTH_DURATION: 600,
   INITIAL_DURATION: 1500,
   INITIAL_X_OFFSET: 70,
   INITIAL_Y_OFFSET: 60,
-  DEVICE_BETA_OFFSET: 20
+  DEVICE_BETA_OFFSET: 20,
 };
 
-const clamp = (value: number, min = 0, max = 100) => Math.min(Math.max(value, min), max);
+const clamp = (value: number, min = 0, max = 100) =>
+  Math.min(Math.max(value, min), max);
 
-const round = (value: number, precision = 3) => parseFloat(value.toFixed(precision));
+const round = (value: number, precision = 3) =>
+  parseFloat(value.toFixed(precision));
 
-const adjust = (value: number, fromMin: number, fromMax: number, toMin: number, toMax: number) =>
-  round(toMin + ((toMax - toMin) * (value - fromMin)) / (fromMax - fromMin));
+const adjust = (
+  value: number,
+  fromMin: number,
+  fromMax: number,
+  toMin: number,
+  toMax: number
+) => round(toMin + ((toMax - toMin) * (value - fromMin)) / (fromMax - fromMin));
 
-const easeInOutCubic = (x: number) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+const easeInOutCubic = (x: number) =>
+  x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
 
 interface ProfileCardProps {
   avatarUrl?: string;
@@ -46,25 +55,25 @@ interface ProfileCardProps {
 }
 
 const ProfileCardComponent: React.FC<ProfileCardProps> = ({
-  avatarUrl = 'https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=800&h=600&auto=format',
+  avatarUrl = "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=800&h=600&auto=format",
   iconUrl,
   grainUrl,
   behindGradient,
   innerGradient,
   showBehindGradient = true,
-  className = '',
+  className = "",
   enableTilt = true,
   enableMobileTilt = false,
   mobileTiltSensitivity = 5,
   miniAvatarUrl,
-  name = 'Event Name',
-  title = 'Event Description',
-  handle = 'eventhandle',
-  status = 'Status',
-  contactText = 'Contact',
+  name = "Event Name",
+  title = "Event Description",
+  handle = "eventhandle",
+  status = "Status",
+  contactText = "Contact",
   showUserInfo = true,
   onContactClick,
-  onCardClick
+  onCardClick,
 }) => {
   const wrapRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLElement>(null);
@@ -74,7 +83,12 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
 
     let rafId: number | null = null;
 
-    const updateCardTransform = (offsetX: number, offsetY: number, card: HTMLElement, wrap: HTMLElement) => {
+    const updateCardTransform = (
+      offsetX: number,
+      offsetY: number,
+      card: HTMLElement,
+      wrap: HTMLElement
+    ) => {
       const width = card.clientWidth;
       const height = card.clientHeight;
 
@@ -85,15 +99,19 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
       const centerY = percentY - 50;
 
       const properties = {
-        '--pointer-x': `${percentX}%`,
-        '--pointer-y': `${percentY}%`,
-        '--background-x': `${adjust(percentX, 0, 100, 35, 65)}%`,
-        '--background-y': `${adjust(percentY, 0, 100, 35, 65)}%`,
-        '--pointer-from-center': `${clamp(Math.hypot(percentY - 50, percentX - 50) / 50, 0, 1)}`,
-        '--pointer-from-top': `${percentY / 100}`,
-        '--pointer-from-left': `${percentX / 100}`,
-        '--rotate-x': `${round(-(centerX / 5))}deg`,
-        '--rotate-y': `${round(centerY / 4)}deg`
+        "--pointer-x": `${percentX}%`,
+        "--pointer-y": `${percentY}%`,
+        "--background-x": `${adjust(percentX, 0, 100, 35, 65)}%`,
+        "--background-y": `${adjust(percentY, 0, 100, 35, 65)}%`,
+        "--pointer-from-center": `${clamp(
+          Math.hypot(percentY - 50, percentX - 50) / 50,
+          0,
+          1
+        )}`,
+        "--pointer-from-top": `${percentY / 100}`,
+        "--pointer-from-left": `${percentX / 100}`,
+        "--rotate-x": `${round(-(centerX / 5))}deg`,
+        "--rotate-y": `${round(centerY / 4)}deg`,
       };
 
       Object.entries(properties).forEach(([property, value]) => {
@@ -101,7 +119,13 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
       });
     };
 
-    const createSmoothAnimation = (duration: number, startX: number, startY: number, card: HTMLElement, wrap: HTMLElement) => {
+    const createSmoothAnimation = (
+      duration: number,
+      startX: number,
+      startY: number,
+      card: HTMLElement,
+      wrap: HTMLElement
+    ) => {
       const startTime = performance.now();
       const targetX = wrap.clientWidth / 2;
       const targetY = wrap.clientHeight / 2;
@@ -132,7 +156,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
           cancelAnimationFrame(rafId);
           rafId = null;
         }
-      }
+      },
     };
   }, [enableTilt]);
 
@@ -144,7 +168,12 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
       if (!card || !wrap || !animationHandlers) return;
 
       const rect = card.getBoundingClientRect();
-      animationHandlers.updateCardTransform(event.clientX - rect.left, event.clientY - rect.top, card, wrap);
+      animationHandlers.updateCardTransform(
+        event.clientX - rect.left,
+        event.clientY - rect.top,
+        card,
+        wrap
+      );
     },
     [animationHandlers]
   );
@@ -156,8 +185,8 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
     if (!card || !wrap || !animationHandlers) return;
 
     animationHandlers.cancelAnimation();
-    wrap.classList.add('active');
-    card.classList.add('active');
+    wrap.classList.add("active");
+    card.classList.add("active");
   }, [animationHandlers]);
 
   const handlePointerLeave = useCallback(
@@ -174,8 +203,8 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
         card,
         wrap
       );
-      wrap.classList.remove('active');
-      card.classList.remove('active');
+      wrap.classList.remove("active");
+      card.classList.remove("active");
     },
     [animationHandlers]
   );
@@ -192,7 +221,8 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
 
       animationHandlers.updateCardTransform(
         card.clientHeight / 2 + gamma * mobileTiltSensitivity,
-        card.clientWidth / 2 + (beta - ANIMATION_CONFIG.DEVICE_BETA_OFFSET) * mobileTiltSensitivity,
+        card.clientWidth / 2 +
+          (beta - ANIMATION_CONFIG.DEVICE_BETA_OFFSET) * mobileTiltSensitivity,
         card,
         wrap
       );
@@ -214,37 +244,51 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
     const deviceOrientationHandler = handleDeviceOrientation;
 
     const handleClick = () => {
-      if (!enableMobileTilt || location.protocol !== 'https:') return;
-      if (typeof window !== 'undefined' && typeof (window as any).DeviceMotionEvent !== 'undefined' && typeof (window as any).DeviceMotionEvent.requestPermission === 'function') {
+      if (!enableMobileTilt || location.protocol !== "https:") return;
+      if (
+        typeof window !== "undefined" &&
+        typeof (window as any).DeviceMotionEvent !== "undefined" &&
+        typeof (window as any).DeviceMotionEvent.requestPermission ===
+          "function"
+      ) {
         (window as any).DeviceMotionEvent.requestPermission()
           .then((state: string) => {
-            if (state === 'granted') {
-              window.addEventListener('deviceorientation', deviceOrientationHandler);
+            if (state === "granted") {
+              window.addEventListener(
+                "deviceorientation",
+                deviceOrientationHandler
+              );
             }
           })
           .catch((err: any) => console.error(err));
       } else {
-        window.addEventListener('deviceorientation', deviceOrientationHandler);
+        window.addEventListener("deviceorientation", deviceOrientationHandler);
       }
     };
 
-    card.addEventListener('pointerenter', pointerEnterHandler);
-    card.addEventListener('pointermove', pointerMoveHandler as any);
-    card.addEventListener('pointerleave', pointerLeaveHandler);
-    card.addEventListener('click', handleClick);
+    card.addEventListener("pointerenter", pointerEnterHandler);
+    card.addEventListener("pointermove", pointerMoveHandler as any);
+    card.addEventListener("pointerleave", pointerLeaveHandler);
+    card.addEventListener("click", handleClick);
 
     const initialX = wrap.clientWidth - ANIMATION_CONFIG.INITIAL_X_OFFSET;
     const initialY = ANIMATION_CONFIG.INITIAL_Y_OFFSET;
 
     animationHandlers.updateCardTransform(initialX, initialY, card, wrap);
-    animationHandlers.createSmoothAnimation(ANIMATION_CONFIG.INITIAL_DURATION, initialX, initialY, card, wrap);
+    animationHandlers.createSmoothAnimation(
+      ANIMATION_CONFIG.INITIAL_DURATION,
+      initialX,
+      initialY,
+      card,
+      wrap
+    );
 
     return () => {
-      card.removeEventListener('pointerenter', pointerEnterHandler);
-      card.removeEventListener('pointermove', pointerMoveHandler as any);
-      card.removeEventListener('pointerleave', pointerLeaveHandler);
-      card.removeEventListener('click', handleClick);
-      window.removeEventListener('deviceorientation', deviceOrientationHandler);
+      card.removeEventListener("pointerenter", pointerEnterHandler);
+      card.removeEventListener("pointermove", pointerMoveHandler as any);
+      card.removeEventListener("pointerleave", pointerLeaveHandler);
+      card.removeEventListener("click", handleClick);
+      window.removeEventListener("deviceorientation", deviceOrientationHandler);
       animationHandlers.cancelAnimation();
     };
   }, [
@@ -254,38 +298,44 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
     handlePointerMove,
     handlePointerEnter,
     handlePointerLeave,
-    handleDeviceOrientation
+    handleDeviceOrientation,
   ]);
 
   const cardStyle = useMemo(
-    () => ({
-      '--icon': iconUrl ? `url(${iconUrl})` : 'none',
-      '--grain': grainUrl ? `url(${grainUrl})` : 'none',
-      // '--behind-gradient': showBehindGradient ? (behindGradient ?? DEFAULT_BEHIND_GRADIENT) : 'none',
-      '--inner-gradient': innerGradient ?? DEFAULT_INNER_GRADIENT
-    } as React.CSSProperties),
+    () =>
+      ({
+        "--icon": iconUrl ? `url(${iconUrl})` : "none",
+        "--grain": grainUrl ? `url(${grainUrl})` : "none",
+        // '--behind-gradient': showBehindGradient ? (behindGradient ?? DEFAULT_BEHIND_GRADIENT) : 'none',
+        "--inner-gradient": innerGradient ?? DEFAULT_INNER_GRADIENT,
+      } as React.CSSProperties),
     [iconUrl, grainUrl, showBehindGradient, behindGradient, innerGradient]
   );
 
-  const handleContactClick = useCallback((e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    onContactClick?.();
-  }, [onContactClick]);
+  const handleContactClick = useCallback(
+    (e: React.MouseEvent) => {
+      e.preventDefault();
+      e.stopPropagation();
+      onContactClick?.();
+    },
+    [onContactClick]
+  );
 
   const handleCardClick = useCallback(() => {
     onCardClick?.();
   }, [onCardClick]);
 
   return (
-    <div 
-      ref={wrapRef} 
-      className={`pc-card-wrapper ${className}`.trim()} 
+    <div
+      ref={wrapRef}
+      className={`pc-card-wrapper ${className}`.trim()}
       style={cardStyle}
       onClick={handleCardClick}
       role={onCardClick ? "button" : undefined}
       tabIndex={onCardClick ? 0 : undefined}
-      onKeyDown={onCardClick ? (e) => e.key === 'Enter' && handleCardClick() : undefined}
+      onKeyDown={
+        onCardClick ? (e) => e.key === "Enter" && handleCardClick() : undefined
+      }
     >
       <section ref={cardRef} className="pc-card">
         <div className="pc-inside">
@@ -295,11 +345,11 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
             <img
               className="avatar"
               src={avatarUrl}
-              alt={`${name || 'User'} avatar`}
+              alt={`${name || "User"} avatar`}
               loading="lazy"
               onError={(e: any) => {
                 const target = e.target;
-                target.style.display = 'none';
+                target.style.display = "none";
               }}
             />
             {showUserInfo && (
@@ -308,11 +358,11 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                   <div className="pc-mini-avatar">
                     <img
                       src={miniAvatarUrl || avatarUrl}
-                      alt={`${name || 'User'} mini avatar`}
+                      alt={`${name || "User"} mini avatar`}
                       loading="lazy"
                       onError={(e: any) => {
                         const target = e.target;
-                        target.style.opacity = '0.5';
+                        target.style.opacity = "0.5";
                         target.src = avatarUrl;
                       }}
                     />
@@ -325,9 +375,9 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                 <button
                   className="pc-contact-btn"
                   onClick={handleContactClick}
-                  style={{ pointerEvents: 'auto' }}
+                  style={{ pointerEvents: "auto" }}
                   type="button"
-                  aria-label={`Contact ${name || 'user'}`}
+                  aria-label={`Contact ${name || "user"}`}
                 >
                   {contactText}
                 </button>

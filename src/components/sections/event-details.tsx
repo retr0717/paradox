@@ -60,7 +60,7 @@ export function EventDetails({ event }: EventDetailsProps) {
                     src={event.details.posterUrl}
                     alt={`${event.name} Poster`}
                     fill
-                    className={`object-cover transition-opacity duration-500 ${
+                    className={`object-contain transition-opacity duration-500 ${
                       imageLoaded ? "opacity-100" : "opacity-0"
                     }`}
                     onLoad={() => setImageLoaded(true)}

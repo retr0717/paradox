@@ -41,7 +41,7 @@ const Events = () => {
         <div className="flex flex-col items-center justify-center sm:grid sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 w-full">
           {events.map((event, index) => (
             <motion.div
-              key={event.title}
+              key={event.id || event.title || `event-${index}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

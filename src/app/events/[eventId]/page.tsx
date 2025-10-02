@@ -11,24 +11,26 @@ interface PageProps {
 
 // Generate static params for all events
 export async function generateStaticParams() {
-  return eventsData.events.map((event: Event) => ({
+  return eventsData.events.map((event) => ({
     eventId: event.id,
   }))
 }
 
 export default async function EventPage({ params }: PageProps) {
-  const event = eventsData.events.find((event: Event) => event.id === params.eventId)
+  const { eventId } = await params;
+  const event = eventsData.events.find((event) => event.id === eventId)
 
   if (!event) {
     notFound()
   }
 
-  return <EventDetails event={event} />
+  return <EventDetails event={event as Event} />
 }
 
 // Generate metadata for each event
 export async function generateMetadata({ params }: PageProps) {
-  const event = eventsData.events.find((event: Event) => event.id === params.eventId)
+  const { eventId } = await params;
+  const event = eventsData.events.find((event) => event.id === eventId)
 
   if (!event) {
     return {

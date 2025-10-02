@@ -713,7 +713,7 @@
       "contactText": "",
       "details": {
         "tagline": "",
-        "fullDescription": "🎯 SCOPE IN 🔫 | BREATHE OUT 😮‍💨 | BLACK OUT 💀\nYou know the rules. Now secure the VICTORY.",
+        "fullDescription": "🎯 SCOPE IN 🔫 | BREATHE OUT 😮‍💨 | BLACK OUT 💀\n  You know the rules. Now secure the VICTORY.",
 
         "date": " 3-10-2025 ,4-10-2025",
         "time": " 8:00",
@@ -751,7 +751,7 @@
           },
           {
             "title": "In case of disconnects:",
-            "content": "If before the round starts, the round may be restarted.\nIf mid-round, the game continues; the disconnected player may rejoin.\nEach team is allowed 1 tactical timeout (1 min) per map.\nPlayers must not use abusive chat/voice. Sportsmanship is expected at all times.\nThe organizers reserve the right to modify the rules if necessary, and their decisions will be final and binding."
+            "content": "If before the round starts → the round may be restarted.\nIf mid-round → the game continues; the disconnected player may rejoin.\nEach team is allowed 1 tactical timeout (1 min) per map.\nPlayers must not use abusive chat/voice. Sportsmanship is expected at all times.\nThe organizers reserve the right to modify the rules if necessary, and their decisions will be final and binding."
           }
         ]
       }

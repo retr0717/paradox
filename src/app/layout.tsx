@@ -15,8 +15,11 @@ import TargetCursor from '@/components/ui/target-cursor';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'PARADOX 2025 - Tech Symposium',
+  title: 'PARADOX\'25',
   description: 'PARADOX 2025 - A Technical Symposium by Department of Computer Science and Engineering, College of Engineering Kidangoor',
+  icons: {
+    icon: '/pdox.png',
+  },
 };
 
 export default function RootLayout({
@@ -25,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} text-white min-h-screen w-full overflow-x-hidden`} style={{ margin: 0, padding: 0, backgroundColor: 'transparent' }}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} text-white min-h-screen w-full overflow-x-hidden antialiased`} style={{ margin: 0, padding: 0, backgroundColor: 'transparent' , marginLeft: 0.4}}>
         <TargetCursor 
           spinDuration={2}
           hideDefaultCursor={true}
@@ -43,7 +46,7 @@ export default function RootLayout({
         </div>
 
         {/* Smoke Overlay */}
-        <div className="fixed inset-0 w-full h-full bg-black/30" style={{ zIndex: 0.5 }}></div>
+        <div className="fixed inset-0 w-full h-full bg-black/20 sm:bg-black/25 md:bg-black/30" style={{ zIndex: 0.5 }}></div>
 
         {/* Content Layer */}
         <div className="relative min-h-screen w-full bg-transparent" style={{ zIndex: 1 }}>

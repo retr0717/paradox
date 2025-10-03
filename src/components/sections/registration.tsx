@@ -15,24 +15,12 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 
+import registrationData from '@/data/registration.json';
+
 const Registration = () => {
   const [formType, setFormType] = useState<'event' | 'workshop' | null>(null);
-
-  const events = [
-    'Hackathon',
-    'Code Combat',
-    'Project Expo',
-    'Design Challenge',
-    'Tech Quiz',
-  ];
-
-  const workshops = [
-    'AI/ML Workshop',
-    'Web Development',
-    'Blockchain Basics',
-    'Cloud Computing',
-    'Cybersecurity',
-  ];
+  
+  const { events, workshops } = registrationData.registration;
 
   const renderForm = () => {
     switch (formType) {
@@ -124,16 +112,17 @@ const Registration = () => {
   };
 
   return (
-    <Section id="register">
-      <motion.div
+    <Section id="register" fullWidth={true}>
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
         className="text-center mb-12"
       >
-        <h2 className="text-4xl font-bold mb-4">Register</h2>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+        <h2 className="text-4xl font-bomber-escort font-bold mb-4 bg-gradient-to-r from-[#61dca3] to-[#2b4539] bg-clip-text text-transparent">Register</h2>
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-bomber-escort-expand">
           Join us at PARADOX 2025 by registering for our events and workshops.
         </p>
       </motion.div>
@@ -154,8 +143,8 @@ const Registration = () => {
                   <CardTitle className="text-center">Event Registration</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center text-muted-foreground">
-                  <p>Register for our exciting technical events and competitions.</p>
-                  <Button variant="outline" className="mt-4">Register Now</Button>
+                  <p className="font-bomber-escort-expand">Register for our exciting technical events and competitions.</p>
+                  <Button variant="outline" className="mt-4 font-bomber-escort-expand">Register Now</Button>
                 </CardContent>
               </Card>
             </motion.div>
@@ -188,8 +177,8 @@ const Registration = () => {
                   <CardTitle className="text-center">Workshop Registration</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center text-muted-foreground">
-                  <p>Sign up for our hands-on technical workshops.</p>
-                  <Button variant="outline" className="mt-4">Register Now</Button>
+                  <p className="font-bomber-escort-expand">Sign up for our hands-on technical workshops.</p>
+                  <Button variant="outline" className="mt-4 font-bomber-escort-expand">Register Now</Button>
                 </CardContent>
               </Card>
             </motion.div>
@@ -206,6 +195,7 @@ const Registration = () => {
             </form>
           </DialogContent>
         </Dialog>
+      </div>
       </div>
     </Section>
   );

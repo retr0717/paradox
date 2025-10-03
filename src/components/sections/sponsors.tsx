@@ -15,16 +15,17 @@ const sponsors = [
 
 const Sponsors = () => {
   return (
-    <Section id="sponsors" className="bg-muted/50">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="text-center mb-12"
-      >
-        <h2 className="text-4xl font-bold mb-4">Our Sponsors</h2>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+    <Section id="sponsors" className="bg-muted/50" fullWidth={true}>
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+        <h2 className="text-4xl font-bomber-escort font-bold mb-4 bg-gradient-to-r from-[#61dca3] to-[#2b4539] bg-clip-text text-transparent">Our Sponsors</h2>
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-bomber-escort-expand">
           We are proud to partner with leading companies in the tech industry.
         </p>
       </motion.div>
@@ -53,6 +54,7 @@ const Sponsors = () => {
             </Card>
           </motion.div>
         ))}
+      </div>
       </div>
     </Section>
   );

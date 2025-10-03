@@ -1,0 +1,760 @@
+{
+  "events": [
+    {
+      "id": "hackathon",
+      "name": "Hackathon",
+      "title": "Coding Challenge",
+      "handle": "hackathon",
+      "status": "Coming Soon",
+      "description": "24-hour coding challenge to build innovative solutions",
+      "avatarUrl": "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=800&h=600&auto=format",
+      "contactText": "Register Now",
+      "details": {
+        "tagline": "Build the future in 24 hours",
+        "fullDescription": "To all the innovators out there, PARADOX '25 presents the ultimate coding challenge where you can showcase your problem-solving skills and creativity.",
+        "date": "21st September",
+        "time": "09:00 AM - 09:00 AM (24 hours)",
+        "venue": "Tech Hub",
+        "prizePool": "₹5K",
+        "posterUrl": "/events/hackathon-poster.jpg",
+        "registrationUrl": "https://forms.gle/hackathon2025",
+        "contacts": [
+          {
+            "name": "Vaishnav",
+            "phone": "+91 9633433537"
+          },
+          {
+            "name": "Shilpa",
+            "phone": "+91 8086687084"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "24 hours continuous coding challenge"
+          },
+          {
+            "title": "Team Size",
+            "content": "Teams of 2-4 members are allowed"
+          },
+          {
+            "title": "Tools",
+            "content": "Any programming language, framework, or tools can be used"
+          },
+          {
+            "title": "Theme",
+            "content": "Problem statement will be revealed at the start"
+          },
+          {
+            "title": "Evaluation Criteria",
+            "content": "Innovation, Technical Implementation, UI/UX, and Presentation"
+          },
+          {
+            "title": "Submission",
+            "content": "Code repository and demo video required"
+          }
+        ]
+      }
+    },
+    {
+      "id": "techtalks",
+      "name": "Tech Talks",
+      "title": "Expert Sessions",
+      "handle": "techtalks",
+      "status": "Registration Open",
+      "description": "Engaging sessions by industry experts",
+      "avatarUrl": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&auto=format",
+      "contactText": "Join Session",
+      "details": {
+        "tagline": "Learn from the industry experts",
+        "fullDescription": "Join us for insightful sessions by leading professionals who will share their expertise and guide you through the latest trends in technology.",
+        "date": "21st September",
+        "time": "02:00 PM - 04:00 PM",
+        "venue": "Main Auditorium",
+        "prizePool": "Knowledge & Networking",
+        "posterUrl": "/events/techtalks-poster.jpg",
+        "registrationUrl": "https://forms.gle/techtalks2025",
+        "contacts": [
+          {
+            "name": "Arjun",
+            "phone": "+91 9876543210"
+          },
+          {
+            "name": "Priya",
+            "phone": "+91 8765432109"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "2 hours interactive session"
+          },
+          {
+            "title": "Format",
+            "content": "Keynote presentations followed by Q&A"
+          },
+          {
+            "title": "Topics",
+            "content": "AI, Machine Learning, Cloud Computing, Cybersecurity"
+          },
+          {
+            "title": "Networking",
+            "content": "Opportunity to connect with industry professionals"
+          },
+          {
+            "title": "Materials",
+            "content": "Presentation slides and resources will be shared"
+          }
+        ]
+      }
+    },
+    {
+      "id": "codecombat",
+      "name": "Code Combat",
+      "title": "Competitive Programming",
+      "handle": "codecombat",
+      "status": "Live",
+      "description": "Competitive programming challenges",
+      "avatarUrl": "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?w=800&h=600&auto=format",
+      "contactText": "Compete Now",
+      "details": {
+        "tagline": "Battle with algorithms and data structures",
+        "fullDescription": "Test your problem-solving skills in this intense competitive programming contest featuring algorithmic challenges of varying difficulty levels.",
+        "date": "22nd September",
+        "time": "10:00 AM - 01:00 PM",
+        "venue": "Computer Lab 1",
+        "prizePool": "₹3K",
+        "posterUrl": "/events/codecombat-poster.jpg",
+        "registrationUrl": "https://forms.gle/codecombat2025",
+        "contacts": [
+          {
+            "name": "Rahul",
+            "phone": "+91 9123456789"
+          },
+          {
+            "name": "Sneha",
+            "phone": "+91 8234567890"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "3 hours competitive contest"
+          },
+          {
+            "title": "Platform",
+            "content": "HackerRank/CodeChef platform will be used"
+          },
+          {
+            "title": "Languages",
+            "content": "C, C++, Java, Python allowed"
+          },
+          {
+            "title": "Problems",
+            "content": "5-7 problems of varying difficulty"
+          },
+          {
+            "title": "Ranking",
+            "content": "Based on problems solved and time taken"
+          },
+          {
+            "title": "Individual",
+            "content": "Solo participation only"
+          }
+        ]
+      }
+    },
+    {
+      "id": "projectexpo",
+      "name": "Project Expo",
+      "title": "Innovation Showcase",
+      "handle": "projectexpo",
+      "status": "Coming Soon",
+      "description": "Showcase your innovative projects",
+      "avatarUrl": "https://images.unsplash.com/photo-1525422847952-7f91db09a364?w=800&h=600&auto=format",
+      "contactText": "Submit Project",
+      "details": {
+        "tagline": "Showcase your innovative ideas",
+        "fullDescription": "Present your cutting-edge projects and innovative solutions to industry experts and fellow students. This is your platform to shine and get recognized.",
+        "date": "23rd September",
+        "time": "11:00 AM - 04:00 PM",
+        "venue": "Exhibition Hall",
+        "prizePool": "₹4K",
+        "posterUrl": "/events/projectexpo-poster.jpg",
+        "registrationUrl": "https://forms.gle/projectexpo2025",
+        "contacts": [
+          {
+            "name": "Kiran",
+            "phone": "+91 9345678901"
+          },
+          {
+            "name": "Meera",
+            "phone": "+91 8456789012"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Project Categories",
+            "content": "Web Development, Mobile Apps, IoT, AI/ML, Hardware"
+          },
+          {
+            "title": "Team Size",
+            "content": "1-4 members per team"
+          },
+          {
+            "title": "Presentation",
+            "content": "10 minutes presentation + 5 minutes Q&A"
+          },
+          {
+            "title": "Requirements",
+            "content": "Working prototype/demo mandatory"
+          },
+          {
+            "title": "Judging Criteria",
+            "content": "Innovation, Technical Merit, Practicality, Presentation"
+          },
+          {
+            "title": "Setup",
+            "content": "Participants must bring their own laptops/devices"
+          }
+        ]
+      }
+    },
+    {
+      "id": "designchallenge",
+      "name": "Design Challenge",
+      "title": "UI/UX Competition",
+      "handle": "designchallenge",
+      "status": "Registration Open",
+      "description": "UI/UX design competition",
+      "avatarUrl": "https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=800&h=600&auto=format",
+      "contactText": "Start Design",
+      "details": {
+        "tagline": "Design the future interfaces",
+        "fullDescription": "Unleash your creativity in this UI/UX design competition where you'll create stunning user interfaces and experiences for real-world problems.",
+        "date": "22nd September",
+        "time": "02:00 PM - 06:00 PM",
+        "venue": "Design Studio",
+        "prizePool": "₹2.5K",
+        "posterUrl": "/events/designchallenge-poster.jpg",
+        "registrationUrl": "https://forms.gle/designchallenge2025",
+        "contacts": [
+          {
+            "name": "Aditi",
+            "phone": "+91 9567890123"
+          },
+          {
+            "name": "Rohan",
+            "phone": "+91 8678901234"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "4 hours design challenge"
+          },
+          {
+            "title": "Tools",
+            "content": "Figma, Adobe XD, Sketch, or any design tool"
+          },
+          {
+            "title": "Deliverables",
+            "content": "High-fidelity mockups and prototype"
+          },
+          {
+            "title": "Theme",
+            "content": "Problem statement revealed on the day"
+          },
+          {
+            "title": "Evaluation",
+            "content": "Creativity, Usability, Visual Appeal, User Experience"
+          },
+          {
+            "title": "Team Size",
+            "content": "Individual or teams of 2"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "techquiz",
+      "name": "Tech Quiz",
+      "title": "Knowledge Test",
+      "handle": "techquiz",
+      "status": "Coming Soon",
+      "description": "Test your technical knowledge",
+      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "contactText": "Take Quiz",
+      "details": {
+        "tagline": "Test your tech knowledge",
+        "fullDescription": "Challenge yourself with a comprehensive quiz covering various domains of computer science and emerging technologies. Perfect for testing your technical acumen.",
+        "date": "21st September",
+        "time": "04:00 PM - 05:30 PM",
+        "venue": "Seminar Hall",
+        "prizePool": "₹1.5K",
+        "posterUrl": "/events/techquiz-poster.jpg",
+        "registrationUrl": "https://forms.gle/mnTm6nb8qUnBbt4i7",
+        "contacts": [
+          {
+            "name": "Suraj",
+            "phone": "+91 9789012345"
+          },
+          {
+            "name": "Kavya",
+            "phone": "+91 8890123456"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "2 hours "
+          },
+          {
+            "title": "Max Count",
+            "content": " 25 teams"
+          },
+          {
+            "title": "Topics",
+            "content": "Programming, Algorithms, OS, Networks, Database, Current Tech"
+          },
+          {
+            "title": "Guidelines",
+            "content": "Each team consists of two participants.\n The competition is conducted through 2 rounds. \n First round will be MCQ and the second is buzzer round.\nMalpractice or any misconduct will lead to disqualification.\nThe authority has full rights to make any changes to the program."
+          },
+          {
+            "title": "Round 1",
+            "content": "Each team would be given a set of question papers containing 25 objective type questions (MCQ).\nThe time limit of 1st round is 30 mins.\nMarks will be given for each correct answer.\nThere will be no negative marking.\n5 questions will be starred.\nIn case of a tie between 2 or more teams, the team that has correctly answered the most number of starred questions will advance into next level.\nThe top 8 scoring teams will qualify for the next round."
+          },
+          {
+            "title": "Round 2 : KNOCKOUT",
+            "content": "The 8 qualifying teams will compete in a knockout format.\nMatches will be held one team against another.\nEach team must compete against and defeat an opponent in a head-to-head match to advance to the next round.\nEach match will consist of a set of buzzer questions.\nThe winners of each stage will proceed to the next stage until the final.\nIn case of a tie, a tie-breaker question will be asked."
+          }
+        ]
+      }
+    },
+    {
+      "id": "debate",
+      "name": "Debate Competition",
+      "title": "Debate",
+      "handle": "debate",
+      "status": "Coming Soon",
+      "description": "",
+      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "",
+        "date": "7 October 2025",
+        "time": ["9:45am - 11:45am", "Final: 12:15pm ‒ 12:30pm"],
+        "venue": " S7 CSE A , Main Stage",
+        "prizePool": "",
+        "posterUrl": "",
+        "registrationUrl": "https://forms.gle/LqZfkkWJTAfWPqFC8",
+        "contacts": [
+          {
+            "name": "",
+            "phone": ""
+          },
+          {
+            "name": "",
+            "phone": ""
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": " 2 Hour 15 minutes"
+          },
+          {
+            "title": "Max Count",
+            "content": "8 teams"
+          },
+          {
+            "title": "Guidelines",
+            "content": "General\n Each team must consist of 3-5 members.\n A maximum of 8 teams will be allowed to participate.\n Proper decorum must be maintained throughout the event.\n Any disruptive behavior will lead to immediate disqualification.\n Exceeding the allotted time will result in negative marks.\n The final stage of the competition will be conducted on the main stage.\n Judges or the organizing authority reserve the right to modify the rules.\n"
+          },
+          {
+            "title": "Evaluation Criteria",
+            "content": " Content & Relevance\n Clarity & Presentation\n Teamwork\n Opposition Handling"
+          },
+          {
+            "title": "Judging & Results",
+            "content": "The decision of the judges will be final and binding."
+          }
+        ]
+      }
+    },
+    {
+      "id": "pitchperfect",
+      "name": "Pitch Perfect",
+      "title": "Pitch Perfect",
+      "handle": "",
+      "status": "Coming Soon",
+      "description": "",
+      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "",
+        "date": "7 October 2025",
+        "time": "10:00 AM",
+        "venue": "LH 5 CS",
+        "prizePool": "",
+        "posterUrl": "",
+        "registrationUrl": "https://forms.gle/xzLzuSVhEvKdMbPg8",
+        "contacts": [
+          {
+            "name": "",
+            "phone": ""
+          },
+          {
+            "name": "",
+            "phone": ""
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "45 Minutes"
+          },
+          {
+            "title": "Team Size",
+            "content": "Minimum: 2 members, Maximum: 4 members"
+          },
+          {
+            "title": "Requirements",
+            "content": "Each participant must have their own system and internet provision"
+          },
+          {
+            "title": "Guidelines",
+            "content": "Participants will be given a product/theme on the spot.\nThey have to design a brochure using AI tools within the given time.\nThe brochure must be presented before the judges.\nJudges will evaluate based on creativity, clarity, innovation, and presentation skills.\n"
+          },
+          {
+            "title": "Event Modifications",
+            "content": "The coordinators reserve the right to modify or take decisions regarding any aspect of the event."
+          }
+        ]
+      }
+    },
+    {
+      "id": "cchallenge",
+      "name": "C Challenge",
+      "title": " C Challenge",
+      "handle": "cchallenge",
+      "status": "Coming Soon",
+      "description": "",
+      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "",
+        "date": "",
+        "time": "",
+        "venue": "",
+        "prizePool": "",
+        "posterUrl": "",
+        "registrationUrl": "https://forms.gle/ijYT18yuKmhwjf6p6",
+        "contacts": [
+          {
+            "name": "",
+            "phone": ""
+          },
+          {
+            "name": "",
+            "phone": ""
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "The problem must be solved within 30 minutes maximum."
+          },
+          {
+            "title": "Guidelines",
+            "content": "Internet usage, mobile phones, or any external references are strictly prohibited. If found, the participant will be disqualified immediately.\nOnly individual participation is allowed.\nA system will be provided for each participant."
+          },
+          {
+            "title": "Round 1 : Reverse Coding",
+            "content": "Participants must write a C program that produces an output almost identical to the given one.\nMinor variations (like an extra space or newline) may be tolerated, but the meaning and structure must match.\nHardcoding the full output directly (just writing one printf(\"…\")) is not allowed, unless the problem specifically permits it.\nThe problem must be solved within 30 minutes maximum."
+          },
+          {
+            "title": "Evaluation Criteria",
+            "content": "Output: Must be almost the same as the given output.\nLogic: Code should logically derive the result.\nNeatness: Proper indentation and structure.\nTime: Completed within the allotted 30 minutes."
+          },
+          {
+            "title": "Round 2 : Algorithm Race",
+            "content": "Participants must write an algorithm for the given problem statement.\nThe participant must write the solution as an algorithm/pseudocode (not full program code).\nJudges will evaluate based on correctness, efficiency, and clarity.\nThe problem must be solved within 30 minutes maximum."
+          },
+          {
+            "title": "Evaluation Criteria",
+            "content": "Correctness: Algorithm must provide the correct solution for the given problem.\nEfficiency: Preference will be given to algorithms with minimum time complexity.\nClarity: Steps should be clearly written, logically ordered, and unambiguous.\nTime: Completed within the allotted 30 minutes."
+          }
+        ]
+      }
+    },
+    {
+      "id": "singleprompt",
+      "name": "Single Prompt",
+      "title": "",
+      "handle": "",
+      "status": "Coming Soon",
+      "description": "",
+      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "",
+        "date": "",
+        "time": "",
+        "venue": "",
+        "prizePool": "",
+        "posterUrl": "",
+        "registrationUrl": "https://forms.gle/3ckEYuDNra89Y4g57",
+        "contacts": [
+          {
+            "name": "",
+            "phone": ""
+          },
+          {
+            "name": "",
+            "phone": ""
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "1.5 Hr"
+          },
+          {
+            "title": "Participants",
+            "content": "Maximum of 20 participants can compete(first-come, first-servedbasis)."
+          },
+          {
+            "title": "Task",
+            "content": "Participants must solve each task using only one prompt. No retries,edits, or multiple submissions."
+          },
+          {
+            "title": "Tools",
+            "content": "Use only the designated/approved software. External assistance such asAI-based auto-completion, plugins, or third-party tools is strictly prohibited."
+          },
+          {
+            "title": "Evaluation Criteria",
+            "content": "Effectiveness: How well does the prompt elicit the intended response?\nCreativity: How unique and innovative is the prompt?\nClarity: The prompt should be concise and easy to understand.\n"
+          },
+          {
+            "title": "Scoring",
+            "content": "Based on prompt performance, creativity, and adherence to the task."
+          },
+          {
+            "title": "Rounds: The competition will be conducted in two rounds:",
+            "content": "Round 1: 15 mins\nRound 2: 20 mins\nScores from both rounds will be combined to determine the winner."
+          },
+          {
+            "title": "Note:",
+            "content": "Each participant will be assigned a computer for the competition."
+          }
+        ]
+      }
+    },
+    {
+      "id": "coderely",
+      "name": "CODERELY",
+      "title": "",
+      "handle": "coderely",
+      "status": "Coming Soon",
+      "description": "",
+      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "",
+        "date": "7/10/25",
+        "time": "10:00AM - 12:00PM",
+        "venue": "MM LAB",
+        "prizePool": "",
+        "posterUrl": "",
+        "registrationUrl": "https://forms.gle/KwJKNTqdgPZv9hJi6",
+        "contacts": [
+          {
+            "name": "",
+            "phone": ""
+          },
+          {
+            "name": "",
+            "phone": ""
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "2hrs"
+          },
+          {
+            "title": "Max Count",
+            "content": "25"
+          },
+          {
+            "title": "Guidelines",
+            "content": "Participants must be present at the venue 10 minutes before the event starts.\nInternet Usage, mobile phones or any external references are strictly prohibited. If found, participants will be disqualified immediately.\nA Team must contain 4 members.\nTotal 30min for completing the program.\nThe Rules of Engagement:\nThe first team member begins their turn, and the 5-minute timer starts.\nOnly the person whose turn it is may touch the keyboard and mouse to write, debug, or refactor code.\nWhen the 5-minute timer rings, the Coder must immediately step away from the setup. They cannot finish the line of code they are on—they must stop instantly.\nThe next team member immediately takes the seat. The clock continues to run down the total time.\nTeam members who are not currently coding are absolutely allowed (and encouraged) to talk, plan, and strategize with the Coder."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ideapitch",
+      "name": "Idea Pitching",
+      "title": "",
+      "handle": "",
+      "status": "Coming Soon",
+      "description": "",
+      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "",
+        "date": "",
+        "time": "",
+        "venue": "",
+        "prizePool": "",
+        "posterUrl": "",
+        "registrationUrl": "https://forms.gle/9mgKxtbbmNgk9hee6",
+        "contacts": [
+          {
+            "name": "",
+            "phone": ""
+          },
+          {
+            "name": "",
+            "phone": ""
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": ""
+          },
+          {
+            "title": "Max Count",
+            "content": "20 (from 20, 6 teams will be shortlisted)"
+          },
+          {
+            "title": "Participation Mode",
+            "content": ": Individual / Team (max 3 members)"
+          },
+          {
+            "title": "Guidelines",
+            "content": "Originality is mandatory: plagiarism or copying existing solutions will lead to disqualification.\nJudges’ decision is final and binding.\n"
+          },
+          {
+            "title": "Phase 1: Idea Development (Before the Event)",
+            "content": "The topic/theme will be announced to participants in advance.\nEach participant/team must submit an abstract based on the given topic.\nThe abstract should be 1–2 pages and include:\nProblem Statement – what issue are you addressing?\nProposed Idea – your solution in brief.\n"
+          },
+          {
+            "title": "Phase 2: Idea Pitching",
+            "content": "Each participant/team will get:\n  5–7 minutes for presentation.\n  5 minutes Q&A from judges.\nPresentations should cover:\n  Problem Statement (what issue are you solving?)\n Proposed Idea (your solution)\n   Innovation (how is it new compared to existing solutions?)\n   Feasibility (can it be implemented realistically?)\n   Sustainability Impact (environmental, social, or economic benefits)\n   Scalability (future potential, long-term impact)\n"
+          }
+        ]
+      }
+    },
+    {
+      "id": "speedtyping",
+      "name": "SPEED TYPING",
+      "title": "",
+      "handle": "",
+      "status": "Coming Soon",
+      "description": "",
+      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "",
+        "date": "7/10/25 ",
+        "time": "9:45am - 10:45pm ",
+        "venue": " IP Lab ",
+        "prizePool": "",
+        "posterUrl": "",
+        "registrationUrl": "https://forms.gle/dAKyBZhDbjaqhg16A",
+        "contacts": [
+          {
+            "name": "",
+            "phone": ""
+          },
+          {
+            "name": "",
+            "phone": ""
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "1 Hour "
+          },
+          {
+            "title": "Max Count",
+            "content": " 20 "
+          },
+
+          {
+            "title": "Guidelines",
+            "content": "Participants must be present at the venue 10 minutes before the event starts.\nOnly individual participation is allowed.\nAll participants must bring their college ID card.\nEach participant will be assigned a computer/laptop with necessary tools for the competition.\nUse of external tools (autocorrect, spell-checker, grammar checkers, etc.) is strictly prohibited.\nAny participant found engaging in malpractice will be disqualified immediately.\nThe competition will consist of 3 rounds (Warm-up, Medium, and Advanced).\nScore will be based on typing speed (WPM) and accuracy.\nResults will be announced after evaluation.\nOrganizers reserve the right to make changes in rules."
+          }
+        ]
+      }
+    },
+    {
+      "id": "valorant",
+      "name": "VALORANT",
+      "title": "",
+      "handle": "",
+      "status": "",
+      "description": "",
+      "avatarUrl": "/posters/valorant.jpg",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "🎯 SCOPE IN 🔫 | BREATHE OUT 😮‍💨 | BLACK OUT 💀\n  You know the rules. Now secure the VICTORY.",
+
+        "date": " 3-10-2025 ,4-10-2025",
+        "time": " 8:00",
+        "venue": " IP Lab ",
+        "prizePool": "2000",
+        "posterUrl": "/posters/valorant.jpg",
+        "registrationUrl": "",
+        "contacts": [
+          {
+            "name": "Amal J Nair",
+            "phone": "7907646537"
+          },
+          {
+            "name": "Thomas Jacob",
+            "phone": " 7012932701"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Mode",
+            "content": "Online"
+          },
+          {
+            "title": "Max Count",
+            "content": " 16 "
+          },
+
+          {
+            "title": "Guidelines",
+            "content": "All matches will be played on Valorant (PC) through custom lobbies (private room codes) created by the organizers.\nPlayers must use their own Riot ID and Valorant account. Smurfing or account sharing is strictly prohibited.\nPlayers must have a stable internet connection and ensure their setup (PC, peripherals, software) is working before the match.\nPlayers must join the lobby on time. Teams failing to join within 10 minutes of scheduled time may be disqualified.\nTournament format: Knockout (Single Elimination). Finals may be Best of 3 (BO3).\nMap Veto Process: Both teams will ban and pick maps before each match (as guided by the organizers).\n"
+          },
+          {
+            "title": "Registration",
+            "content": "Free for Computer Science students.\n₹50 registration fee for students from other departments.\nTeam size: 5 registered players only. Substitutes are allowed but must be declared before the event.\nVoice communication must be through the in-game chat or an organizer-approved platform (e.g., Discord).\nUnfair play (cheats, unauthorized software, ghosting via streams, exploiting bugs) will lead to instant disqualification."
+          },
+          {
+            "title": "In case of disconnects:",
+            "content": "If before the round starts → the round may be restarted.\nIf mid-round → the game continues; the disconnected player may rejoin.\nEach team is allowed 1 tactical timeout (1 min) per map.\nPlayers must not use abusive chat/voice. Sportsmanship is expected at all times.\nThe organizers reserve the right to modify the rules if necessary, and their decisions will be final and binding."
+          }
+        ]
+      }
+    }
+  ]
+}

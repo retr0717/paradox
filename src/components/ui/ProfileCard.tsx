@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback, useMemo } from "react";
+import React, { useEffect, useRef, useCallback, useMemo, useState } from "react";
 import "./ProfileCard.css";
 
 // Removed unused DEFAULT_BEHIND_GRADIENT constant
@@ -72,6 +72,8 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
 }) => {
   const wrapRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLElement>(null);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [miniImageLoaded, setMiniImageLoaded] = useState(false);
 
   const animationHandlers = useMemo(() => {
     if (!enableTilt) return null;
@@ -337,30 +339,94 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
           <div className="pc-shine" />
           <div className="pc-glare" />
           <div className="pc-content pc-avatar-content">
-            <img
-              className="avatar"
-              src={avatarUrl}
-              alt={`${name || "User"} avatar`}
-              loading="lazy"
-              onError={(e: any) => {
-                const target = e.target;
-                target.style.display = "none";
-              }}
-            />
+            {/* Main avatar with loader */}
+            <div className="relative w-full h-full">
+              {!imageLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#2b4539]/80 via-gray-900/80 to-black/80 rounded-lg">
+                  {/* Compact loader for profile cards */}
+                  <div className="flex flex-col items-center space-y-3">
+                    {/* Spinning ring - smaller for cards */}
+                    <div className="relative">
+                      <div 
+                        className="w-8 h-8 rounded-full border border-[#61dca3]/30"
+                        style={{
+                          animation: "spin 2s linear infinite"
+                        }}
+                      />
+                      <div 
+                        className="absolute inset-0 w-8 h-8 rounded-full border border-transparent border-t-[#61dca3] border-r-[#61dca3]"
+                        style={{
+                          animation: "spin 1s linear infinite"
+                        }}
+                      />
+                      <div 
+                        className="absolute inset-1 bg-[#61dca3]/20 rounded-full"
+                        style={{
+                          animation: "pulse 1.5s ease-in-out infinite"
+                        }}
+                      />
+                    </div>
+                    {/* Loading dots - smaller */}
+                    <div className="flex space-x-1">
+                      {[0, 1, 2].map((i) => (
+                        <div
+                          key={i}
+                          className="w-1 h-1 bg-[#61dca3] rounded-full"
+                          style={{
+                            animation: `pulse 1s ease-in-out infinite ${i * 0.2}s`
+                          }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+              <img
+                className={`avatar transition-opacity duration-500 ${
+                  imageLoaded ? "opacity-100" : "opacity-0"
+                }`}
+                src={avatarUrl}
+                alt={`${name || "User"} avatar`}
+                loading="lazy"
+                onLoad={() => setImageLoaded(true)}
+                onError={(e: any) => {
+                  const target = e.target;
+                  target.style.display = "none";
+                  setImageLoaded(true);
+                }}
+              />
+            </div>
             {showUserInfo && (
               <div className="pc-user-info">
                 <div className="pc-user-details">
                   <div className="pc-mini-avatar">
-                    <img
-                      src={miniAvatarUrl || avatarUrl}
-                      alt={`${name || "User"} mini avatar`}
-                      loading="lazy"
-                      onError={(e: any) => {
-                        const target = e.target;
-                        target.style.opacity = "0.5";
-                        target.src = avatarUrl;
-                      }}
-                    />
+                    <div className="relative">
+                      {!miniImageLoaded && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-[#2b4539]/60 rounded-full">
+                          <div 
+                            className="w-3 h-3 rounded-full border border-[#61dca3]/50 border-t-[#61dca3]"
+                            style={{
+                              animation: "spin 1s linear infinite"
+                            }}
+                          />
+                        </div>
+                      )}
+                      <img
+                        className={`transition-opacity duration-300 ${
+                          miniImageLoaded ? "opacity-100" : "opacity-0"
+                        }`}
+                        src={miniAvatarUrl || avatarUrl}
+                        alt={`${name || "User"} mini avatar`}
+                        loading="lazy"
+                        onLoad={() => setMiniImageLoaded(true)}
+                        onError={(e: any) => {
+                          const target = e.target;
+                          target.style.opacity = "0.5";
+                          target.src = avatarUrl;
+                          setMiniImageLoaded(true);
+                        }}
+                      />
+                    </div>
                   </div>
                   <div className="pc-user-text">
                     <div className="pc-handle">@{handle}</div>

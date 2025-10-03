@@ -73,10 +73,98 @@ export function EventDetails({ event }: EventDetailsProps) {
                     </div>
                   )}
                   {!imageLoaded && event.details.posterUrl && (
-                    <div className="absolute inset-0 bg-gradient-to-br from-green-900 to-black flex items-center justify-center">
-                      <span className="text-2xl font-bomber-escort-expand text-green-400">
-                        {event.name}
-                      </span>
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#2b4539] via-gray-900 to-black flex items-center justify-center">
+                      {/* Animated loader */}
+                      <div className="flex flex-col items-center justify-center space-y-6">
+                        {/* Spinning ring loader */}
+                        <div className="relative">
+                          {/* Outer ring */}
+                          <motion.div
+                            className="w-16 h-16 rounded-full border-2 border-[#61dca3]/20"
+                            animate={{ rotate: 360 }}
+                            transition={{ 
+                              duration: 2, 
+                              repeat: Infinity, 
+                              ease: "linear" 
+                            }}
+                          />
+                          {/* Inner spinning ring */}
+                          <motion.div
+                            className="absolute inset-0 w-16 h-16 rounded-full border-2 border-transparent border-t-[#61dca3] border-r-[#61dca3]"
+                            animate={{ rotate: 360 }}
+                            transition={{ 
+                              duration: 1, 
+                              repeat: Infinity, 
+                              ease: "linear" 
+                            }}
+                          />
+                          {/* Center pulse */}
+                          <motion.div
+                            className="absolute inset-3 bg-[#61dca3]/30 rounded-full"
+                            animate={{ 
+                              scale: [0.8, 1.2, 0.8],
+                              opacity: [0.3, 0.7, 0.3]
+                            }}
+                            transition={{ 
+                              duration: 1.5, 
+                              repeat: Infinity, 
+                              ease: "easeInOut" 
+                            }}
+                          />
+                        </div>
+                        
+                        {/* Loading text with typewriter effect */}
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ delay: 0.3 }}
+                          className="text-center"
+                        >
+                          <motion.p 
+                            className="text-[#61dca3] font-bomber-escort-expand text-lg mb-2"
+                            animate={{ opacity: [0.5, 1, 0.5] }}
+                            transition={{ 
+                              duration: 1.5, 
+                              repeat: Infinity, 
+                              ease: "easeInOut" 
+                            }}
+                          >
+                            Loading Event
+                          </motion.p>
+                          <motion.div 
+                            className="text-white/70 font-bomber-escort text-sm"
+                            animate={{ opacity: [0.3, 0.8, 0.3] }}
+                            transition={{ 
+                              duration: 2, 
+                              repeat: Infinity, 
+                              ease: "easeInOut",
+                              delay: 0.5 
+                            }}
+                          >
+                            {event.name}
+                          </motion.div>
+                        </motion.div>
+                        
+                        {/* Loading dots */}
+                        <div className="flex space-x-2">
+                          {[0, 1, 2].map((i) => (
+                            <motion.div
+                              key={i}
+                              className="w-2 h-2 bg-[#61dca3] rounded-full"
+                              animate={{ 
+                                scale: [0.8, 1.2, 0.8],
+                                opacity: [0.4, 1, 0.4] 
+                              }}
+                              transition={{ 
+                                duration: 1, 
+                                repeat: Infinity, 
+                                ease: "easeInOut",
+                                delay: i * 0.2 
+                              }}
+                            />
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   )}
                 </div>

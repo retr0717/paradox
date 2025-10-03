@@ -15,9 +15,8 @@ import TargetCursor from '@/components/ui/target-cursor';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://paradox25.vercel.app'),
   title: 'PARADOX\'25',
-  description: 'PARADOX 2025 - A Technical Symposium by Department of Computer Science and Engineering, College of Engineering Kidangoor',
+  description: 'PARADOX 2025 - Department of Computer Science and Engineering, College of Engineering Kidangoor',
   icons: {
     icon: '/pdox.png',
   },

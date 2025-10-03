@@ -687,3 +687,30 @@
     max-width: 360px;
   }
 }
+
+/* Loading animations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Smooth transitions for image loading */
+.avatar,
+.pc-mini-avatar img {
+  transition: opacity 0.5s ease-in-out;
+}

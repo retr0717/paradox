@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, useScroll } from 'framer-motion';
+import { usePathname, useRouter } from 'next/navigation';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -19,6 +20,8 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     return scrollY.onChange((latest) => {
@@ -27,24 +30,49 @@ const Header = () => {
   }, [scrollY]);
 
   const menuItems = [
-    { title: 'About', href: '#about' },
-    { title: 'Events', href: '#events' },
-    { title: 'Schedule', href: '#schedule' },
+    { title: 'About', href: '/#about' },
+    { title: 'Events', href: '/#events' },
+    { title: 'Schedule', href: '/#schedule' },
   ];
 
   const handleMobileMenuClick = (href: string) => {
     setIsMobileMenuOpen(false);
-    // Smooth scroll to section
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    
+    // If we're on the home page, scroll to section
+    if (pathname === '/') {
+      const sectionId = href.replace('/#', '#');
+      const element = document.querySelector(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If we're on another page, navigate to home page with anchor
+      router.push(href);
+    }
+  };
+
+  const handleNavClick = (href: string) => {
+    // If we're on the home page, scroll to section
+    if (pathname === '/') {
+      const sectionId = href.replace('/#', '#');
+      const element = document.querySelector(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If we're on another page, navigate to home page with anchor
+      router.push(href);
     }
   };
 
   const handleRegisterClick = () => {
-    const eventsSection = document.querySelector('#events');
-    if (eventsSection) {
-      eventsSection.scrollIntoView({ behavior: 'smooth' });
+    if (pathname === '/') {
+      const eventsSection = document.querySelector('#events');
+      if (eventsSection) {
+        eventsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      router.push('/#events');
     }
   };
 
@@ -80,12 +108,12 @@ const Header = () => {
               <NavigationMenuList className="gap-1">
                 {menuItems.map((item) => (
                   <NavigationMenuItem key={item.title}>
-                    <NavigationMenuLink
-                      href={item.href}
-                      className="px-4 py-2 cursor-target text-sm xl:text-base hover:text-white/80 transition-all duration-200 rounded-lg hover:bg-white/5 font-bomber-escort-expand"
+                    <button
+                      onClick={() => handleNavClick(item.href)}
+                      className="px-4 py-2 cursor-target text-sm xl:text-base hover:text-white/80 transition-all duration-200 rounded-lg hover:bg-white/5 font-bomber-escort-expand bg-transparent border-none text-white"
                     >
                       {item.title}
-                    </NavigationMenuLink>
+                    </button>
                   </NavigationMenuItem>
                 ))}
               </NavigationMenuList>

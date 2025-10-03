@@ -1,8 +1,27 @@
 "use client";
 
-import { motion } from "framer-motion";
+'use client';
+
+import { motion } from 'framer-motion';
+import { usePathname, useRouter } from 'next/navigation';
 
 const Footer = () => {
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleNavClick = (href: string) => {
+    // If we're on the home page, scroll to section
+    if (pathname === '/') {
+      const sectionId = href.replace('/#', '#');
+      const element = document.querySelector(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If we're on another page, navigate to home page with anchor
+      router.push(href);
+    }
+  };
   return (
     <motion.footer
       className="w-full bg-black/80 backdrop-blur-sm border-t border-white/10 relative overflow-hidden"
@@ -44,28 +63,28 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a
-                  href="#about"
-                  className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base cursor-target font-monserrat-bold font-bold"
+                <button
+                  onClick={() => handleNavClick('/#about')}
+                  className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base cursor-target font-monserrat-bold font-bold bg-transparent border-none text-left p-0"
                 >
                   About
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#events"
-                  className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base font-monserrat-bold font-bold"
+                <button
+                  onClick={() => handleNavClick('/#events')}
+                  className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base font-monserrat-bold font-bold bg-transparent border-none text-left p-0"
                 >
                   Events
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#schedule"
-                  className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base font-monserrat-bold font-bold"
+                <button
+                  onClick={() => handleNavClick('/#schedule')}
+                  className="text-muted-foreground hover:text-[#61dca3] transition-colors duration-200 text-sm sm:text-base font-monserrat-bold font-bold bg-transparent border-none text-left p-0"
                 >
                   Schedule
-                </a>
+                </button>
               </li>
             </ul>
           </div>

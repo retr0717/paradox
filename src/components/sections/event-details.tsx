@@ -139,10 +139,42 @@ export function EventDetails({ event }: EventDetailsProps) {
               </CardContent>
             </Card>
 
+            {/* Contact Information */}
+            <Card className="bg-gray-900 border-green-400/30">
+              <CardHeader>
+                <CardTitle className="text-green-400 text-center font-bomber-escort-expand">
+                  Contact Information
+                </CardTitle>
+                <CardDescription className="text-gray-400 text-center font-bomber-escort-expand">
+                  For any queries regarding {event.name}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {event.details.contacts.map((contact, index) => (
+                    <div
+                      key={index}
+                      className="bg-gray-800 p-4 rounded-lg text-center"
+                    >
+                      <h4 className="text-white font-bomber-escort-expand text-lg mb-2 ">
+                        {contact.name}
+                      </h4>
+                      <a
+                        href={`tel:${contact.phone}`}
+                        className="text-green-400 hover:text-green-300 transition-colors font-extrabold"
+                      >
+                        {contact.phone}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
-                className="bg-green-600 hover:bg-green-700 text-black font-bomber-escort-expand px-8 py-3 text-lg flex-1"
+                className="bg-green-600 hover:bg-green-700 text-black font-bomber-escort-expand px-8 py-3 text-lg flex-1 cursor-target"
                 onClick={() =>
                   window.open(event.details.registrationUrl, "_blank")
                 }
@@ -154,7 +186,7 @@ export function EventDetails({ event }: EventDetailsProps) {
                 <DialogTrigger asChild>
                   <Button
                     variant="outline"
-                    className="border-green-400 text-green-400 hover:bg-green-400 hover:text-black font-bomber-escort-expand px-8 py-3 text-lg flex-1"
+                    className="border-green-400 text-green-400 hover:bg-green-400 hover:text-black font-bomber-escort-expand px-8 py-3 text-lg flex-1 cursor-target"
                   >
                     Guidelines
                   </Button>
@@ -181,44 +213,7 @@ export function EventDetails({ event }: EventDetailsProps) {
           </motion.div>
         </div>
 
-        {/* Contact Information */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="mt-12"
-        >
-          <Card className="bg-gray-900 border-green-400/30">
-            <CardHeader>
-              <CardTitle className="text-green-400 text-center font-bomber-escort-expand">
-                Contact Information
-              </CardTitle>
-              <CardDescription className="text-gray-400 text-center font-bomber-escort-expand">
-                For any queries regarding {event.name}
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {event.details.contacts.map((contact, index) => (
-                  <div
-                    key={index}
-                    className="bg-gray-800 p-4 rounded-lg text-center"
-                  >
-                    <h4 className="text-white font-bomber-escort-expand text-lg mb-2 ">
-                      {contact.name}
-                    </h4>
-                    <a
-                      href={`tel:${contact.phone}`}
-                      className="text-green-400 hover:text-green-300 transition-colors font-extrabold"
-                    >
-                      {contact.phone}
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
+
 
         {/* Back Button */}
         <motion.div
@@ -230,7 +225,7 @@ export function EventDetails({ event }: EventDetailsProps) {
           <Link href="/#events">
             <Button
               variant="ghost"
-              className="text-green-400 hover:text-green-300 hover:bg-gray-800"
+              className="text-green-400 hover:text-green-300 hover:bg-gray-800 cursor-target"
             >
               ← Back to Events
             </Button>

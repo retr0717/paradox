@@ -244,6 +244,26 @@ const Schedule = () => {
                         <p className="text-xs sm:text-sm md:text-base text-muted-foreground/80 leading-relaxed font-medium">{item.description}</p>
                       )}
                       
+                      {/* Additional Events */}
+                      {item.additionalEvents && item.additionalEvents.map((additionalEvent, eventIndex) => (
+                        <div key={eventIndex}>
+                          {/* Black divider line */}
+                          <div className="my-3 sm:my-4 border-t border-muted-foreground/30"></div>
+                          
+                          <h3 className="font-bold text-base sm:text-lg md:text-xl mb-2 text-foreground uppercase tracking-wide">{additionalEvent.event}</h3>
+                          <p className="text-muted-foreground text-xs sm:text-sm md:text-base mb-2 flex items-center gap-2 font-semibold uppercase tracking-wide">
+                            <svg className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            {additionalEvent.venue}
+                          </p>
+                          {additionalEvent.description && (
+                            <p className="text-xs sm:text-sm md:text-base text-muted-foreground/80 leading-relaxed font-medium">{additionalEvent.description}</p>
+                          )}
+                        </div>
+                      ))}
+                      
                       {/* Progress indicator */}
                       <div className="mt-3 sm:mt-4 flex items-center gap-2">
                         <div className="flex-1 h-1 bg-muted rounded-full overflow-hidden">

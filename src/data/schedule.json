@@ -1,58 +1,72 @@
 {
   "schedule": [
     {
-      "time": "09:00 AM",
-      "event": "Opening Ceremony",
-      "venue": "Main Auditorium",
-      "description": "Welcome to PARADOX 2025"
+      "time": "09:30 AM",
+      "event": "Inauguration",
+      "venue": "Main Stage",
+      "description": "Welcome to PARADOX 2025 - Opening ceremony with keynote speakers"
+    },
+    {
+      "time": "09:45 AM",
+      "event": "Speed Typing",
+      "venue": "IP Lab",
+      "description": "Test your typing speed and accuracy in this fast-paced competition",
+      "additionalEvents": [
+        {
+          "event": "Debate",
+          "venue": "CSLH5(S7 CSE A)", 
+          "description": "Parliamentary style debate competition on contemporary topics"
+        }
+      ]
     },
     {
       "time": "10:00 AM",
-      "event": "Keynote Speech",
-      "venue": "Main Auditorium",
-      "description": "Future of Technology"
+      "event": "C Challenge",
+      "venue": "BC Lab",
+      "description": "Coding challenges and algorithm problems in C programming",
+      "additionalEvents": [
+        {
+          "event": "Code Relay",
+          "venue": "MM Lab",
+          "description": "Team-based sequential programming challenge"
+        },
+        {
+          "event": "Treasure Hunt",
+          "venue": "Start: S3 CSE A",
+          "description": "Campus-wide adventure with clues and challenges"
+        }
+      ]
     },
     {
-      "time": "11:30 AM",
-      "event": "Hackathon Kickoff",
-      "venue": "Tech Hub",
-      "description": "24-hour coding challenge begins"
+      "time": "10:15 AM",
+      "event": "Quiz",
+      "venue": "Main Stage",
+      "description": "Advanced rounds of the quiz competition with buzzer rounds"
     },
     {
-      "time": "12:30 PM",
-      "event": "Code Combat",
-      "venue": "Lab 1",
-      "description": "Competitive programming event"
+      "time": "10:45 AM",
+      "event": "Idea Pitching",
+      "venue": "CSLH4(S7 CSE B)",
+      "description": "Present your innovative ideas and solutions to judges",
+      "additionalEvents": [
+        {
+          "event": "Pitch the Product",
+          "venue": "CSLH5(S5 CSE A)",
+          "description": "Design and present product brochures using AI tools"
+        }
+      ]
     },
     {
-      "time": "02:00 PM",
-      "event": "Tech Talk: AI & Future",
-      "venue": "Seminar Hall",
-      "description": "Industry experts discuss AI trends"
+      "time": "11:00 AM",
+      "event": "Single Prompt",
+      "venue": "IP Lab",
+      "description": "AI prompt engineering competition - create effective prompts"
     },
     {
-      "time": "03:30 PM",
-      "event": "Design Challenge",
-      "venue": "Creative Studio",
-      "description": "UI/UX design competition"
-    },
-    {
-      "time": "04:30 PM",
-      "event": "Project Presentations",
-      "venue": "Exhibition Hall",
-      "description": "Teams showcase their innovations"
-    },
-    {
-      "time": "05:30 PM",
-      "event": "Award Ceremony",
-      "venue": "Main Auditorium",
-      "description": "Recognizing the best projects"
-    },
-    {
-      "time": "06:00 PM",
-      "event": "Closing Ceremony",
-      "venue": "Main Auditorium",
-      "description": "Celebrating achievements"
+      "time": "12:15 PM",
+      "event": "Debate Finals",
+      "venue": "Main Stage",
+      "description": "Parliamentary style debate competition on contemporary topics"
     }
   ]
 }

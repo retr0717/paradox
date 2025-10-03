@@ -71,28 +71,13 @@
   aspect-ratio: 0.718;
   border-radius: var(--card-radius);
   position: relative;
-  background-blend-mode: color-dodge, normal, normal, normal;
+  background-blend-mode: normal;
   animation: glow-bg 12s linear infinite;
   transition: transform 1s ease;
   transform: translate3d(0, 0, 0.1px) rotateX(0deg) rotateY(0deg);
   background-size: 100% 100%;
-  background-position: 0 0, 0 0, 50% 50%, 0 0;
-  background-image: radial-gradient(
-      farthest-side circle at var(--pointer-x) var(--pointer-y),
-      hsla(140, 25%, 22%, calc(var(--card-opacity) * 0.7)) 4%,
-      hsla(156, 65%, 65%, calc(var(--card-opacity) * 0.5)) 10%,
-      hsla(200, 65%, 65%, calc(var(--card-opacity) * 0.3)) 50%,
-      hsla(140, 25%, 22%, 0) 100%
-    ),
-    radial-gradient(35% 52% at 55% 20%, #61dca380 0%, #2b453900 100%),
-    radial-gradient(100% 100% at 50% 50%, #61b3dccc 1%, #2b453900 76%),
-    conic-gradient(
-      from 124deg at 50% 50%,
-      #61dca3cc 0%,
-      #61b3dccc 40%,
-      #61b3dccc 60%,
-      #61dca3cc 100%
-    );
+  background-position: center center;
+  background-image: none;
   overflow: hidden;
   width: 100%;
   max-width: 400px;
@@ -121,8 +106,8 @@
 .pc-inside {
   inset: 1px;
   position: absolute;
-  background-image: var(--inner-gradient);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-image: none;
+  background-color: transparent;
   transform: translate3d(0, 0, 0.01px);
 }
 
@@ -683,5 +668,22 @@
     pointer-events: auto !important;
     position: relative;
     z-index: 10;
+  }
+}
+
+/* Hide all text content on cards */
+.pc-user-info {
+  display: none !important;
+}
+
+.pc-details {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .pc-card {
+    height: 75svh;
+    max-height: 455px;
+    max-width: 360px;
   }
 }

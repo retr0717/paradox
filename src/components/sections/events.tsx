@@ -12,6 +12,7 @@ const Events = () => {
 
   const handleEventClick = (eventId: string) => {
     console.log("Event clicked:", eventId);
+    sessionStorage.setItem('fromEventPage', 'true');
     router.push(`/events/${eventId}`);
   };
 

@@ -6,6 +6,20 @@ import { ArrowDownIcon } from 'lucide-react';
 import GlitchText from '@/components/ui/glitch-text';
 
 const Hero = () => {
+  const handleRegisterClick = () => {
+    const eventsSection = document.querySelector('#events');
+    if (eventsSection) {
+      eventsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleLearnMoreClick = () => {
+    const aboutSection = document.querySelector('#about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-transparent pt-20 sm:pt-24 md:pt-32 w-full">
       <div className="relative z-10 flex flex-col items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,15 +61,17 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.8 }}
           >
             <Button 
+              onClick={handleRegisterClick}
               size="lg" 
-              className="text-xs sm:text-sm md:text-base px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm w-full sm:w-auto min-w-[140px] sm:min-w-[160px] md:min-w-[180px] transition-all duration-300 hover:scale-105 font-bomber-escort-expand"
+              className="cursor-target text-xs sm:text-sm md:text-base px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm w-full sm:w-auto min-w-[140px] sm:min-w-[160px] md:min-w-[180px] transition-all duration-300 hover:scale-105 font-bomber-escort-expand"
             >
               Register Now
             </Button>
             <Button 
+              onClick={handleLearnMoreClick}
               size="lg" 
               variant="outline" 
-              className="text-xs sm:text-sm md:text-base px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 border-white/20 hover:bg-white/10 w-full sm:w-auto min-w-[140px] sm:min-w-[160px] md:min-w-[180px] transition-all duration-300 hover:scale-105 font-bomber-escort-expand"
+              className="cursor-target text-xs sm:text-sm md:text-base px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 border-white/20 hover:bg-white/10 w-full sm:w-auto min-w-[140px] sm:min-w-[160px] md:min-w-[180px] transition-all duration-300 hover:scale-105 font-bomber-escort-expand"
             >
               Learn More
             </Button>
@@ -81,7 +97,6 @@ const Hero = () => {
           }}
           className="flex flex-col items-center gap-2"
         >
-          <span className="text-xs sm:text-sm text-muted-foreground hidden sm:block">Scroll to explore</span>
           <ArrowDownIcon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-muted-foreground" />
         </motion.div>
       </motion.div>

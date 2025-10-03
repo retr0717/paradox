@@ -41,6 +41,13 @@ const Header = () => {
     }
   };
 
+  const handleRegisterClick = () => {
+    const eventsSection = document.querySelector('#events');
+    if (eventsSection) {
+      eventsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <motion.header
       className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-300 mt-2 sm:mt-4 md:mt-6 rounded-lg sm:rounded-xl md:rounded-2xl ${
@@ -87,6 +94,7 @@ const Header = () => {
 
           {/* Desktop Register Button */}
           <Button 
+            onClick={handleRegisterClick}
             className="hidden md:flex bg-gradient-to-r from-blue-500/20 to-violet-500/20 hover:from-blue-500/30 hover:to-violet-500/30 backdrop-blur-md border border-white/20 transition-all duration-300 cursor-target text-sm px-4 py-2 whitespace-nowrap shadow-lg hover:shadow-blue-500/25 hover:scale-105"
           >
             Register Now
@@ -94,6 +102,7 @@ const Header = () => {
 
           {/* Mobile Register Button - Show only on sm screens */}
           <Button 
+            onClick={handleRegisterClick}
             className="md:hidden sm:flex hidden bg-gradient-to-r from-blue-500/20 to-violet-500/20 hover:from-blue-500/30 hover:to-violet-500/30 backdrop-blur-md border border-white/20 transition-all duration-300 cursor-target text-xs px-3 py-1.5 whitespace-nowrap shadow-md"
           >
             Register
@@ -174,9 +183,12 @@ const Header = () => {
 
                 {/* Mobile Register Button */}
                 <div className="relative z-10 p-6 pt-4 border-t border-white/10 bg-black/5 backdrop-blur-sm">
-                  <Button 
+                  <Button
                     className="w-full py-4 text-base font-semibold rounded-2xl transition-all duration-300 hover:scale-[1.02] shadow-sm border border-white/10 relative overflow-hidden group"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      handleRegisterClick();
+                    }}
                     style={{
                       background: 'linear-gradient(135deg, rgba(97,220,163,0.08) 0%, rgba(97,179,220,0.08) 100%)',
                       backdropFilter: 'blur(10px)'
@@ -189,9 +201,7 @@ const Header = () => {
                     <span className="relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90 group-hover:from-white group-hover:to-white transition-all duration-300">
                       Register Now
                     </span>
-                  </Button>
-                  
-                  {/* Additional mobile info */}
+                  </Button>                  {/* Additional mobile info */}
                   <motion.p 
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}

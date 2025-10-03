@@ -35,11 +35,18 @@ export interface Event {
 }
 
 // Schedule types
+export interface AdditionalEvent {
+  event: string;
+  venue: string;
+  description?: string;
+}
+
 export interface ScheduleItem {
   time: string;
   event: string;
   venue: string;
   description?: string;
+  additionalEvents?: AdditionalEvent[];
 }
 
 // FAQ types

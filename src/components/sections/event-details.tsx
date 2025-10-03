@@ -49,11 +49,11 @@ export function EventDetails({ event }: EventDetailsProps) {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-            className="relative"
+            className="relative h-full"
           >
-            <Card className="bg-gray-900 border-green-400/30">
-              <CardContent className="p-6">
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-gray-800">
+            <Card className="bg-gray-900 border-green-400/30 h-full">
+              <CardContent className="p-6 h-full">
+                <div className="relative w-full h-full min-h-[600px] lg:min-h-full overflow-hidden rounded-lg bg-gray-800">
                   {event.details.posterUrl ? (
                     <Image
                       src={event.details.posterUrl}
@@ -89,51 +89,53 @@ export function EventDetails({ event }: EventDetailsProps) {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
-            className="space-y-6"
+            className="space-y-6 h-full flex flex-col"
           >
-            <Card className="bg-gray-900 border-green-400/30">
+            <Card className="bg-gray-900 border-green-400/30 flex-1">
               <CardHeader>
                 <CardTitle className="text-green-400 font-bomber-escort-expand">
                   Event Details
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-gray-300 leading-relaxed font-bold">
-                  {event.details.fullDescription}
-                </p>
+              <CardContent className="space-y-4 h-full flex flex-col justify-between">
+                <div className="space-y-4">
+                  <p className="text-gray-300 leading-relaxed font-bold">
+                    {event.details.fullDescription}
+                  </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-gray-800 p-4 rounded-lg">
-                    <h4 className="text-green-400 font-bomber-escort-expand mb-1">
-                      Date
-                    </h4>
-                    <p className="text-white font-extrabold">
-                      {event.details.date}
-                    </p>
-                  </div>
-                  <div className="bg-gray-800 p-4 rounded-lg">
-                    <h4 className="text-green-400 font-bomber-escort-expand mb-1">
-                      Time
-                    </h4>
-                    <p className="text-white font-extrabold">
-                      {event.details.time}
-                    </p>
-                  </div>
-                  <div className="bg-gray-800 p-4 rounded-lg">
-                    <h4 className="text-green-400 font-bomber-escort-expand mb-1">
-                      Venue
-                    </h4>
-                    <p className="text-white font-extrabold">
-                      {event.details.venue}
-                    </p>
-                  </div>
-                  <div className="bg-gray-800 p-4 rounded-lg">
-                    <h4 className="text-green-400 font-bomber-escort-expand mb-1">
-                      Prize Pool
-                    </h4>
-                    <p className="text-white font-extrabold text-lg">
-                      {event.details.prizePool}
-                    </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="bg-gray-800 p-4 rounded-lg">
+                      <h4 className="text-green-400 font-bomber-escort-expand mb-1">
+                        Date
+                      </h4>
+                      <p className="text-white font-extrabold">
+                        {event.details.date}
+                      </p>
+                    </div>
+                    <div className="bg-gray-800 p-4 rounded-lg">
+                      <h4 className="text-green-400 font-bomber-escort-expand mb-1">
+                        Time
+                      </h4>
+                      <p className="text-white font-extrabold">
+                        {event.details.time}
+                      </p>
+                    </div>
+                    <div className="bg-gray-800 p-4 rounded-lg">
+                      <h4 className="text-green-400 font-bomber-escort-expand mb-1">
+                        Venue
+                      </h4>
+                      <p className="text-white font-extrabold">
+                        {event.details.venue}
+                      </p>
+                    </div>
+                    <div className="bg-gray-800 p-4 rounded-lg">
+                      <h4 className="text-green-400 font-bomber-escort-expand mb-1">
+                        Prize Pool
+                      </h4>
+                      <p className="text-white font-extrabold text-lg">
+                        {event.details.prizePool}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </CardContent>

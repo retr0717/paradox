@@ -49,11 +49,11 @@ export function EventDetails({ event }: EventDetailsProps) {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-            className="relative h-full"
+            className="relative lg:h-full"
           >
-            <Card className="bg-gray-900 border-green-400/30 h-full">
-              <CardContent className="p-6 h-full">
-                <div className="relative w-full h-full min-h-[600px] lg:min-h-full overflow-hidden rounded-lg bg-gray-800">
+            <Card className="bg-gray-900 border-green-400/30 lg:h-full">
+              <CardContent className="p-6 lg:h-full">
+                <div className="relative w-full h-full min-h-[300px] sm:min-h-[400px] lg:min-h-full overflow-hidden rounded-lg bg-gray-800">
                   {event.details.posterUrl ? (
                     <Image
                       src={event.details.posterUrl}
@@ -89,15 +89,15 @@ export function EventDetails({ event }: EventDetailsProps) {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
-            className="space-y-6 h-full flex flex-col"
+            className="space-y-6 lg:h-full lg:flex lg:flex-col"
           >
-            <Card className="bg-gray-900 border-green-400/30 flex-1">
+            <Card className="bg-gray-900 border-green-400/30 lg:flex-1">
               <CardHeader>
                 <CardTitle className="text-green-400 font-bomber-escort-expand">
                   Event Details
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4 h-full flex flex-col justify-between">
+              <CardContent className="space-y-4 lg:h-full lg:flex lg:flex-col lg:justify-between">
                 <div className="space-y-4">
                   <p className="text-gray-300 leading-relaxed font-bold">
                     {event.details.fullDescription}

@@ -4,9 +4,9 @@ import eventsData from '@/data/events.json'
 import { Event } from '@/types/data'
 
 interface PageProps {
-  params: {
+  params: Promise<{
     eventId: string
-  }
+  }>
 }
 
 // Generate static params for all events

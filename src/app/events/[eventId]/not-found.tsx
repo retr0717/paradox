@@ -8,7 +8,7 @@ export default function NotFound() {
         <h1 className="text-6xl font-bold text-green-400 mb-4">404</h1>
         <h2 className="text-2xl font-semibold mb-4">Event Not Found</h2>
         <p className="text-gray-400 mb-8 max-w-md">
-          The event you're looking for doesn't exist or has been moved.
+          The event you&apos;re looking for doesn&apos;t exist or has been moved.
         </p>
         <Link href="/#events">
           <Button className="bg-green-600 hover:bg-green-700 text-black font-bold px-8 py-3">

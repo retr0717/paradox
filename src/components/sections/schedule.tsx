@@ -4,7 +4,6 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { useRef, useEffect, useState } from 'react';
 import scheduleData from '@/data/schedule.json';
-import { ScheduleItem } from '@/types/data';
 
 const Schedule = () => {
   const sectionRef = useRef<HTMLElement>(null);

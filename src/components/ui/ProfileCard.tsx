@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useCallback, useMemo } from "react";
 import "./ProfileCard.css";
 
-const DEFAULT_BEHIND_GRADIENT =
-  "radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y),hsla(140,25%,22%,var(--card-opacity)) 4%,hsla(156,65%,65%,calc(var(--card-opacity)*0.6)) 15%,hsla(200,65%,65%,calc(var(--card-opacity)*0.4)) 40%,hsla(140,25%,22%,0) 100%),radial-gradient(ellipse 70% 80% at 30% 40%,#2b4539aa 0%,#61dca350 30%,#61b3dc30 60%,transparent 100%),radial-gradient(ellipse 60% 90% at 70% 60%,#61b3dc40 0%,#61dca330 40%,#2b453920 80%,transparent 100%),linear-gradient(135deg,#2b453915 0%,#61dca320 50%,#61b3dc25 100%)";
+// Removed unused DEFAULT_BEHIND_GRADIENT constant
 
 const DEFAULT_INNER_GRADIENT =
   "linear-gradient(145deg,#2b45394c 0%,#61dca344 50%,#61b3dc44 100%)";
@@ -36,9 +35,7 @@ interface ProfileCardProps {
   avatarUrl?: string;
   iconUrl?: string;
   grainUrl?: string;
-  behindGradient?: string;
   innerGradient?: string;
-  showBehindGradient?: boolean;
   className?: string;
   enableTilt?: boolean;
   enableMobileTilt?: boolean;
@@ -58,9 +55,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
   avatarUrl = "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=800&h=600&auto=format",
   iconUrl,
   grainUrl,
-  behindGradient,
   innerGradient,
-  showBehindGradient = true,
   className = "",
   enableTilt = true,
   enableMobileTilt = false,
@@ -309,7 +304,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
         // '--behind-gradient': showBehindGradient ? (behindGradient ?? DEFAULT_BEHIND_GRADIENT) : 'none',
         "--inner-gradient": innerGradient ?? DEFAULT_INNER_GRADIENT,
       } as React.CSSProperties),
-    [iconUrl, grainUrl, showBehindGradient, behindGradient, innerGradient]
+    [iconUrl, grainUrl, innerGradient]
   );
 
   const handleContactClick = useCallback(

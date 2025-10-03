@@ -51,7 +51,14 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            Department of Computer Science and Engineering
+            <span className="block sm:hidden">
+              Department of<br />
+              Computer Science<br />
+              and Engineering
+            </span>
+            <span className="hidden sm:block whitespace-nowrap">
+              Department of Computer Science and Engineering
+            </span>
           </motion.p>
 
           <motion.div

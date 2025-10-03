@@ -159,15 +159,15 @@ const Schedule = () => {
 
               {/* Time indicator - desktop only */}
               <div className={`hidden lg:block absolute ${
-                index % 2 === 0 ? 'right-1/2 mr-8' : 'left-1/2 ml-8'
+                index % 2 === 0 ? 'right-1/2 mr-12 xl:mr-16' : 'left-1/2 ml-12 xl:ml-16'
               } bg-gradient-to-r from-[#2b4539] to-[#61dca3] text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wide shadow-lg`}>
                 {item.time}
               </div>
 
               {/* Content card - centered on mobile, positioned on desktop */}
               <div className={`w-full md:ml-10 lg:ml-0 ${
-                index % 2 === 0 ? 'lg:mr-8 lg:ml-auto' : 'lg:ml-8 lg:mr-auto'
-              } flex-1 max-w-full sm:max-w-md md:max-w-lg lg:max-w-md xl:max-w-lg mx-auto lg:mx-0`}>
+                index % 2 === 0 ? 'lg:mr-12 xl:mr-16 lg:ml-auto' : 'lg:ml-12 xl:ml-16 lg:mr-auto'
+              } flex-1 max-w-full sm:max-w-md md:max-w-lg lg:max-w-sm xl:max-w-md 2xl:max-w-lg mx-auto lg:mx-0`}>
                 <motion.div
                   whileHover={{ scale: 1.02, y: -2 }}
                   animate={{

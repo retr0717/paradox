@@ -392,7 +392,7 @@
       "handle": "",
       "status": "Coming Soon",
       "description": "",
-      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "avatarUrl": "/posters/Pitchtheproduct.png",
       "contactText": "",
       "details": {
         "tagline": "",
@@ -401,7 +401,7 @@
         "time": "10:00 AM",
         "venue": "LH 5 CS",
         "prizePool": "",
-        "posterUrl": "",
+        "posterUrl": "/posters/Pitchtheproduct.png",
         "registrationUrl": "https://forms.gle/xzLzuSVhEvKdMbPg8",
         "contacts": [
           {
@@ -444,7 +444,7 @@
       "handle": "cchallenge",
       "status": "Coming Soon",
       "description": "",
-      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "avatarUrl": "/posters/cchallenge.png",
       "contactText": "",
       "details": {
         "tagline": "",
@@ -453,7 +453,7 @@
         "time": "",
         "venue": "",
         "prizePool": "",
-        "posterUrl": "",
+        "posterUrl": "/posters/cchallenge.png",
         "registrationUrl": "https://forms.gle/ijYT18yuKmhwjf6p6",
         "contacts": [
           {
@@ -500,7 +500,7 @@
       "handle": "",
       "status": "Coming Soon",
       "description": "",
-      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "avatarUrl": "/posters/singleprompt.png",
       "contactText": "",
       "details": {
         "tagline": "",
@@ -509,7 +509,7 @@
         "time": "",
         "venue": "",
         "prizePool": "",
-        "posterUrl": "",
+        "posterUrl": "/posters/singleprompt.png",
         "registrationUrl": "https://forms.gle/3ckEYuDNra89Y4g57",
         "contacts": [
           {
@@ -558,13 +558,13 @@
       }
     },
     {
-      "id": "coderely",
-      "name": "CODERELY",
+      "id": "coderelay",
+      "name": "CODERELAY",
       "title": "",
-      "handle": "coderely",
+      "handle": "coderelay",
       "status": "Coming Soon",
       "description": "",
-      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "avatarUrl": "/posters/CodeRelay.png",
       "contactText": "",
       "details": {
         "tagline": "",
@@ -573,7 +573,7 @@
         "time": "10:00AM - 12:00PM",
         "venue": "MM LAB",
         "prizePool": "",
-        "posterUrl": "",
+        "posterUrl": "/posters/CodeRelay.png",
         "registrationUrl": "https://forms.gle/KwJKNTqdgPZv9hJi6",
         "contacts": [
           {
@@ -608,7 +608,7 @@
       "handle": "",
       "status": "Coming Soon",
       "description": "",
-      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "avatarUrl": "/posters/ideapitching.png",
       "contactText": "",
       "details": {
         "tagline": "",
@@ -617,7 +617,7 @@
         "time": "",
         "venue": "",
         "prizePool": "",
-        "posterUrl": "",
+        "posterUrl": "/posters/ideapitching.png",
         "registrationUrl": "https://forms.gle/9mgKxtbbmNgk9hee6",
         "contacts": [
           {
@@ -664,7 +664,7 @@
       "handle": "",
       "status": "Coming Soon",
       "description": "",
-      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "avatarUrl": "/posters/speedtyping.png",
       "contactText": "",
       "details": {
         "tagline": "",
@@ -673,7 +673,7 @@
         "time": "9:45am - 10:45pm ",
         "venue": " IP Lab ",
         "prizePool": "",
-        "posterUrl": "",
+        "posterUrl": "/posters/speedtyping.png",
         "registrationUrl": "https://forms.gle/dAKyBZhDbjaqhg16A",
         "contacts": [
           {

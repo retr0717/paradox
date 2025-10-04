@@ -281,19 +281,31 @@ export function EventDetails({ event }: EventDetailsProps) {
                     Guidelines
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="bg-gray-900 text-white border-green-400/30 max-w-2xl max-h-[80vh] overflow-y-auto">
+                <DialogContent className="bg-gray-900 text-white border-green-400/30 max-w-4xl max-h-[80vh] overflow-y-auto">
                   <DialogHeader>
-                    <DialogTitle className="text-green-400 text-xl font-bomber-escort-expand">
+                    <DialogTitle className="text-green-400 text-xl md:text-2xl font-bomber-escort-expand">
                       {event.name} - Guidelines
                     </DialogTitle>
                   </DialogHeader>
-                  <div className="space-y-4 mt-4">
+                  <div className="space-y-4 md:space-y-6 mt-4">
                     {event.details.guidelines.map((guideline, index) => (
-                      <div key={index} className="bg-gray-800 p-4 rounded-lg">
-                        <h4 className="text-green-400 font-semibold mb-2 ">
+                      <div key={index} className="bg-gray-800 p-4 md:p-6 rounded-lg">
+                        <h4 className="text-green-400 font-semibold mb-3 md:mb-4 text-sm md:text-base">
                           {guideline.title}
                         </h4>
-                        <p className="text-gray-300">{guideline.content}</p>
+                        <ul className="text-gray-300 space-y-2 md:space-y-3">
+                          {guideline.content
+                            .split('.')
+                            .filter(point => point.trim().length > 0)
+                            .map((point, pointIndex) => (
+                              <li key={pointIndex} className="flex items-start">
+                                <span className="text-green-400 mr-2 md:mr-3 mt-1 flex-shrink-0">•</span>
+                                <span className="text-xs md:text-sm leading-relaxed">
+                                  {point.trim()}.
+                                </span>
+                              </li>
+                            ))}
+                        </ul>
                       </div>
                     ))}
                   </div>

@@ -292,7 +292,7 @@
         "date": "21st September",
         "time": "10:15 AM - 12:15 PM",
         "venue": "Main Stage",
-        "prizePool": "₹1.5K",
+        "prizePool": "₹2000",
         "posterUrl": "/posters/quiz.png",
         "registrationUrl": "https://forms.gle/mnTm6nb8qUnBbt4i7",
         "contacts": [
@@ -348,7 +348,7 @@
         "date": "7/10/2025",
         "time": ["9:45 AM - 11:45 AM", "Final: 12:15 PM ‒ 12:30 PM"],
         "venue": "CSLH5(S7 CSE A), Main Stage",
-        "prizePool": "",
+        "prizePool": "2000",
         "posterUrl": "/posters/debate.jpg",
         "registrationUrl": "https://forms.gle/LqZfkkWJTAfWPqFC8",
         "contacts": [
@@ -775,8 +775,8 @@
 
         "date": " 7/10/2025",
         "time": "10:00 AM - 12:30 PM",
-        "starting point": " CSE DEPT ",
-        "prizePool": "",
+        "venue": " CSE DEPT ",
+        "prizePool": "2000",
         "posterUrl": "/posters/treasurehunt.png",
         "registrationUrl": "https://forms.gle/RyXjZ5EFvAyt6vk79",
         "contacts": [

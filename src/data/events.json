@@ -247,7 +247,7 @@
         "guidelines": [
           {
             "title": "Duration",
-            "content": "1.5 Hr"
+            "content": "1 hr 30 mins"
           },
           {
             "title": "Participants",
@@ -311,7 +311,7 @@
         "guidelines": [
           {
             "title": "Duration",
-            "content": "2hrs"
+            "content": "2 hrs"
           },
           {
             "title": "Max Count",
@@ -359,7 +359,7 @@
         "guidelines": [
           {
             "title": "Duration",
-            "content": ""
+            "content": "1 hr"
           },
           {
             "title": "Max Count",
@@ -367,7 +367,7 @@
           },
           {
             "title": "Participation Mode",
-            "content": ": Individual / Team (max 3 members)"
+            "content": "Individual / Team (max 3 members)"
           },
           {
             "title": "Guidelines",
@@ -474,7 +474,7 @@
           },
           {
             "title": "Registration",
-            "content": "Free for Computer Science students.\n₹50 registration fee for students from other departments.\nTeam size: 5 registered players only. Substitutes are allowed but must be declared before the event.\nVoice communication must be through the in-game chat or an organizer-approved platform (e.g., Discord).\nUnfair play (cheats, unauthorized software, ghosting via streams, exploiting bugs) will lead to instant disqualification."
+            "content": "Free for Computer Science students.\n₹50 registration fee for students from other departments.\nTeam size: 5 registered players only. Substitutes are allowed but must be declared before the event.\nVoice communication must be through the in-game chat or an organizer-approved platform (eg: Discord).\nUnfair play (cheats, unauthorized software, ghosting via streams, exploiting bugs) will lead to instant disqualification."
           },
           {
             "title": "In case of disconnects:",
@@ -515,7 +515,7 @@
         "guidelines": [
           {
             "title": "Instructions",
-            "content": "Starting point: CSE Dept\nMaximum no.of team: 7\nStarting time: 10.00 am\nDuration: 2 hrs 30 min\nTeam should contain 2-5 members\nParticipants should complete their task within the time limit\nThe competition will start at the exact time announced\nParticipants are required to follow all the instructions given by the volunteers during the competition.\nCompetition organizers reserve the right to modify rules.\nAny form of cheating or malpractice will lead to immediate disqualification"
+            "content": "Starting point: CSE Dept.\nMaximum no of teams:  7.\nStarting time: 10:00 am.\nDuration: 2 hrs 30 min.\nTeam should contain 2-5 members\nParticipants should complete their task within the time limit\nThe competition will start at the exact time announced\nParticipants are required to follow all the instructions given by the volunteers during the competition.\nCompetition organizers reserve the right to modify rules.\nAny form of cheating or malpractice will lead to immediate disqualification."
           }
         ]
       }

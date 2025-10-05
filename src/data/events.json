@@ -1,22 +1,407 @@
 {
   "events": [
     {
+      "id": "hackathon",
+      "name": "Hackathon",
+      "title": "Coding Challenge",
+      "handle": "hackathon",
+      "status": "Coming Soon",
+      "description": "24-hour coding challenge to build innovative solutions",
+      "avatarUrl": "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=800&h=600&auto=format",
+      "contactText": "Register Now",
+      "details": {
+        "tagline": "Build the future in 24 hours",
+        "fullDescription": "To all the innovators out there, PARADOX '25 presents the ultimate coding challenge where you can showcase your problem-solving skills and creativity.",
+        "date": "21st September",
+        "time": "09:00 AM - 09:00 AM (24 hours)",
+        "venue": "Tech Hub",
+        "prizePool": "₹5K",
+        "posterUrl": "/events/hackathon-poster.jpg",
+        "registrationUrl": "https://forms.gle/hackathon2025",
+        "contacts": [
+          {
+            "name": "Vaishnav",
+            "phone": "+91 9633433537"
+          },
+          {
+            "name": "Shilpa",
+            "phone": "+91 8086687084"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "24 hours continuous coding challenge"
+          },
+          {
+            "title": "Team Size",
+            "content": "Teams of 2-4 members are allowed"
+          },
+          {
+            "title": "Tools",
+            "content": "Any programming language, framework, or tools can be used"
+          },
+          {
+            "title": "Theme",
+            "content": "Problem statement will be revealed at the start"
+          },
+          {
+            "title": "Evaluation Criteria",
+            "content": "Innovation, Technical Implementation, UI/UX, and Presentation"
+          },
+          {
+            "title": "Submission",
+            "content": "Code repository and demo video required"
+          }
+        ]
+      }
+    },
+    {
+      "id": "techtalks",
+      "name": "Tech Talks",
+      "title": "Expert Sessions",
+      "handle": "techtalks",
+      "status": "Registration Open",
+      "description": "Engaging sessions by industry experts",
+      "avatarUrl": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&auto=format",
+      "contactText": "Join Session",
+      "details": {
+        "tagline": "Learn from the industry experts",
+        "fullDescription": "Join us for insightful sessions by leading professionals who will share their expertise and guide you through the latest trends in technology.",
+        "date": "21st September",
+        "time": "02:00 PM - 04:00 PM",
+        "venue": "Main Auditorium",
+        "prizePool": "Knowledge & Networking",
+        "posterUrl": "/events/techtalks-poster.jpg",
+        "registrationUrl": "https://forms.gle/techtalks2025",
+        "contacts": [
+          {
+            "name": "Arjun",
+            "phone": "+91 9876543210"
+          },
+          {
+            "name": "Priya",
+            "phone": "+91 8765432109"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "2 hours interactive session"
+          },
+          {
+            "title": "Format",
+            "content": "Keynote presentations followed by Q&A"
+          },
+          {
+            "title": "Topics",
+            "content": "AI, Machine Learning, Cloud Computing, Cybersecurity"
+          },
+          {
+            "title": "Networking",
+            "content": "Opportunity to connect with industry professionals"
+          },
+          {
+            "title": "Materials",
+            "content": "Presentation slides and resources will be shared"
+          }
+        ]
+      }
+    },
+    {
+      "id": "codecombat",
+      "name": "Code Combat",
+      "title": "Competitive Programming",
+      "handle": "codecombat",
+      "status": "Live",
+      "description": "Competitive programming challenges",
+      "avatarUrl": "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?w=800&h=600&auto=format",
+      "contactText": "Compete Now",
+      "details": {
+        "tagline": "Battle with algorithms and data structures",
+        "fullDescription": "Test your problem-solving skills in this intense competitive programming contest featuring algorithmic challenges of varying difficulty levels.",
+        "date": "22nd September",
+        "time": "10:00 AM - 01:00 PM",
+        "venue": "Computer Lab 1",
+        "prizePool": "₹3K",
+        "posterUrl": "/events/codecombat-poster.jpg",
+        "registrationUrl": "https://forms.gle/codecombat2025",
+        "contacts": [
+          {
+            "name": "Rahul",
+            "phone": "+91 9123456789"
+          },
+          {
+            "name": "Sneha",
+            "phone": "+91 8234567890"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "3 hours competitive contest"
+          },
+          {
+            "title": "Platform",
+            "content": "HackerRank/CodeChef platform will be used"
+          },
+          {
+            "title": "Languages",
+            "content": "C, C++, Java, Python allowed"
+          },
+          {
+            "title": "Problems",
+            "content": "5-7 problems of varying difficulty"
+          },
+          {
+            "title": "Ranking",
+            "content": "Based on problems solved and time taken"
+          },
+          {
+            "title": "Individual",
+            "content": "Solo participation only"
+          }
+        ]
+      }
+    },
+    {
+      "id": "projectexpo",
+      "name": "Project Expo",
+      "title": "Innovation Showcase",
+      "handle": "projectexpo",
+      "status": "Coming Soon",
+      "description": "Showcase your innovative projects",
+      "avatarUrl": "https://images.unsplash.com/photo-1525422847952-7f91db09a364?w=800&h=600&auto=format",
+      "contactText": "Submit Project",
+      "details": {
+        "tagline": "Showcase your innovative ideas",
+        "fullDescription": "Present your cutting-edge projects and innovative solutions to industry experts and fellow students. This is your platform to shine and get recognized.",
+        "date": "23rd September",
+        "time": "11:00 AM - 04:00 PM",
+        "venue": "Exhibition Hall",
+        "prizePool": "₹4K",
+        "posterUrl": "/events/projectexpo-poster.jpg",
+        "registrationUrl": "https://forms.gle/projectexpo2025",
+        "contacts": [
+          {
+            "name": "Kiran",
+            "phone": "+91 9345678901"
+          },
+          {
+            "name": "Meera",
+            "phone": "+91 8456789012"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Project Categories",
+            "content": "Web Development, Mobile Apps, IoT, AI/ML, Hardware"
+          },
+          {
+            "title": "Team Size",
+            "content": "1-4 members per team"
+          },
+          {
+            "title": "Presentation",
+            "content": "10 minutes presentation + 5 minutes Q&A"
+          },
+          {
+            "title": "Requirements",
+            "content": "Working prototype/demo mandatory"
+          },
+          {
+            "title": "Judging Criteria",
+            "content": "Innovation, Technical Merit, Practicality, Presentation"
+          },
+          {
+            "title": "Setup",
+            "content": "Participants must bring their own laptops/devices"
+          }
+        ]
+      }
+    },
+    {
+      "id": "designchallenge",
+      "name": "Design Challenge",
+      "title": "UI/UX Competition",
+      "handle": "designchallenge",
+      "status": "Registration Open",
+      "description": "UI/UX design competition",
+      "avatarUrl": "https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=800&h=600&auto=format",
+      "contactText": "Start Design",
+      "details": {
+        "tagline": "Design the future interfaces",
+        "fullDescription": "Unleash your creativity in this UI/UX design competition where you'll create stunning user interfaces and experiences for real-world problems.",
+        "date": "22nd September",
+        "time": "02:00 PM - 06:00 PM",
+        "venue": "Design Studio",
+        "prizePool": "₹2.5K",
+        "posterUrl": "/events/designchallenge-poster.jpg",
+        "registrationUrl": "https://forms.gle/designchallenge2025",
+        "contacts": [
+          {
+            "name": "Aditi",
+            "phone": "+91 9567890123"
+          },
+          {
+            "name": "Rohan",
+            "phone": "+91 8678901234"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "4 hours design challenge"
+          },
+          {
+            "title": "Tools",
+            "content": "Figma, Adobe XD, Sketch, or any design tool"
+          },
+          {
+            "title": "Deliverables",
+            "content": "High-fidelity mockups and prototype"
+          },
+          {
+            "title": "Theme",
+            "content": "Problem statement revealed on the day"
+          },
+          {
+            "title": "Evaluation",
+            "content": "Creativity, Usability, Visual Appeal, User Experience"
+          },
+          {
+            "title": "Team Size",
+            "content": "Individual or teams of 2"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "techquiz",
+      "name": "Tech Quiz",
+      "title": "Knowledge Test",
+      "handle": "techquiz",
+      "status": "Coming Soon",
+      "description": "Test your technical knowledge",
+      "avatarUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&auto=format",
+      "contactText": "Take Quiz",
+      "details": {
+        "tagline": "Test your tech knowledge",
+        "fullDescription": "Challenge yourself with a comprehensive quiz covering various domains of computer science and emerging technologies. Perfect for testing your technical acumen.",
+        "date": "21st September",
+        "time": "04:00 PM - 05:30 PM",
+        "venue": "Seminar Hall",
+        "prizePool": "₹1.5K",
+        "posterUrl": "/events/techquiz-poster.jpg",
+        "registrationUrl": "https://forms.gle/mnTm6nb8qUnBbt4i7",
+        "contacts": [
+          {
+            "name": "Suraj",
+            "phone": "+91 9789012345"
+          },
+          {
+            "name": "Kavya",
+            "phone": "+91 8890123456"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": "2 hours "
+          },
+          {
+            "title": "Max Count",
+            "content": " 25 teams"
+          },
+          {
+            "title": "Topics",
+            "content": "Programming, Algorithms, OS, Networks, Database, Current Tech"
+          },
+          {
+            "title": "Guidelines",
+            "content": "Each team consists of two participants.\n The competition is conducted through 2 rounds. \n First round will be MCQ and the second is buzzer round.\nMalpractice or any misconduct will lead to disqualification.\nThe authority has full rights to make any changes to the program."
+          },
+          {
+            "title": "Round 1",
+            "content": "Each team would be given a set of question papers containing 25 objective type questions (MCQ).\nThe time limit of 1st round is 30 mins.\nMarks will be given for each correct answer.\nThere will be no negative marking.\n5 questions will be starred.\nIn case of a tie between 2 or more teams, the team that has correctly answered the most number of starred questions will advance into next level.\nThe top 8 scoring teams will qualify for the next round."
+          },
+          {
+            "title": "Round 2 : KNOCKOUT",
+            "content": "The 8 qualifying teams will compete in a knockout format.\nMatches will be held one team against another.\nEach team must compete against and defeat an opponent in a head-to-head match to advance to the next round.\nEach match will consist of a set of buzzer questions.\nThe winners of each stage will proceed to the next stage until the final.\nIn case of a tie, a tie-breaker question will be asked."
+          }
+        ]
+      }
+    },
+    {
+      "id": "debate",
+      "name": "Debate Competition",
+      "title": "Debate",
+      "handle": "debate",
+      "status": "Coming Soon",
+      "description": "",
+      "avatarUrl": "/posters/debate.jpg",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "",
+        "date": "7/10/2025",
+        "time": ["9:45 AM - 11:45 AM", "Final: 12:15 PM ‒ 12:30 PM"],
+        "venue": "CSLH5(S7 CSE A), Main Stage",
+        "prizePool": "",
+        "posterUrl": "/posters/debate.jpg",
+        "registrationUrl": "https://forms.gle/LqZfkkWJTAfWPqFC8",
+        "contacts": [
+          {
+            "name": "Bhavya",
+            "phone": "7510695281"
+          },
+          {
+            "name": "Boomika",
+            "phone": "7034958002"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Duration",
+            "content": " 2 Hour 15 minutes"
+          },
+          {
+            "title": "Max Count",
+            "content": "8 teams"
+          },
+          {
+            "title": "Guidelines",
+            "content": "General\n Each team must consist of 3-5 members.\n A maximum of 8 teams will be allowed to participate.\n Proper decorum must be maintained throughout the event.\n Any disruptive behavior will lead to immediate disqualification.\n Exceeding the allotted time will result in negative marks.\n The final stage of the competition will be conducted on the main stage.\n Judges or the organizing authority reserve the right to modify the rules.\n"
+          },
+          {
+            "title": "Evaluation Criteria",
+            "content": " Content & Relevance\n Clarity & Presentation\n Teamwork\n Opposition Handling"
+          },
+          {
+            "title": "Judging & Results",
+            "content": "The decision of the judges will be final and binding."
+          }
+        ]
+      }
+    },
+    {
       "id": "pitchperfect",
       "name": "Pitch Perfect",
       "title": "Pitch Perfect",
       "handle": "",
       "status": "Coming Soon",
       "description": "",
-      "avatarUrl": "/posters/pitch.jpg",
+      "avatarUrl": "/posters/Pitchtheproduct.png",
       "contactText": "",
       "details": {
         "tagline": "",
         "fullDescription": "",
-        "date": "7 October 2025",
-        "time": "10:45 AM - 11:45 AM",
-        "venue": " CS LH6",
-        "prizePool": "1500 ",
-        "posterUrl": "/posters/pitch.jpg",
+        "date": "77/10/2025",
+        "time": "10.45 AM - 11.45 AM",
+        "venue": "CSLH5(S5 CS A)",
+        "prizePool": "1500",
+        "posterUrl": "/posters/Pitchtheproduct.png",
         "registrationUrl": "https://forms.gle/xzLzuSVhEvKdMbPg8",
         "contacts": [
           {
@@ -64,15 +449,15 @@
       "details": {
         "tagline": "",
         "fullDescription": "",
-        "date": "7 October 2025",
-        "time": "10:00 AM - 12:00 PM",
-        "venue": "BC LAB",
+        "date": "7/10/2025",
+        "time": "10:00 AM -12:00 PM",
+        "venue": "BC Lab",
         "prizePool": "1500",
         "posterUrl": "/posters/cchallenge.png",
         "registrationUrl": "https://forms.gle/ijYT18yuKmhwjf6p6",
         "contacts": [
           {
-            "name": "Laya Ann Sebastian",
+            "name": "Laya",
             "phone": "8590719838"
           },
           {
@@ -120,9 +505,9 @@
       "details": {
         "tagline": "",
         "fullDescription": "",
-        "date": "7 October 2025",
+        "date": "7/10/2025",
         "time": "11:00 AM - 12:30 PM",
-        "venue": "IP LAB",
+        "venue": "IP Lab",
         "prizePool": "1000",
         "posterUrl": "/posters/singleprompt.png",
         "registrationUrl": "https://forms.gle/3ckEYuDNra89Y4g57",
@@ -174,7 +559,7 @@
     },
     {
       "id": "coderelay",
-      "name": "CODERELAY",
+      "name": "CODE RELAY",
       "title": "",
       "handle": "coderelay",
       "status": "Coming Soon",
@@ -184,7 +569,7 @@
       "details": {
         "tagline": "",
         "fullDescription": "",
-        "date": "7 October 2025",
+        "date": "7/10/25",
         "time": "10:00AM - 11:00AM",
         "venue": "MM LAB",
         "prizePool": "1700",
@@ -228,9 +613,9 @@
       "details": {
         "tagline": "",
         "fullDescription": "",
-        "date": "7 October 2025",
-        "time": "10:45 AM - 11:45 AM",
-        "venue": "CS LH4",
+        "date": "7/10/2025",
+        "time": "10.45-11.45 AM",
+        "venue": "CSLH4(S7 CSE B)",
         "prizePool": "1000",
         "posterUrl": "/posters/ideapitching.png",
         "registrationUrl": "https://forms.gle/9mgKxtbbmNgk9hee6",
@@ -242,6 +627,10 @@
           {
             "name": "Nimmy",
             "phone": "7034366456"
+          },
+          {
+            "name": "Feba",
+            "phone": "8137043170"
           }
         ],
         "guidelines": [
@@ -284,8 +673,8 @@
       "details": {
         "tagline": "",
         "fullDescription": "",
-        "date": "7 October 2025 ",
-        "time": "9:45am - 10:45pm ",
+        "date": "7/10/25 ",
+        "time": "9:45 AM - 10:45 PM ",
         "venue": " IP Lab ",
         "prizePool": "500",
         "posterUrl": "/posters/speedtyping.png",
@@ -330,12 +719,12 @@
         "tagline": "",
         "fullDescription": "🎯 SCOPE IN 🔫 | BREATHE OUT 😮‍💨 | BLACK OUT 💀\n  You know the rules. Now secure the VICTORY.",
 
-        "date": " 3-10-2025 ,4-10-2025",
-        "time": " 8:00",
+        "date": " 3/10/2025 ,4/10/2025",
+        "time": " 8:00 PM",
         "venue": " IP Lab ",
         "prizePool": "2000",
         "posterUrl": "/posters/valorant.jpg",
-        "registrationUrl": "https://forms.gle/DYVKrV4DPmhW8urE9",
+        "registrationUrl": "",
         "contacts": [
           {
             "name": "Amal J Nair",
@@ -367,6 +756,43 @@
           {
             "title": "In case of disconnects:",
             "content": "If before the round starts → the round may be restarted.\nIf mid-round → the game continues; the disconnected player may rejoin.\nEach team is allowed 1 tactical timeout (1 min) per map.\nPlayers must not use abusive chat/voice. Sportsmanship is expected at all times.\nThe organizers reserve the right to modify the rules if necessary, and their decisions will be final and binding."
+          }
+        ]
+      }
+    },
+    {
+      "id": "treasurehunt",
+      "name": "TREASURE HUNT",
+      "title": "",
+      "handle": "",
+      "status": "",
+      "description": "",
+      "avatarUrl": "/posters/treasurehunt.png",
+      "contactText": "",
+      "details": {
+        "tagline": "",
+        "fullDescription": "",
+
+        "date": " 7/10/2025",
+        "time": "10:00 AM - 12:00 PM",
+        "starting point": " CSE DEPT ",
+        "prizePool": "",
+        "posterUrl": "/posters/treasurehunt.png",
+        "registrationUrl": "https://forms.gle/RyXjZ5EFvAyt6vk79",
+        "contacts": [
+          {
+            "name": "Anila",
+            "phone": "8086414048"
+          },
+          {
+            "name": "Aliya",
+            "phone": "8078204698"
+          }
+        ],
+        "guidelines": [
+          {
+            "title": "Instructions",
+            "content": "Starting point: CSE Dept\nMaximum no.of team: 7\nStarting time: 10.00 am\nDuration: 2 hrs 30 min\nTeam should contain 2-5 members\nParticipants should complete their task within the time limit\nThe competition will start at the exact time announced\nParticipants are required to follow all the instructions given by the volunteers during the competition.\nCompetition organizers reserve the right to modify rules.\nAny form of cheating or malpractice will lead to immediate disqualification"
           }
         ]
       }

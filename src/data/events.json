@@ -1,17 +1,17 @@
 {
   "events": [
     {
-      "id": "techquiz",
-      "name": "Tech Quiz",
+      "id": "quiz",
+      "name": "Quiz",
       "title": "Knowledge Test",
-      "handle": "techquiz",
+      "handle": "quiz",
       "status": "Coming Soon",
       "description": "Test your technical knowledge",
       "avatarUrl": "/posters/quiz.png",
       "contactText": "Take Quiz",
       "details": {
-        "tagline": "Test your tech knowledge",
-        "fullDescription": "Challenge yourself with a comprehensive quiz covering various domains of computer science and emerging technologies. Perfect for testing your technical acumen.",
+        "tagline": "",
+        "fullDescription": "",
         "date": "7/10/2025",
         "time": "10:15 AM - 12:15 PM",
         "venue": "Main Stage",
@@ -30,16 +30,16 @@
         ],
         "guidelines": [
           {
+            "title": "Topic",
+            "content": "General Knowledge and Technical Knowledge"
+          },
+          {
             "title": "Duration",
             "content": "2 hours "
           },
           {
             "title": "Max Count",
             "content": " 25 teams"
-          },
-          {
-            "title": "Topics",
-            "content": "Programming, Algorithms, OS, Networks, Database, Current Tech"
           },
           {
             "title": "Guidelines",
